@@ -16,7 +16,7 @@ xkb_symbols "thumbledore" {
     key <BKSL> { [ backslash, bar, at, at ] };
 
     key <AC01> { [ a, A, asterisk, asterisk ] };
-    key <AC02> { [ s, S, parenleft] };
+    key <AC02> { [ s, S, parenleft, parenleft ] };
     key <AC03> { [ d, D, minus, minus ] };
     key <AC04> { [ f, F, equal, equal ] };
     key <AC05> { [ g, G, parenright, parenright ] };
