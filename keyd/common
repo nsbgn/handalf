@@ -7,13 +7,23 @@ disable_modifier_guard = 0
 
 [main]
 FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
-# SHIFT = oneshot(shift)
-SHIFT = timeout(overload(shift, enter), 140, layer(shift))
-ALTGR = oneshot(altgr)
+SHIFT = overload(shift2, oneshot(shift))
+# SHIFT = timeout(overload(shift, enter), 140, layer(shift))
+ALTGR = overload(altgr2, oneshot(altgr))
+# space = oneshotm(doublespace, space)
+
+# WORKAROUND: Double tapping space while holding shift/altgr (thus entering
+# doublespace) should not keep altgr/shift active unless altgr/shift is
+# actually still pressed. This is why we add shift2/altgr2 layers whose only
+# purpose is to avoid triggering the continued activation of modifiers during
+# oneshots. This is not perfect but it avoids the most egregious issues
+[shift2:S]
+space = oneshotm(doublespace, space)
+[altgr2:G]
 space = oneshotm(doublespace, space)
 
-[doublespace]
-[doublespace+shift]
-space = macro(backspace _)
-[doublespace+altgr]
-space = macro(backspace kpdot)
+#[doublespace]
+#[doublespace+shift2]
+#space = macro(backspace _)
+#[doublespace+altgr2]
+#space = macro(backspace kpdot)
