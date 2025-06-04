@@ -9,8 +9,10 @@ disable_modifier_guard = 0
 FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
 ALTGR = overload(shift2, oneshot(shift))
 # SHIFT = overload(shift2, oneshot(shift))
-leftshift = overload(control, esc)
+# leftshift = overload(control, esc)
+leftshift = noop
 rightshift = layer(alt)
+leftmeta = enter
 
 # WORKAROUND: Double tapping space while holding shift/altgr (thus entering
 # doublespace) should not keep altgr/shift active unless altgr/shift is
