@@ -1,11 +1,11 @@
 [main]
-space = layerm(StartedHoldingSpace, space)
-rightalt = overload(StartedHoldingShift, oneshot(shift))
+space = oneshotm(BeginSpace, space)
+rightalt = overload(BeginHoldingShift, oneshot(BeginShift))
 
 [Empty]
 
-[StartedHoldingSpace]
-rightalt = layerm(altgr, backspace)
+[BeginSpace]
+rightalt = oneshotm(altgr, backspace)
 q = swapm(empty, q)
 w = swapm(empty, w)
 e = swapm(empty, e)
@@ -38,7 +38,10 @@ m = swapm(empty, ,)
 . = swapm(empty, .)
 / = swapm(empty, /)
 
-[StartedHoldingShift:S]
+[BeginShift:S]
+space = swap(altgr)
+
+[BeginHoldingShift:S]
 space = swap(altgr)
 q = swapm(shift, S-q)
 w = swapm(shift, S-w)
