@@ -1,5 +1,5 @@
 [main]
-space = oneshotm(BeginSpace, space)
+space = layerm(BeginSpace, space)
 rightalt = overload(BeginHoldingShift, oneshot(BeginShift))
 
 [Empty]
