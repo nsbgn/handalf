@@ -7,10 +7,10 @@ disable_modifier_guard = 0
 
 [main]
 FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
-ALTGR = overload(shift2, oneshot(shift))
+# ALTGR = overload(shift2, oneshot(shift))
 # SHIFT = overload(shift2, oneshot(shift))
 # leftshift = overload(control, esc)
-leftshift = noop
+leftshift = layer(shift)
 rightshift = layer(alt)
 leftmeta = enter
 
@@ -36,3 +36,5 @@ space = oneshotm(doublespace, space)
 #space = macro(backspace _)
 #[doublespace+altgr2]
 #space = macro(backspace kpdot)
+
+
