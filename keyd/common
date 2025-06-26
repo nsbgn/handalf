@@ -1,39 +1,87 @@
 [global]
-
 chord_timeout = 50
 overload_tap_timeout = 300
 oneshot_timeout = 500
 disable_modifier_guard = 0
 
 [main]
-FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
-ALTGR = overload(altgr, oneshot(altgr))
-# SHIFT = overload(shift2, oneshot(shift))
-SHIFT = timeout(overload(shift, enter), 100, oneshot(shift))
-rightshift = layer(alt)
-leftmeta = enter
+leftmeta = layer(NavMeta)
+leftalt = timeout(overload(shift1, oneshot(shift)), 150, layer(shift1))
+rightalt = timeout(overload(altgr1, oneshot(altgr)), 150, layer(altgr1))
+compose = layer(MetaFn)
+rightcontrol = layer(MetaFn)
 
-# WORKAROUND: Double tapping space while holding shift/altgr (thus entering
-# doublespace) should not keep altgr/shift active unless altgr/shift is
-# actually still pressed. This is why we add shift2/altgr2 layers whose only
-# purpose is to avoid triggering the continued activation of modifiers during
-# oneshots. This is not perfect but it avoids the most egregious issues
-[shift2:S]
-space = oneshotm(doublespace, space)
+leftshift = timeout(overload(control, esc), 150, layer(control))
 
-[shift:S]
-ALTGR = overload(altgr, swap(altgr))
+[shift1:S]
+rightalt = enter
+q = swapm(shift, S-q)
+w = swapm(shift, S-w)
+e = swapm(shift, S-e)
+r = swapm(shift, S-r)
+t = swapm(shift, S-t)
+a = swapm(shift, S-a)
+s = swapm(shift, S-s)
+d = swapm(shift, S-d)
+f = swapm(shift, S-f)
+g = swapm(shift, S-g)
+z = swapm(shift, S-z)
+x = swapm(shift, S-x)
+c = swapm(shift, S-c)
+v = swapm(shift, S-v)
+b = swapm(shift, S-b)
+y = swapm(shift, S-y)
+u = swapm(shift, S-u)
+i = swapm(shift, S-i)
+o = swapm(shift, S-o)
+p = swapm(shift, S-p)
+\ = swapm(shift, S-\)
+h = swapm(shift, S-h)
+j = swapm(shift, S-j)
+k = swapm(shift, S-k)
+l = swapm(shift, S-l)
+; = swapm(shift, S-;)
+' = swapm(shift, S-')
+n = swapm(shift, S-n)
+m = swapm(shift, S-m)
+, = swapm(shift, S-,)
+. = swapm(shift, S-.)
+/ = swapm(shift, S-/)
 
-[altgr:G]
-ALTGR = overload(shift, swap(shift))
+[altgr1:G]
+leftalt = enter
+q = swapm(altgr, G-q)
+w = swapm(altgr, G-w)
+e = swapm(altgr, G-e)
+r = swapm(altgr, G-r)
+t = swapm(altgr, G-t)
+a = swapm(altgr, G-a)
+s = swapm(altgr, G-s)
+d = swapm(altgr, G-d)
+f = swapm(altgr, G-f)
+g = swapm(altgr, G-g)
+z = swapm(altgr, G-z)
+x = swapm(altgr, G-x)
+c = swapm(altgr, G-c)
+v = swapm(altgr, G-v)
+b = swapm(altgr, G-b)
+y = swapm(altgr, G-y)
+u = swapm(altgr, G-u)
+i = swapm(altgr, G-i)
+o = swapm(altgr, G-o)
+p = swapm(altgr, G-p)
+\ = swapm(altgr, G-\)
+h = swapm(altgr, G-h)
+j = swapm(altgr, G-j)
+k = swapm(altgr, G-k)
+l = swapm(altgr, G-l)
+; = swapm(altgr, G-;)
+' = swapm(altgr, G-')
+n = swapm(altgr, G-n)
+m = swapm(altgr, G-m)
+, = swapm(altgr, G-,)
+. = swapm(altgr, G-.)
+/ = swapm(altgr, G-/)
 
-[altgr2:G]
-space = oneshotm(doublespace, space)
-
-#[doublespace]
-#[doublespace+shift2]
-#space = macro(backspace _)
-#[doublespace+altgr2]
-#space = macro(backspace kpdot)
 
 

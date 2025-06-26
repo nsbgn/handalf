@@ -1,0 +1,44 @@
+[NavMeta]
+space = M-space
+
+# Left (Nav)
+
+q = home
+w = up
+e = end
+r = noop
+t = pause
+
+a = left
+s = down
+d = right
+f = delete
+g = noop
+
+z = noop
+x = pageup
+c = pagedown
+v = insert
+b = sysrq
+
+# Right (Meta)
+
+y = M-y
+u = M-u
+i = M-i
+o = M-o
+p = M-p
+\ = M-\
+
+h = M-h
+j = M-j
+k = M-k
+l = M-l
+; = M-;
+' = M-'
+
+n = M-n
+m = M-m
+, = M-,
+. = M-.
+/ = M-/

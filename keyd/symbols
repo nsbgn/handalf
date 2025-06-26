@@ -1,5 +1,4 @@
 [altgr:G]
-space = oneshotm(doublespace, space)
 backspace = backspace
 
 # Left
