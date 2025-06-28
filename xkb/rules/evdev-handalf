@@ -1,0 +1,4 @@
+! layout
+  handalf Handalf-Qwerty
+
+! include %S/evdev

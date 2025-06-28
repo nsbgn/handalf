@@ -1,4 +1,4 @@
-# 🧙 Thumbledore
+# 🧙 Handalf
 
 *I only uploaded this so that it may serve as inspiration. It is still 
 being tweaked. It currently only supports Linux.*
@@ -9,9 +9,9 @@ thumbs idle while your weakest finger contorts to reach keys like
 require you to abandon a comfortable hand position entirely. Exotic 
 keyboards can remedy all this, but lack portability.
 
-Thumbledore and Handalf are keyboard layouts that works well for fancy 
-keyboards with 2 or more thumb keys per hand, but that *also* fit 
-broadly within the constraints of a laptop keyboard.
+Handalf is a keyboard layout that works well for fancy keyboards with 2 
+or more thumb keys per hand, but that *also* fit broadly within the 
+constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the slack.
 -   **Easy to remember.** All symbols are accessible with just the 
@@ -53,11 +53,11 @@ broadly within the constraints of a laptop keyboard.
 
 ## Symbols
 
-![The thumbledore-qwerty keyboard layout.](kb-qwerty.svg)
+![The Handalf-qwerty keyboard layout.](kb-qwerty.svg)
 
 Are you currently using a Qwerty layout or similar? Then there isn't 
-much of a barrier to entry: in the Thumbledore variant, all characters 
-stay in the same place. The major addition is that the Level-3 symbols 
+much of a barrier to entry: in the standard variant, all characters stay 
+in the same place. The major addition is that the Level-3 symbols 
 (accessed through <kbd>AltGr</kbd>) have been crammed full with numbers 
 and the other ASCII symbols for which you would normally have had 
 contort your hands.
@@ -95,7 +95,7 @@ number pad can now be controlled entirely with your right-hand. -->
 
 ## Escape
 
-![The action portion of the Thumbledore keyboard layout.](kb-action.svg)
+![The action portion of the Handalf keyboard layout.](kb-action.svg)
 
 <kbd>Esc</kbd> is given an easily accessible spots for your left thumb, 
 since it is useful for modal applications like Vim. However, when you 
@@ -140,7 +140,7 @@ computer; the kernel maps that to a *keycode*; and finally, your
 keyboard layout considers that keycode (along with the active modifiers) 
 and emits a *keysym*.
 
-Thumbledore remaps *symbols* at this keysym level, while other keys are 
+Handalf remaps *symbols* at this keysym level, while other keys are 
 mapped at the scan- or keycode-level. Teasing the two apart like this 
 has several benefits:
 
@@ -164,8 +164,7 @@ has several benefits:
 ## Usage and installation
 
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
-`sudo make install`. Activate the `thumbledore` layout in your 
-environment.
+`sudo make install`. Activate the `handalf` layout in your environment.
 
 <!--
 ## Other
