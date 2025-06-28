@@ -9,7 +9,7 @@ disable_modifier_guard = 0
 FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
 ALTGR = overload(altgr, oneshot(altgr))
 # SHIFT = overload(shift2, oneshot(shift))
-SHIFT = timeout(overload(shift, enter), 100, oneshot(shift))
+SHIFT = oneshot(shift)
 rightshift = layer(alt)
 leftmeta = enter
 
