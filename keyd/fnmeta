@@ -1,5 +1,9 @@
+[FnMetaOneshot]
+space = enter
+
 [FnMeta]
-space = timeout(layer(MetaFn), 500, overload(MetaFn, M-space))
+space = enter
+FN = layer(MetaFn)
 
 # Left (Fn)
 
