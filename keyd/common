@@ -6,11 +6,11 @@ oneshot_timeout = 500
 disable_modifier_guard = 0
 
 [main]
-FN = timeout(overload(FnMeta, oneshot(FnMetaOneshot)), 140, layer(FnMeta))
+FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
 ALTGR = oneshot(altgr)
 SHIFT = oneshot(shift)
 rightshift = layer(alt)
-leftmeta = timeout(overload(control, esc), 140, layer(control))
+leftmeta = timeout(oneshot(control), 200, layer(control))
 rightcontrol = layer(alt)
 compose = layer(alt)
 

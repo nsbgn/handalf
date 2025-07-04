@@ -1,10 +1,5 @@
-[FnMetaOneshot]
-space = enter
-FN = layer(MetaFn)
-
 [FnMeta]
-space = enter
-FN = layer(MetaFn)
+space = layer(MetaFn)
 
 # Left (Fn)
 
