@@ -81,6 +81,9 @@ number pad can now be controlled entirely with your right-hand. -->
   unmodified key, you can just tap once and forget about it. MUch 
   better!
 
+- Holding <kbd>Shift</kbd> and <kbd>AltGr</kbd> together does not change 
+  the keysyms, but it does change the keycode.
+
 - You will often need a decimal point while typing numbers, but it is 
   cumbersome to exit the numpad just to grab one and return. A similar 
   observation can be made for the underscore when typing in all-caps. 
