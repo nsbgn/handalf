@@ -1,4 +1,5 @@
-space = oneshotm(doublespace, space)
+#space = oneshotm(doublespace, space)
+space = space
 backspace = backspace
 
 # Left
@@ -28,7 +29,7 @@ u = 7
 i = 8
 o = 9
 p = .
-\ = @
+[ = enter
 
 h = ~
 j = 4
@@ -42,3 +43,4 @@ m = 1
 , = 2
 . = 3
 / = /
+rightshift = @
