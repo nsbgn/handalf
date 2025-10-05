@@ -1,0 +1,124 @@
+# Double-tapping space and holding it while typing a compose key sequence will
+# remove the space from the first tap and insert the compose key before the
+# sequence. This is a good use of overloading because (1) the space key will
+# still appear instantaneously during normal typing; (2) any compose key
+# sequence only makes sense during regular typing, so the fact that we inject a
+# backspace to 'backtrack' is fine; and (3)  we can use overloadt2 to mitigate
+# the risk that a 'normal' double space tap is interpreted as a compose key
+# sequence, but the subsequent requirement that, for a compose sequence to
+# trigger, the keyup of the space *must* occur after the keyup of the first
+# key, is unlikely to lead to misfiring, because a compose sequence consists of
+# at least two keys anyway.
+#
+# Issue: stacking modifiers
+# Issue: multiple compose sequences?
+
+[main]
+space = timeout(oneshotm(spaced, space), 150, space)
+
+[spaced]
+space = overloadt2(composed, oneshotm(spaced, space), 150)
+
+[empty]
+
+[composed]
+# removed backspace for now.
+q = swapm(empty, macro(rightmeta q))
+w = swapm(empty, macro(rightmeta w))
+e = swapm(empty, macro(rightmeta e))
+r = swapm(empty, macro(rightmeta r))
+t = swapm(empty, macro(rightmeta t))
+a = swapm(empty, macro(rightmeta a))
+s = swapm(empty, macro(rightmeta s))
+d = swapm(empty, macro(rightmeta d))
+f = swapm(empty, macro(rightmeta f))
+g = swapm(empty, macro(rightmeta g))
+z = swapm(empty, macro(rightmeta z))
+x = swapm(empty, macro(rightmeta x))
+c = swapm(empty, macro(rightmeta c))
+v = swapm(empty, macro(rightmeta v))
+b = swapm(empty, macro(rightmeta b))
+y = swapm(empty, macro(rightmeta y))
+u = swapm(empty, macro(rightmeta u))
+i = swapm(empty, macro(rightmeta i))
+o = swapm(empty, macro(rightmeta o))
+p = swapm(empty, macro(rightmeta p))
+[ = swapm(empty, macro(rightmeta [))
+h = swapm(empty, macro(rightmeta h))
+j = swapm(empty, macro(rightmeta j))
+k = swapm(empty, macro(rightmeta k))
+l = swapm(empty, macro(rightmeta l))
+; = swapm(empty, macro(rightmeta ;))
+' = swapm(empty, macro(rightmeta '))
+n = swapm(empty, macro(rightmeta n))
+m = swapm(empty, macro(rightmeta m))
+, = swapm(empty, macro(rightmeta ,))
+. = swapm(empty, macro(rightmeta .))
+/ = swapm(empty, macro(rightmeta /))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
