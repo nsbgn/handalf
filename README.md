@@ -37,7 +37,9 @@ constraints of a laptop keyboard.
     no reasonable shortcut should be impossible or cumbersome to type.
 -   **Good feeling.** Muscle memory, simplicity, semantic clustering, 
     and symmetry are all taken into consideration --- but above all, 
-    keys are placed in such a way that they *feel* good.
+    keys are placed in such a way that they *feel* good: they encourage 
+    rolling motions, have common symbols in easy-to-reach spots, 
+    etcetera.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
@@ -49,6 +51,10 @@ constraints of a laptop keyboard.
     accesses a layer when held. This is considered safe because `Esc` 
     tends to punctuate a keystroke and a misfire is not catastrophic. 
     The `Esc` is only registered when the tap is short.
+-   **Stateless.** Well, almost. You shouldn't need to remember what 
+    'mode' your keyboard is in: all symbols depend only on what keys you 
+    are *currently* pressing, or perhaps which keys you were pressing 
+    some fraction of a second ago.
 
 
 ## Symbols
