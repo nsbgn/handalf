@@ -38,7 +38,8 @@ constraints of a laptop keyboard.
 -   **Good feeling.** Muscle memory, simplicity, semantic clustering, 
     and symmetry are all taken into consideration --- but above all, 
     keys are placed in such a way that they *feel* good: they encourage 
-    rolling motions, have common symbols in easy-to-reach spots, 
+    rolling motions, have common symbols in easy-to-reach spots, do not 
+    mix action keys with letter keys, try to avoid layer switching, 
     etcetera.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
@@ -102,6 +103,29 @@ number pad can now be controlled entirely with your right-hand. -->
   special characters by typing intuitive keys in succession. For 
   example, <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
 
+## Shift
+
+We need a clever way to compromise on the lack of thumb keys on a laptop 
+keyboard, in as unobtrusive a way as possible. My solution is the 
+following:
+
+Ideally, the bottom-left key will be the backslash, but on a laptop, 
+this key will retain its function as <kbd>Shift</kbd>. In the Shift- and 
+AltGr-layers, it is then *also* a backslash. That is, double tapping 
+<kbd>Shift</kbd>, or tapping while holding <kbd>AltGr</kbd>, will get 
+you `\`, and if you keep holding the key, the associated Shift modifier 
+will stay active.
+
+Because `\` is often for escaping, it will normally be combined with 
+special characters, and thus, you would have needed to activate 
+<kbd>AltGr</kbd> or <kbd>Shift</kbd> *anyway*. In this way, we retain an 
+easily accessible <kbd>Shift</kbd> on generic keyboards, including 
+oneshot behaviour, without wasting a good spot for a useful symbol key.
+
+The position at the edge is aesthetically pleasing, as `\` is often used 
+for escaping characters. Moreover, its location has some precedent.
+
+
 ## Escape
 
 ![The action portion of the Handalf keyboard layout.](kb-action.svg)
@@ -116,17 +140,17 @@ navigation cluster, F-keys, and modifiers.
   This plays well with the convention of bringing up some sort of menu 
   upon tapping *Meta*.
 
-- It must be confessed that the above is a bit of a simplification. 
-  Observe that, in the **Fn** layer, the navigation cluster is placed so 
-  that you can control the directional keys with only your left hand. On 
-  the other hand (literally), the F-keys are not often used in modern 
-  applications. That is why holding the <kbd>Esc</kbd> key brings up the 
-  **Fn**-layer only on the *left* side, whereas the *right* side instead 
-  exposes *Meta*-keys, easily accessible for mapping actions in your 
-  window manager. When you *also* hold *Space*, this is flipped around, 
-  as the left-hand *Meta*-keys and right-hand F-keys are exposed. This 
-  is, in my opinion, the most distressing aspect of the layout, but it 
-  is worth it for the practical convenience it brings.
+- Admittedly, the above is a simplification. In the **Fn** layer, the 
+  navigation cluster is placed so that you can control the directional 
+  keys with only your left hand. On the other hand (literally), the 
+  F-keys are not often used in modern applications. That is why holding 
+  the <kbd>Esc</kbd> key brings up the **Fn**-layer only on the *left* 
+  side, whereas the *right* side instead exposes *Meta*-keys, easily 
+  accessible for mapping actions in your window manager. When you *also* 
+  hold *Space*, this is flipped around, as the left-hand *Meta*-keys and 
+  right-hand F-keys are exposed. This is, in my opinion, the most 
+  distressing aspect of the layout, but it is worth it for the practical 
+  convenience it brings.
 
 - The keys labeled <kbd>Alt</kbd> and <kbd>Ctrl</kbd> activate the 
   corresponding modifier for any subsequent keypress that occurs shortly 

@@ -3,7 +3,7 @@ xkb_symbols "handalf" {
     include "us(basic)"
     name[Group1]= "English (Handalf, QWERTY)";
 
-    key <AD01> { [ q, Q, exclam, exclam ] };
+    key <AD01> { [ q, Q, bar, bar ] };
     key <AD02> { [ w, W, bracketleft, bracketleft ] };
     key <AD03> { [ e, E, plus, plus ] };
     key <AD04> { [ r, R, numbersign, numbersign ] };
@@ -12,15 +12,15 @@ xkb_symbols "handalf" {
     key <AD07> { [ u, U, 7, 7 ] };
     key <AD08> { [ i, I, 8, 8 ] };
     key <AD09> { [ o, O, 9, 9 ] };
-    key <AD10> { [ p, P, period, period ] };
-    key <BKSL> { [ backslash, bar, at, at ] };
+    key <AD10> { [ p, P, percent, percent ] };
+    key <BKSL> { [ backslash, backslash, backslash, backslash ] };
 
     key <AC01> { [ a, A, asterisk, asterisk ] };
     key <AC02> { [ s, S, parenleft, parenleft ] };
     key <AC03> { [ d, D, minus, minus ] };
     key <AC04> { [ f, F, equal, equal ] };
     key <AC05> { [ g, G, parenright, parenright ] };
-    key <AC06> { [ h, H, asciitilde, asciitilde ] };
+    key <AC06> { [ h, H, at, at ] };
     key <AC07> { [ j, J, 4, 4 ] };
     key <AC08> { [ k, K, 5, 5 ] };
     key <AC09> { [ l, L, 6, 6 ] };
@@ -32,11 +32,11 @@ xkb_symbols "handalf" {
     key <AB03> { [ c, C, dollar, dollar ] };
     key <AB04> { [ v, V, underscore, underscore ] };
     key <AB05> { [ b, B, braceright, braceright ] };
-    key <AB06> { [ n, N, percent, percent ] };
+    key <AB06> { [ n, N, asciitilde, asciitilde ] };
     key <AB07> { [ m, M, 1, 1 ] };
     key <AB08> { [ comma, less, 2, 2 ] };
     key <AB09> { [ period, greater, 3, 3 ] };
-    key <AB10> { [ slash, question, slash, slash ] };
+    key <AB10> { [ slash, question, exclam, exclam ] };
 
     include "level3(ralt_switch)"
 };

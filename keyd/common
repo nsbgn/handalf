@@ -14,22 +14,30 @@ leftmeta = timeout(oneshot(control), 200, layer(control))
 rightcontrol = layer(alt)
 compose = layer(alt)
 
+SHIFT = oneshot(shift)
+
+[shift]
+SHIFT = layerm(shift, backslash)
+
+[altgr]
+SHIFT = backslash
+
 # WORKAROUND: Double tapping space while holding shift/altgr (thus entering
 # doublespace) should not keep altgr/shift active unless altgr/shift is
 # actually still pressed. This is why we add shift2/altgr2 layers whose only
 # purpose is to avoid triggering the continued activation of modifiers during
 # oneshots. This is not perfect but it avoids the most egregious issues
-[shift2:S]
-space = oneshotm(doublespace, space)
+# [shift2:S]
+# space = oneshotm(doublespace, space)
 
-[shift:S]
-ALTGR = overload(altgr, swap(altgr))
+# [shift:S]
+# ALTGR = overload(altgr, swap(altgr))
 
-[altgr:G]
-ALTGR = overload(shift, swap(shift))
+# [altgr:G]
+# ALTGR = overload(shift, swap(shift))
 
-[altgr2:G]
-space = oneshotm(doublespace, space)
+# [altgr2:G]
+# space = oneshotm(doublespace, space)
 
 #[doublespace]
 #[doublespace+shift2]
