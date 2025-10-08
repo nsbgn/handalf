@@ -13,13 +13,18 @@ SHIFT = oneshot(shift)
 leftmeta = timeout(oneshot(control), 200, layer(control))
 rightcontrol = layer(alt)
 compose = layer(alt)
+rightshift = rightmeta
 
 SHIFT = oneshot(shift)
 
 [shift]
+# FIXME: This will keep the oneshot active
 SHIFT = layerm(shift, backslash)
 
 [altgr]
+SHIFT = backslash
+
+[shift+altgr]
 SHIFT = backslash
 
 # WORKAROUND: Double tapping space while holding shift/altgr (thus entering
