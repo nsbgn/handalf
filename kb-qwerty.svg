@@ -76,7 +76,7 @@ g.kb > g > g > text:nth-child(3) {
     <g class="c1">
       <text>q</text>
       <text>Q</text>
-      <text>|</text>
+      <text>!</text>
     </g>
     <g class="c2">
       <text>w</text>
@@ -147,7 +147,7 @@ g.kb > g > g > text:nth-child(3) {
     <g class="c4">
       <text>v</text>
       <text>V</text>
-      <text>_</text>
+      <text>|</text>
     </g>
     <g class="c5">
       <text>b</text>
@@ -227,7 +227,7 @@ g.kb > g > g > text:nth-child(3) {
     <g class="c0">
       <text>n</text>
       <text>N</text>
-      <text>~</text>
+      <text>_</text>
     </g>
     <g class="c1">
       <text>m</text>
@@ -247,7 +247,7 @@ g.kb > g > g > text:nth-child(3) {
     <g class="c4">
       <text>/</text>
       <text>?</text>
-      <text>!</text>
+      <text>~</text>
     </g>
     <text class="c5 tiny">Esc</text>
   </g>

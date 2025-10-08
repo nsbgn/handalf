@@ -4,7 +4,7 @@ backspace = backspace
 
 # Left
 
-q = |
+q = !
 w = [
 e = +
 r = #
@@ -19,7 +19,7 @@ g = )
 z = &
 x = {
 c = $
-v = _
+v = |
 b = }
 
 # Right
@@ -38,9 +38,9 @@ l = 6
 ; = 0
 ' = `
 
-n = ~
+n = _
 m = 1
 , = 2
 . = 3
-/ = !
+/ = ~
 # rightshift = @

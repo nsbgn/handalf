@@ -3,7 +3,7 @@ xkb_symbols "handalf" {
     include "us(basic)"
     name[Group1]= "English (Handalf, QWERTY)";
 
-    key <AD01> { [ q, Q, bar, bar ] };
+    key <AD01> { [ q, Q, exclam, exclam ] };
     key <AD02> { [ w, W, bracketleft, bracketleft ] };
     key <AD03> { [ e, E, plus, plus ] };
     key <AD04> { [ r, R, numbersign, numbersign ] };
@@ -30,13 +30,13 @@ xkb_symbols "handalf" {
     key <AB01> { [ z, Z, ampersand, ampersand ] };
     key <AB02> { [ x, X, braceleft, braceleft ] };
     key <AB03> { [ c, C, dollar, dollar ] };
-    key <AB04> { [ v, V, underscore, underscore ] };
+    key <AB04> { [ v, V, bar, bar ] };
     key <AB05> { [ b, B, braceright, braceright ] };
-    key <AB06> { [ n, N, asciitilde, asciitilde ] };
+    key <AB06> { [ n, N, underscore, underscore ] };
     key <AB07> { [ m, M, 1, 1 ] };
     key <AB08> { [ comma, less, 2, 2 ] };
     key <AB09> { [ period, greater, 3, 3 ] };
-    key <AB10> { [ slash, question, exclam, exclam ] };
+    key <AB10> { [ slash, question, asciitilde, asciitilde ] };
 
     include "level3(ralt_switch)"
 };
