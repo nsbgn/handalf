@@ -1,24 +1,29 @@
 [FnMeta]
 space = layer(MetaFn)
+# to do:
+# capslock
+# scrolllock
+# numlock
+# insert
 
 # Left (Fn)
 
-q = pageup
+q = noop
 w = home
 e = up
 r = end
-t = noop
+t = pageup
 
 a = timeout(oneshot(Control), 150, overload(Control, leftcontrol))
 s = left
 d = down
 f = right
-g = delete
+g = pagedown
 
 z = timeout(oneshot(Control), 150, overload(Control, rightcontrol))
 x = pause
 c = insert
-v = pagedown
+v = delete
 b = sysrq
 
 # Right (Meta)
@@ -34,11 +39,11 @@ h = M-h
 j = M-j
 k = M-k
 l = M-l
-; = overload(alt, M-;)
+; = M-;
 ' = M-'
 
 n = M-n
 m = M-m
 , = M-,
 . = M-.
-/ = overload(alt, M-/)
+/ = M-/

@@ -23,22 +23,21 @@ b = M-b
 
 # Right (Fn)
 
-y = f12
+y = rightmeta
 u = f7
 i = f8
 o = f9
-p = noop
-\ = scrolllock
+p = f10
 
-h = f11
+h = rightcontrol
 j = f4
 k = f5
 l = f6
-; = timeout(oneshot(Alt), 150, overload(Alt, leftalt))
-' = capslock
+; = f11
+' = pause
 
 n = f10
 m = f1
 , = f2
 . = f3
-/ = timeout(oneshot(Alt), 150, overload(Alt, rightalt))
+/ = f12
