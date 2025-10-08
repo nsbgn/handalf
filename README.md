@@ -58,6 +58,15 @@ constraints of a laptop keyboard.
     some fraction of a second ago.
 
 
+## Arrow keys
+
+Tricks can be handy, but they must not require conscious thought. For 
+example: you will usually use the arrow keys while typing a sentence, 
+but the next key may overlap with the activation of Fn. For this reason, 
+the Super modifier will be disabled when pressing something in the `Fn` 
+layer some milliseconds after using the arrow keys.
+
+
 ## Symbols
 
 ![The Handalf-qwerty keyboard layout.](kb-qwerty.svg)
@@ -103,7 +112,7 @@ number pad can now be controlled entirely with your right-hand. -->
   special characters by typing intuitive keys in succession. For 
   example, <kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`.
 
-## Shift
+## Sfift
 
 We need a clever way to compromise on the lack of thumb keys on a laptop 
 keyboard, in as unobtrusive a way as possible. My solution is the 
@@ -120,10 +129,9 @@ Because `\` is often for escaping, it will normally be combined with
 special characters, and thus, you would have needed to activate 
 <kbd>AltGr</kbd> or <kbd>Shift</kbd> *anyway*. In this way, we retain an 
 easily accessible <kbd>Shift</kbd> on generic keyboards, including 
-oneshot behaviour, without wasting a good spot for a useful symbol key.
+oneshot behaviour, without wasting a good spot for a useful symbol key. 
 
-The position at the edge is aesthetically pleasing, as `\` is often used 
-for escaping characters. Moreover, its location has some precedent.
+The same reasoning goes for the compose key on the opposite edge.
 
 
 ## Escape
