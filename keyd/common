@@ -15,16 +15,18 @@ rightcontrol = layer(alt)
 compose = layer(alt)
 rightshift = rightmeta
 
-SHIFT = oneshot(shift)
+SHIFT = overload(shift, oneshot(shift_tap))
 
-[shift]
-# FIXME: This will keep the oneshot active
+[shift_tap:S]
 SHIFT = layerm(shift, backslash)
 
 [altgr]
 SHIFT = backslash
 
+# This will avoid keeping the oneshot active
 [shift+altgr]
+SHIFT = backslash
+[shift+shift_tap]
 SHIFT = backslash
 
 # WORKAROUND: Double tapping space while holding shift/altgr (thus entering
