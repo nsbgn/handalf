@@ -1,29 +1,31 @@
 [FnMeta]
+
+leftshift = overload(shift, capslock)
+altgr = overload(altgr, numlock)
+
 space = layer(MetaFn)
-# to do:
-# capslock
-# scrolllock
-# numlock
-# insert
 
 # Left (Fn)
 
-q = noop
+tab = tab
+q = layer(MetaFn)
 w = home
 e = up
 r = end
 t = pageup
 
-a = timeout(oneshot(Control), 150, overload(Control, leftcontrol))
+backspace = backspace
+a = esc
 s = left
 d = down
 f = right
 g = pagedown
 
-z = timeout(oneshot(Control), 150, overload(Control, rightcontrol))
-x = pause
-c = insert
-v = delete
+leftshift = leftshift
+z = delete
+x = prog1
+c = prog2
+v = prog3
 b = sysrq
 
 # Right (Meta)

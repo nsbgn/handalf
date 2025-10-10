@@ -9,13 +9,13 @@ e = M-e
 r = M-r
 t = M-t
 
-a = overload(control, M-a)
+a = M-a
 s = M-s
 d = M-d
 f = M-f
 g = M-g
 
-z = overload(control, M-z)
+z = M-z
 x = M-x
 c = M-c
 v = M-v
@@ -23,21 +23,23 @@ b = M-b
 
 # Right (Fn)
 
-y = rightmeta
+y = scrolllock
 u = f7
 i = f8
 o = f9
 p = f10
+enter = enter
 
-h = rightcontrol
+h = insert
 j = f4
 k = f5
 l = f6
 ; = f11
-' = pause
+' = compose
 
-n = f10
+n = pause
 m = f1
 , = f2
 . = f3
 / = f12
+rightshift = rightshift
