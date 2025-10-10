@@ -1,7 +1,8 @@
 [FnMeta]
 
 leftshift = overload(shift, capslock)
-altgr = overload(altgr, numlock)
+rightalt = overload(altgr, numlock)
+leftmeta = cancel
 
 space = layer(MetaFn)
 

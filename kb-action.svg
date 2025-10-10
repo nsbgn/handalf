@@ -117,7 +117,7 @@ text { font-size: 8px; text-anchor: middle; font-family: monospace; }
   <g class="r3">
     <text class="c0"><tspan x="0" y="-6">Caps</tspan><tspan x="0" y="6">Shift</tspan></text>
     <text class="c1"><tspan x="0" y="-6">NumLk</tspan><tspan x="0" y="6">AltGr</tspan></text>
-    <text class="c2 mod">Cancel</text>
+    <text class="c2">Cancel</text>
   </g>
   </g>
 </svg>
