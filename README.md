@@ -173,6 +173,11 @@ navigation cluster, F-keys, and modifiers.
       tapping a modifier on its own --- this is achieved by holding it 
       on its own for a little longer.
 
+# Suggested tweaks
+
+- Swap the overload to Esc to an overload to Meta.
+- Swap the left/right halves of **Nav/Meta** and **Meta/Fn** so that you 
+  get only a **Nav/Fn** and **Meta** layer.
 
 # Technical considerations
 
