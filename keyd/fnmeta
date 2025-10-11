@@ -1,7 +1,12 @@
+[shift_tap+FnMeta]
+leftshift = capslock
+
 [FnMeta]
 
-leftshift = overload(shift, capslock)
-rightalt = overload(altgr, numlock)
+#leftshift = overload(shift, capslock)
+#rightalt = overload(altgr, numlock)
+leftshift = overload(shift, oneshot(shift_tap))
+leftcontrol = rightcontrol
 leftmeta = cancel
 
 space = layer(MetaFn)
@@ -9,7 +14,7 @@ space = layer(MetaFn)
 # Left (Fn)
 
 tab = tab
-q = layer(MetaFn)
+q = sysrq
 w = home
 e = up
 r = end
@@ -22,12 +27,12 @@ d = down
 f = right
 g = pagedown
 
-leftshift = leftshift
+leftshift = layer(shift)
 z = delete
 x = prog1
 c = prog2
 v = prog3
-b = sysrq
+b = prog4
 
 # Right (Meta)
 

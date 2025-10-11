@@ -6,28 +6,26 @@ oneshot_timeout = 500
 disable_modifier_guard = 0
 
 [main]
-FN = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
-ALTGR = oneshot(altgr)
-SHIFT = oneshot(shift)
-# rightshift = layer(alt)
-leftmeta = timeout(oneshot(control), 200, layer(control))
-rightcontrol = layer(alt)
-compose = layer(alt)
+leftalt = timeout(overload(FnMeta, esc), 140, layer(FnMeta))
+rightalt = oneshot(altgr)
+leftmeta = layer(alt)
+leftcontrol = layer(control)
 rightshift = rightmeta
 
-SHIFT = overload(shift, oneshot(shift_tap))
+leftshift = overload(shift, oneshot(shift_tap))
 
 [shift_tap:S]
-SHIFT = layerm(shift, backslash)
+leftshift = layerm(shift, backslash)
 
-[altgr]
-SHIFT = backslash
+[altgr:G]
+leftshift = backslash
+rightalt = numlock
 
 # This will avoid keeping the oneshot active
 [shift+altgr]
-SHIFT = backslash
+leftshift = backslash
 [shift+shift_tap]
-SHIFT = backslash
+leftshift = backslash
 
 # WORKAROUND: Double tapping space while holding shift/altgr (thus entering
 # doublespace) should not keep altgr/shift active unless altgr/shift is
