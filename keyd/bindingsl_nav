@@ -1,0 +1,23 @@
+# Left (Fn)
+
+tab = tab
+q = sysrq
+w = home
+e = up
+r = end
+t = pageup
+
+backspace = backspace
+a = esc
+s = left
+d = down
+f = right
+g = pagedown
+
+leftshift = layer(shift)
+z = delete
+x = prog1
+c = prog2
+v = prog3
+b = prog4
+
