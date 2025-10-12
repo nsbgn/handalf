@@ -1,6 +1,6 @@
 #space = oneshotm(doublespace, space)
 space = space
-backspace = backspace
+capslock = backspace
 [ = enter
 
 # Left
