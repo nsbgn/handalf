@@ -55,7 +55,7 @@ constraints of a laptop keyboard.
 Above all, the layout should **feel good**. Many things are taken into 
 consideration: simplicity, rolling motions, muscle memory, semantic 
 clustering, symmetry, avoiding mixing action keys with letter keys, 
-etcetera. Final prioritization based on vibes. :)
+etcetera --- but the final prioritization is based solely on vibes. :)
 
 ## Symbol keys
 
@@ -76,27 +76,35 @@ number pad can now be controlled entirely with your right-hand. -->
 
 ![The action portion of the Handalf keyboard layout.](kb-action.svg)
 
-On the left side of the Space, what would have been your <kbd>Alt</kbd>, 
-is now your *action* layer. When you *hold it*, it reveals a navigation 
-cluster, the Meta modifier, F-keys, and other common keys.
+On the left side of <kbd>Space</kbd>, what would usually be your 
+<kbd>Alt</kbd> now accesses an *action layer*. Behind this layer are 
+keys that perform an *action*, like the navigation cluster, the 
+<kbd>Meta</kbd> modifier, and F-keys. (*Meta* is also sometimes referred 
+to as the *Super*, *Windows*, *OS* or *GUI*-key.)
 
-Pressing space while in this layer turns it into *Meta* (also sometimes 
-referred to as the *Super*, *Windows*, *OS* or *GUI*-key). This plays 
-well with the convention of bringing up some sort of menu upon tapping 
-*Meta*.
+- The navigation cluster is placed so that you can control the 
+  directional keys with only your *left* hand. The *right*-hand side 
+  exposes keys augmented with the **Meta** modifier, easily accessible 
+  for mapping actions in your window manager.
 
-Admittedly, the above is a simplification. In the **Fn** layer, the 
-navigation cluster is placed so that you can control the directional 
-keys with only your left hand. On the other hand (literally), the F-keys 
-are not often used in modern applications. That is why holding the 
-<kbd>Esc</kbd> key brings up the **Fn**-layer only on the *left* side, 
-whereas the *right* side instead exposes *Meta*-keys, easily accessible 
-for mapping actions in your window manager. When you *also* hold 
-*Space*, this is flipped around, as the left-hand *Meta*-keys and 
-right-hand F-keys are exposed. This is, in my opinion, the most 
-distressing aspect of the layout, but it is worth it for the practical 
-convenience it brings.
+- This is flipped around by holding <kbd>Space</kbd>: then the *left* 
+  side holds **Meta**-keys and the *right*-hand side has your F-keys.
 
+- Just tapping <kbd>Space</kdb> will emit <kbd>Meta</kdb> on its own, 
+  which plays well with the convention, as established in multiple OSes 
+  and DEs, of having <kbd>Meta</kdb> bring up a global menu.
+
+This criss-crossed approach is an aesthetic sacrifice, worth it for the 
+practical convenience it brings. After all, the F-keys are not often 
+used in modern applications. And while it is useful to reserve some 
+<kbd>Meta</kbd> keys for frictionless window manager bindings, half a 
+keyboard should be plenty for this purpose.
+
+<!--
+<kbd>Space</kbd>, being a thumb key and having no associations with any 
+other modifier, is the obvious choice for switching between these two 
+half-layers.
+-->
 
 ## Other changes
 
