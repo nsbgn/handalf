@@ -1,6 +1,6 @@
-# This tweak overloads the `esc` key (at the position of the `a` key on the
+# This tweak overloads the `esc` key (at the position of the `z` key on the
 # _Nav/Meta_ layer) to act as a `ctrl` key when held. This gives you a
-# comfortable way to type `ctrl+{c,v,s,f,p}` without an easy-to-reach dedicated
+# comfortable way to type `ctrl+{c,v,s,f,p,d}` without an easy-to-reach dedicated
 # thumb control key, at the expense of some of the beauty and simplicity of the
 # vanilla layout.
 
@@ -45,4 +45,4 @@ m = C-,
 / = C-/
 
 [NavMeta]
-a = overload(Control, esc)
+z = overload(Control, esc)

@@ -8,14 +8,14 @@ r = end
 t = pageup
 
 backspace = backspace
-a = esc
+a = delete
 s = left
 d = down
 f = right
 g = pagedown
 
 leftshift = layer(shift)
-z = delete
+z = esc
 x = prog1
 c = prog2
 v = prog3
