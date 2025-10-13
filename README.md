@@ -14,15 +14,11 @@ Handalf is a keyboard layout that works well for fancy keyboards with 2
 or more thumb keys per hand, but that *also* fit broadly within the 
 constraints of a laptop keyboard.
 
--   **Each finger travels one key at most.** Your thumbs pick up the slack.
--   **Easy to remember.** All symbols are accessible with just one of 
-    the normal <kbd>Shift</kbd> and <kbd>AltGr</kbd> modifiers, without 
-    combining them. There is only *one* additional layer for navigation 
-    and function keys — and that's it.
--   **One-handed control.** The number pad can be operated with just the 
-    right hand. Navigation keys can be reached with just the left, 
-    freeing your hand for the mouse. Unfortunately, this also means that 
-    the layout is biased towards right-handed people.
+-   **Each finger travels one key at most.** Your thumbs pick up the 
+    slack.
+-   **Easy to remember.** All symbols are accessible with 
+    <kbd>Shift</kbd> and <kbd>AltGr</kbd> modifiers (not both!). There 
+    is only *one* additional layer for navigation and function keys.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a laptop keyboard. Only the backslash key 
     <kbd>\\</kbd> functions slightly differently.
@@ -31,11 +27,11 @@ constraints of a laptop keyboard.
     ergonomically significant --- it's a great place to start.
 -   **Regressions are avoided.** When stuffing so much functionality in 
     a limited space, it is inevitable that some key sequences will 
-    become hard to generate. However, care has been taken to make few 
+    become harder to generate. However, care has been taken to make few 
     assumptions about the programs you will be running. That is, all 
-    modifiers should still stack in an intuitive and consistent way, and 
-    no reasonable shortcut should be made impossible or even just 
-    cumbersome to type.
+    modifier combinations should still be available, they should still 
+    stack in an intuitive and consistent way, and no reasonable shortcut 
+    should be made impossible to type.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
@@ -43,19 +39,19 @@ constraints of a laptop keyboard.
     yourself to work with it, but I have not made that sacrifice here.
 -   **Overloading is used sparingly.** Even on non-alpha keys, 
     overloading has the above downsides, albeit to a lesser degree. 
-    Therefore, only *one* key has been overloaded: <kbd>Esc</kbd> 
-    accesses a layer when held. This is considered safe because `Esc` 
-    tends to punctuate a keystroke and a misfire is not catastrophic. 
-    The `Esc` is only registered when the tap is short.
+    Therefore, only *one* key has been overloaded, because it tends to 
+    punctuate a keystroke: <kbd>Esc</kbd>.
 -   **Stateless.** Well, almost. You shouldn't need to remember what 
     'mode' your keyboard is in: all symbols depend only on what keys you 
-    are *currently* pressing, or perhaps which keys you were pressing 
+    are *currently* pressing, or at most which keys you were pressing 
     some fraction of a second ago.
 
 Above all, the layout should **feel good**. Many things are taken into 
 consideration: simplicity, rolling motions, muscle memory, semantic 
 clustering, symmetry, avoiding mixing action keys with letter keys, 
 etcetera --- but the final prioritization is based solely on vibes. :)
+
+Unfortunately, the layout is biased toward right-handed people.
 
 ## Symbol keys
 
@@ -70,7 +66,7 @@ ASCII symbols for which you would normally have had contort your hands.
 
 <!-- Because AltGr is pressed with your right-hand thumb, the left-hand 
 side of the keyboard is preferred for things like parentheses, while the 
-number pad can now be controlled entirely with your right-hand. -->
+number pad can now be operated entirely with your right-hand. -->
 
 ## Action keys
 
@@ -111,8 +107,10 @@ half-layers.
 - <kbd>BkSp</kbd> takes the place of <kbd>Caps</kbd>, avoiding the huge 
   move your pinky would have made.
 
-- <kbd>Esc</kbd> is given an easily accessible spots for your left 
-  thumb, since it is useful for modal applications like Vim.
+- The Action key can be overloaded with <kbd>Esc</kbd> is given an 
+  easily accessible spots for your left thumb, since it is useful for 
+  modal applications like Vim. The `Esc` is only registered when the tap 
+  is short.
 
 - <kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
   <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't access shortcuts — they 
@@ -128,7 +126,13 @@ half-layers.
   reason, double-tapping <kbd>Space</kbd> while holding <kbd>AltGr</kbd> 
   will emit a decimal point (resulting in `.` or `,` depending on your 
   locale), and doing so while holding <kbd>Shift</kbd> will emit an 
-  underscore `_`.
+  underscore `_`. **(TODO)**
+
+- You will usually use the arrows in the **Nav/Meta** layer while typing 
+  a sentence, but if you continue typing quickly, the **Meta** portion 
+  may still be active. For this reason, the right half will be disabled 
+  when pressing something in the **Nav/Meta** layer some milliseconds 
+  after using the arrow keys. **(TODO)**
 
 - The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
   special characters by typing intuitive keys in succession. For 
@@ -191,15 +195,6 @@ has several benefits:
 Holding <kbd>Shift</kbd> and <kbd>AltGr</kbd> together does not change 
 the keysyms, but it does change the keycode. This is helpful in 
 situations where an application monitors
-
-## Arrow keys
-
-Tricks can be handy, but they must not require conscious thought. For 
-example: you will usually use the arrow keys while typing a sentence, 
-but the next key may overlap with the activation of Fn. For this reason, 
-the Super modifier will be disabled when pressing something in the `Fn` 
-layer some milliseconds after using the arrow keys.
-
 
 # Suggested tweaks
 
