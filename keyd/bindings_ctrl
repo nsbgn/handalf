@@ -1,0 +1,41 @@
+# Because there is no oneshotswap (see issue
+# <https://github.com/rvaiya/keyd/issues/673>)
+
+# Note: tap-holding automatically combines the action keys with modifiers
+
+[Control:C]
+space = overload(meta, C-space)
+
+q = C-q
+w = C-w
+e = C-e
+r = C-r
+t = C-t
+y = C-y
+u = C-u
+i = C-i
+o = C-o
+p = C-p
+\ = C-\
+
+a = C-a
+s = C-s
+d = C-d
+f = C-f
+g = C-g
+h = C-h
+j = C-j
+k = C-k
+l = C-l
+; = C-;
+' = C-'
+
+z = C-z
+x = C-x
+c = C-c
+v = C-v
+b = C-b
+n = C-n
+m = C-,
+. = C-.
+/ = C-/
