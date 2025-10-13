@@ -3,6 +3,8 @@ xkb_symbols "handalf" {
     include "us(basic)"
     name[Group1]= "English (Handalf, QWERTY)";
 
+    key <TAB> { [ Tab, Tab, Tab, Tab ] };
+
     key <AD01> { [ q, Q, bar, bar ] };
     key <AD02> { [ w, W, bracketleft, bracketleft ] };
     key <AD03> { [ e, E, plus, plus ] };
