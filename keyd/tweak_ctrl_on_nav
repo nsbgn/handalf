@@ -1,7 +1,7 @@
-# This tweak overloads the `esc` key (at the position of the `z` key on the
-# _Nav/Meta_ layer) to act as a `ctrl` key when held. This gives you a
-# comfortable way to type `ctrl+{c,v,s,f,p,d}` without an easy-to-reach dedicated
-# thumb control key, at the expense of some of the beauty and simplicity of the
+# This tweak overloads pinky keys (at the position of the `a` and `z` keys on
+# the _Nav/Meta_ layer) to act as a `ctrl` key. This gives you a comfortable
+# way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach dedicated thumb
+# control key, at the expense of some of the beauty and simplicity of the
 # vanilla layout.
 
 # We use a `Control` layer overlaid on the currently active layer, because
@@ -44,5 +44,6 @@ m = C-,
 . = C-.
 / = C-/
 
+[empty]
 [NavMeta]
-z = overload(Control, esc)
+a = oneshot(Control)

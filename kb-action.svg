@@ -60,7 +60,7 @@ text { font-size: 7px; text-anchor: middle; font-family: monospace; }
   <use href="#left"/>
   <g class="r0">
     <text class="c0">Tab</text>
-    <text class="c1">PrtSc</text>
+    <text class="c1">Del</text>
     <text class="c2">Home</text>
     <text class="c3">▲</text>
     <text class="c4">End</text>
@@ -68,7 +68,7 @@ text { font-size: 7px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r1">
     <text class="c0">BkSp</text>
-    <text class="c1">Del</text>
+    <text class="c1">Esc</text>
     <text class="c2">◀</text>
     <text class="c3">▼</text>
     <text class="c4">▶</text>
@@ -76,7 +76,7 @@ text { font-size: 7px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r2">
     <text class="c0 mod">ShiftL</text>
-    <text class="c1">Esc</text>
+    <text class="c1">PrtSc</text>
     <text class="c2">Prog1</text>
     <text class="c3">Prog2</text>
     <text class="c4">Prog3</text>
