@@ -1,0 +1,87 @@
+# This tweak overloads pinky keys (at the position of the `a` and `z` keys on
+# the _Nav/Meta_ layer) to act as a `ctrl` and `alt` keys. This gives you a
+# comfortable way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach
+# dedicated thumb control key, at the expense of some of the beauty and
+# simplicity of the vanilla layout.
+
+# We use a `Control` layer overlaid on the currently active layer, because
+# there is no oneshotswap or overloadswap (see issue
+# <https://github.com/rvaiya/keyd/issues/673>)
+[Control:C]
+space = overload(meta, C-space)
+
+q = C-q
+w = C-w
+e = C-e
+r = C-r
+t = C-t
+y = C-y
+u = C-u
+i = C-i
+o = C-o
+p = C-p
+\ = C-\
+
+a = C-a
+s = C-s
+d = C-d
+f = C-f
+g = C-g
+h = C-h
+j = C-j
+k = C-k
+l = C-l
+; = C-;
+' = C-'
+
+z = overload(alt, C-z)
+x = C-x
+c = C-c
+v = C-v
+b = C-b
+n = C-n
+m = C-,
+. = C-.
+/ = C-/
+
+[Alt:A]
+space = overload(meta, A-space)
+
+q = A-q
+w = A-w
+e = A-e
+r = A-r
+t = A-t
+y = A-y
+u = A-u
+i = A-i
+o = A-o
+p = A-p
+\ = A-\
+
+a = overload(control, A-a)
+s = A-s
+d = A-d
+f = A-f
+g = A-g
+h = A-h
+j = A-j
+k = A-k
+l = A-l
+; = A-;
+' = A-'
+
+z = A-z
+x = A-x
+c = A-c
+v = A-v
+b = A-b
+n = A-n
+m = A-,
+. = A-.
+/ = A-/
+
+[empty]
+[NavMeta]
+a = timeout(oneshot(Control), 500, overload(Control, esc))
+z = timeout(oneshot(Alt), 500, overload(Alt, sysrq))
