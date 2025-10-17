@@ -41,6 +41,12 @@ g.kb > g > g > text:nth-child(3) {
 .altgr {
   fill: #004488;
 }
+.navsuper {
+  fill: #801818;
+}
+.superfn {
+  fill: #800080;
+}
 
 ]]></style>
   <g id="key">
@@ -161,7 +167,7 @@ g.kb > g > g > text:nth-child(3) {
   </g>
   <g class="r3">
     <text class="c3 tiny mod">CtrlL</text>
-    <text class="c4 tiny mod"><tspan x="0" y="-6">Nav/</tspan><tspan x="0" y="6">Meta</tspan></text>
+    <text class="c4 navsuper">&#9680;</text>
     <text class="c5 tiny">Space</text>
   </g>
 </g>
