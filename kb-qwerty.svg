@@ -2,7 +2,7 @@
 <svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 14px; text-anchor: middle; font-family: monospace; }
+text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
 .mod { font-weight: bold; }
 .dbl { font-style: italic; }
 
@@ -19,27 +19,11 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; }
 .tiny { font-size: 8px; }
 .tiny text { font-size: 8px; }
 
-g.kb > g > g > text:nth-child(1) {
-  font-size: 10px;
-  transform: translate(-2px, -6px);
-  text-anchor: end;
-}
-g.kb > g > g > text:nth-child(2) {
-  font-size: 10px;
-  transform: translate(2px, -6px);
-  text-anchor: start;
-  fill: #225500;
-}
-g.kb > g > g > text:nth-child(3) {
-  font-size: 10px;
-  fill: #004488;
-  transform: translate(0px, 6px);
-}
 .shift {
   fill: #225500;
 }
 .altgr {
-  fill: #004488;
+  fill: 
 }
 .navsuper {
   fill: #801818;
@@ -65,17 +49,11 @@ g.kb > g > g > text:nth-child(3) {
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#key" x="96" y="96"/>
-    <use href="#key" x="128" y="96"/>
-    <use href="#key" x="160" y="96"/>
   </g>
   <g id="right">
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#key" x="0" y="96"/>
-    <use href="#key" x="32" y="96"/>
-    <use href="#key" x="64" y="96"/>
   </g>
 </defs>
 
@@ -83,189 +61,55 @@ g.kb > g > g > text:nth-child(3) {
   <use href="#left"/>
   <g class="r0">
     <text class="c0 tiny">Tab</text>
-    <g class="c1">
-      <text>q</text>
-      <text>Q</text>
-      <text>|</text>
-    </g>
-    <g class="c2">
-      <text>w</text>
-      <text>W</text>
-      <text>[</text>
-    </g>
-    <g class="c3">
-      <text>e</text>
-      <text>E</text>
-      <text>+</text>
-    </g>
-    <g class="c4">
-      <text>r</text>
-      <text>R</text>
-      <text>#</text>
-    </g>
-    <g class="c5">
-      <text>t</text>
-      <text>T</text>
-      <text>]</text>
-    </g>
+    <text class="c1">|</text>
+    <text class="c2">[</text>
+    <text class="c3">+</text>
+    <text class="c4">#</text>
+    <text class="c5">]</text>
   </g>
   <g class="r1">
     <text class="c0 tiny">BkSp</text>
-    <g class="c1">
-      <text>a</text>
-      <text>A</text>
-      <text>*</text>
-    </g>
-    <g class="c2">
-      <text>s</text>
-      <text>S</text>
-      <text>(</text>
-    </g>
-    <g class="c3">
-      <text>d</text>
-      <text>D</text>
-      <text>-</text>
-    </g>
-    <g class="c4">
-      <text>f</text>
-      <text>F</text>
-      <text>=</text>
-    </g>
-    <g class="c5">
-      <text>g</text>
-      <text>G</text>
-      <text>)</text>
-    </g>
+    <text class="c1">*</text>
+    <text class="c2">(</text>
+    <text class="c3">-</text>
+    <text class="c4">=</text>
+    <text class="c5">)</text>
   </g>
   <g class="r2">
-    <text class="c0 tiny">\</text>
-    <g class="c1">
-      <text>z</text>
-      <text>Z</text>
-      <text>&amp;</text>
-    </g>
-    <g class="c2">
-      <text>x</text>
-      <text>X</text>
-      <text>{</text>
-    </g>
-    <g class="c3">
-      <text>c</text>
-      <text>C</text>
-      <text>$</text>
-    </g>
-    <g class="c4">
-      <text>v</text>
-      <text>V</text>
-      <text>_</text>
-    </g>
-    <g class="c5">
-      <text>b</text>
-      <text>B</text>
-      <text>}</text>
-    </g>
-  </g>
-  <g class="r3">
-    <text class="c3 tiny mod">CtrlL</text>
-    <text class="c4 navsuper">&#9680;</text>
-    <text class="c5 tiny">Space</text>
+    <text class="c0">\</text>
+    <text class="c1">&amp;</text>
+    <text class="c2">{</text>
+    <text class="c3">$</text>
+    <text class="c4">_</text>
+    <text class="c5">}</text>
   </g>
 </g>
 
 <g class="kb" id="right-keyboard" transform="translate(195, 0)">
   <use href="#right"/>
   <g class="r0">
-    <g class="c0">
-      <text>y</text>
-      <text>Y</text>
-      <text>^</text>
-    </g>
-    <g class="c1">
-      <text>u</text>
-      <text>U</text>
-      <text>7</text>
-    </g>
-    <g class="c2">
-      <text>i</text>
-      <text>I</text>
-      <text>8</text>
-    </g>
-    <g class="c3">
-      <text>o</text>
-      <text>O</text>
-      <text>9</text>
-    </g>
-    <g class="c4">
-      <text>p</text>
-      <text>P</text>
-      <text>%</text>
-    </g>
+    <text class="c0">^</text>
+    <text class="c1">7</text>
+    <text class="c2">8</text>
+    <text class="c3">9</text>
+    <text class="c4">%</text>
     <text class="c5 tiny">Enter</text>
   </g>
   <g class="r1">
-    <g class="c0">
-      <text>h</text>
-      <text>H</text>
-      <text>@</text>
-    </g>
-    <g class="c1">
-      <text>j</text>
-      <text>J</text>
-      <text>4</text>
-    </g>
-    <g class="c2">
-      <text>k</text>
-      <text>K</text>
-      <text>5</text>
-    </g>
-    <g class="c3">
-      <text>l</text>
-      <text>L</text>
-      <text>6</text>
-    </g>
-    <g class="c4">
-      <text>;</text>
-      <text>:</text>
-      <text>0</text>
-    </g>
-    <g class="c5">
-      <text>'</text>
-      <text>"</text>
-      <text>`</text>
-    </g>
+    <text class="c0">@</text>
+    <text class="c1">4</text>
+    <text class="c2">5</text>
+    <text class="c3">6</text>
+    <text class="c4">0</text>
+    <text class="c5">`</text>
   </g>
   <g class="r2">
-    <g class="c0">
-      <text>n</text>
-      <text>N</text>
-      <text>!</text>
-    </g>
-    <g class="c1">
-      <text>m</text>
-      <text>M</text>
-      <text>1</text>
-    </g>
-    <g class="c2">
-      <text>,</text>
-      <text>&lt;</text>
-      <text>2</text>
-    </g>
-    <g class="c3">
-      <text>.</text>
-      <text>&gt;</text>
-      <text>3</text>
-    </g>
-    <g class="c4">
-      <text>/</text>
-      <text>?</text>
-      <text>~</text>
-    </g>
+    <text class="c0">!</text>
+    <text class="c1">1</text>
+    <text class="c2">2</text>
+    <text class="c3">3</text>
+    <text class="c4">~</text>
     <text class="c5 tiny">Multi</text>
-  </g>
-  <g class="r3">
-    <text class="c0 tiny"><tspan x="0" y="-6" class="dbl">Caps</tspan><tspan x="0" y="6" class="mod shift">ShiftL</tspan></text>
-    <text class="c1 tiny"><tspan x="0" y="-6" class="dbl">NumLk</tspan><tspan x="0" y="6" class="mod altgr">AltGr</tspan></text>
-    <text class="c2 tiny mod">Alt</text>
   </g>
 </g>
 </svg>

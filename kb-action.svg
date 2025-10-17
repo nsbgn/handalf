@@ -50,17 +50,11 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#key" x="96" y="96"/>
-    <use href="#key" x="128" y="96"/>
-    <use href="#key" x="160" y="96"/>
   </g>
   <g id="right">
     <use href="#6x1" x="0" y="0"/>
     <use href="#6x1" x="0" y="32"/>
     <use href="#6x1" x="0" y="64"/>
-    <use href="#key" x="0" y="96"/>
-    <use href="#key" x="32" y="96"/>
-    <use href="#key" x="64" y="96"/>
   </g>
 </defs>
 
@@ -90,11 +84,6 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c4">Prog1</text>
     <text class="c5">PrtSc</text>
   </g>
-  <g class="r3">
-    <text class="c3 mod">CtrlR</text>
-    <text class="c4 big mod navsuper">&#9680;</text>
-    <text class="c5 big mod superfn">&#9681;</text>
-  </g>
 </g>
 
 <g class="kb" id="right-keyboard" transform="translate(196, 0)">
@@ -122,11 +111,6 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c3">F3</text>
     <text class="c4">F12</text>
     <text class="c5">Help</text>
-  </g>
-  <g class="r3">
-    <text class="c0"><tspan x="0" y="-6" class="dbl">Caps</tspan><tspan x="0" y="6" class="mod">ShftR</tspan></text>
-    <text class="c1"><tspan x="0" y="-6" class="dbl">NumLk</tspan><tspan x="0" y="6" class="mod">AltGr</tspan></text>
-    <text class="c2 mod">Alt</text>
   </g>
   </g>
 </svg>
