@@ -93,9 +93,9 @@ layer has been split in twain.
   layer becomes **Meta/Fn**, in which the *left* side holds 
   <kbd>Meta</kbd>-keys and the *right*-hand side has your F-keys.
 
-- Just tapping <kbd>Space</kbd> will emit <kbd>Meta</kdb> on its own, 
+- Just tapping <kbd>Space</kbd> will emit <kbd>Meta</kbd> on its own, 
   which plays well with the convention, as established in multiple OSes 
-  and DEs, of having <kbd>Meta</kdb> bring up a global menu.
+  and DEs, of having <kbd>Meta</kbd> bring up a global menu.
 
 This criss-crossed approach is an aesthetic sacrifice, worth it for the 
 practical convenience it brings. After all, the F-keys are not often 
