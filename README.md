@@ -14,6 +14,8 @@ Handalf is a keyboard layout that works well for fancy keyboards with 2
 or more thumb keys per hand, but it *also* fits broadly within the 
 constraints of a laptop keyboard.
 
+![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
+
 -   **Each finger travels one key at most.** Your thumbs pick up the 
     slack.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 

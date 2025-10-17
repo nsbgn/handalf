@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style type="text/css"><![CDATA[
+text { font-size: 8px; text-anchor: middle; font-family: monospace; }
+.mod { font-weight: bold; }
+.dbl {
+  font-size: 6px;
+  transform: translate(13px, 8px);
+  text-anchor: end;
+}
+
+.c0 { transform: translate(15px, 0); }
+.c1 { transform: translate(47px, 0); }
+.c2 { transform: translate(79px, 0); }
+.c3 { transform: translate(111px, 0); }
+.c4 { transform: translate(143px, 0); }
+.c5 { transform: translate(175px, 0); }
+.r0 { transform: translate(0, 18px); }
+.r1 { transform: translate(0, 50px); }
+.r2 { transform: translate(0, 82px); }
+.r3 { transform: translate(0, 114px); }
+
+/* 2-variant keys */
+g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(1) {
+  transform: translate(0, 4px);
+}
+g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
+  font-size: 8px;
+  transform: translate(0, -8px);
+}
+
+/* 4-variant keys */
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(1) {
+  font-size: 10px;
+  transform: translate(0px, 4px);
+  text-anchor: middle;
+  opacity: 20%;
+}
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
+  transform: translate(-5px, 4px);
+  text-anchor: end;
+  font-size: 12px;
+}
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
+  font-size: 12px;
+  fill: #004488;
+  transform: translate(5px, 4px);
+  text-anchor: start;
+}
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4) {
+  font-size: 8px;
+  transform: translate(0, -9px);
+  text-anchor: middle;
+}
+
+/* Color coding */
+.shift,
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
+  fill: #225500;
+}
+.altgr,
+g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
+  fill: #004488;
+}
+.superfn,
+g#right.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4),
+g#right.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
+  fill: #800080 !important;
+}
+.navsuper,
+g#left.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4),
+g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
+  fill: #801818;
+}
+
+]]></style>
+  <g id="unit">
+    <rect width="29" height="28" ry="5" x="0.5" y="1.5" fill="#454C54" stroke="#454C54" stroke-width="1px"/>
+    <rect width="29" height="28" ry="5" x="0.5" fill="#E6EAEF" stroke="#454C54" stroke-width="1px"/>
+  </g>
+  <g id="6x1">
+    <use href="#unit" x="0" y="0"/>
+    <use href="#unit" x="32" y="0"/>
+    <use href="#unit" x="64" y="0"/>
+    <use href="#unit" x="96" y="0"/>
+    <use href="#unit" x="128" y="0"/>
+    <use href="#unit" x="160" y="0"/>
+  </g>
+  <g id="lhs">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+    <use href="#unit" x="96" y="96"/>
+    <use href="#unit" x="128" y="96"/>
+    <use href="#unit" x="160" y="96"/>
+  </g>
+  <g id="rhs">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+    <use href="#unit" x="0" y="96"/>
+    <use href="#unit" x="32" y="96"/>
+    <use href="#unit" x="64" y="96"/>
+  </g>
+</defs>
+
+<g class="kb" id="left">
+  <use href="#lhs"/>
+  <g class="r0">
+    <g class="c0">
+      <text>Tab</text>
+      <text>A-Tab</text>
+    </g>
+    <g class="c1">
+      <text>q</text>
+      <text>Q</text>
+      <text>|</text>
+      <text>Del</text>
+    </g>
+    <g class="c2">
+      <text>w</text>
+      <text>W</text>
+      <text>[</text>
+      <text>Home</text>
+    </g>
+    <g class="key c3">
+      <text>e</text>
+      <text>E</text>
+      <text>+</text>
+      <text>&#9650;</text>
+    </g>
+    <g class="c4">
+      <text>r</text>
+      <text>R</text>
+      <text>#</text>
+      <text>End</text>
+    </g>
+    <g class="c5">
+      <text>t</text>
+      <text>T</text>
+      <text>]</text>
+      <text>PgUp</text>
+    </g>
+  </g>
+  <g class="r1">
+    <text class="c0">BkSp</text>
+    <g class="c1">
+      <text>a</text>
+      <text>A</text>
+      <text>*</text>
+      <text>Esc</text>
+    </g>
+    <g class="c2">
+      <text>s</text>
+      <text>S</text>
+      <text>(</text>
+      <text>&#9664;</text>
+    </g>
+    <g class="c3">
+      <text>d</text>
+      <text>D</text>
+      <text>-</text>
+      <text>&#9660;</text>
+    </g>
+    <g class="c4">
+      <text>f</text>
+      <text>F</text>
+      <text>=</text>
+      <text>&#9654;</text>
+    </g>
+    <g class="c5">
+      <text>g</text>
+      <text>G</text>
+      <text>)</text>
+      <text>PgDn</text>
+    </g>
+  </g>
+  <g class="r2">
+    <g class="c0">
+      <text>\</text>
+      <text>Prog5</text>
+    </g>
+    <g class="c1">
+      <text>z</text>
+      <text>Z</text>
+      <text>&amp;</text>
+      <text>Prog4</text>
+    </g>
+    <g class="c2">
+      <text>x</text>
+      <text>X</text>
+      <text>{</text>
+      <text>Prog3</text>
+    </g>
+    <g class="c3">
+      <text>c</text>
+      <text>C</text>
+      <text>$</text>
+      <text>Prog2</text>
+    </g>
+    <g class="c4">
+      <text>v</text>
+      <text>V</text>
+      <text>_</text>
+      <text>Prog1</text>
+    </g>
+    <g class="c5">
+      <text>b</text>
+      <text>B</text>
+      <text>}</text>
+      <text>PrtSc</text>
+    </g>
+  </g>
+  <g class="r3">
+    <text class="c3 mod">Ctrl</text>
+    <text class="c4 mod navsuper"><tspan style="font-size: 1.5em">&#9680;</tspan>Esc</text>
+    <g class="c5">
+      <text>Space</text>
+      <text class="mod superfn"><tspan style="font-size: 1.5em;">&#9681;</tspan>Meta</text>
+    </g>
+  </g>
+</g>
+
+<g class="kb" id="right" transform="translate(195, 0)">
+  <use href="#rhs"/>
+  <g class="r0">
+    <g class="c0">
+      <text>y</text>
+      <text>Y</text>
+      <text>^</text>
+      <text>ScrLk</text>
+    </g>
+    <g class="c1">
+      <text>u</text>
+      <text>U</text>
+      <text>7</text>
+      <text>F7</text>
+    </g>
+    <g class="c2">
+      <text>i</text>
+      <text>I</text>
+      <text>8</text>
+      <text>F8</text>
+    </g>
+    <g class="c3">
+      <text>o</text>
+      <text>O</text>
+      <text>9</text>
+      <text>F9</text>
+    </g>
+    <g class="c4">
+      <text>p</text>
+      <text>P</text>
+      <text>%</text>
+      <text>F10</text>
+    </g>
+    <text class="c5">Enter</text>
+  </g>
+  <g class="r1">
+    <g class="c0">
+      <text>h</text>
+      <text>H</text>
+      <text>@</text>
+      <text>Ins</text>
+    </g>
+    <g class="c1">
+      <text>j</text>
+      <text>J</text>
+      <text>4</text>
+      <text>F4</text>
+    </g>
+    <g class="c2">
+      <text>k</text>
+      <text>K</text>
+      <text>5</text>
+      <text>F5</text>
+    </g>
+    <g class="c3">
+      <text>l</text>
+      <text>L</text>
+      <text>6</text>
+      <text>F6</text>
+    </g>
+    <g class="c4">
+      <text>;</text>
+      <text>:</text>
+      <text>0</text>
+      <text>F11</text>
+    </g>
+    <g class="c5">
+      <text>'</text>
+      <text>"</text>
+      <text>`</text>
+      <text>Menu</text>
+    </g>
+  </g>
+  <g class="r2">
+    <g class="c0">
+      <text>n</text>
+      <text>N</text>
+      <text>!</text>
+      <text>Pause</text>
+    </g>
+    <g class="c1">
+      <text>m</text>
+      <text>M</text>
+      <text>1</text>
+      <text>F1</text>
+    </g>
+    <g class="c2">
+      <text>,</text>
+      <text>&lt;</text>
+      <text>2</text>
+      <text>F2</text>
+    </g>
+    <g class="c3">
+      <text>.</text>
+      <text>&gt;</text>
+      <text>3</text>
+      <text>F3</text>
+    </g>
+    <g class="c4">
+      <text>/</text>
+      <text>?</text>
+      <text>~</text>
+      <text>F12</text>
+    </g>
+    <g class="c5">
+      <text>Multi</text>
+      <text>Help</text>
+    </g>
+  </g>
+  <g class="r3">
+    <text class="c0 mod shift">Shift</text>
+    <text class="c1 mod altgr">AltGr</text>
+    <text class="c2 mod">Alt</text>
+  </g>
+  <g class="r3">
+    <g class="c0"><text class="dbl">&#450;Caps</text></g>
+    <g class="c1"><text class="dbl">&#450;NumLk</text></g>
+  </g>
+</g>
+</svg>
