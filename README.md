@@ -21,12 +21,13 @@ constraints of a laptop keyboard.
 -   **Graceful degradation.** You can keep a somewhat consistent layout 
     even when you're stuck on a laptop keyboard. Only the backslash key 
     <kbd>\\</kbd> is used slightly differently.
--   **Easy to learn & remember.** The letter keys won't change, and all 
-    other symbols are accessible with *only* the <kbd>AltGr</kbd> 
-    modifier. There is a *single* additional layer beyond that, for 
-    navigation and function keys. There's no need to learn it all at 
-    once; I've found the symbols under <kbd>AltGr</kbd> to be the most 
-    ergonomically significant.
+-   **Easy to learn & remember.** The alpha keys won't change from 
+    whatever layout you already use, and all other symbols are 
+    accessible with *only* the <kbd>AltGr</kbd> modifier. There is a 
+    *single* additional layer beyond that, for navigation and function 
+    keys. There's no need to learn it all at once; I've found the 
+    symbols under <kbd>AltGr</kbd> to be the most ergonomically 
+    significant.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
@@ -57,13 +58,13 @@ but the final decision is based on vibes. :)
 Unfortunately, the layout is biased toward right-handed people.
 
 
-## Symbols
+## Symbol keys
 
 ![The Handalf-qwerty keyboard layout.](kb-qwerty.svg)
 
 If you are currently using US Colemak or Workman or good ol' 
 Qwerty/Azerty, then all alpha keys will stay in the same place. The 
-major addition is that the Level-3 symbols on those keys (accessed 
+major addition is that the **Level-3** symbols on those keys (accessed 
 through <kbd>AltGr</kbd>) have been crammed full with numbers and the 
 other ASCII symbols for which you would normally have had contort your 
 hands.
@@ -73,27 +74,29 @@ side of the keyboard is preferred for things like parentheses, while the
 number pad can now be operated entirely with your right-hand. -->
 
 
-## Action keys and Escape
+## Action keys
 
 ![The action portion of the Handalf keyboard layout.](kb-action.svg)
 
 The key to the left of <kbd>Space</kbd>, what would have been your 
-<kbd>Alt</kbd>, now is the *action* key, which exposes the **Nav/Fn** 
-layer that holds the navigation cluster and F-keys. Tragically, this 
-layer has been split in twain.
+<kbd>Alt</kbd>, is now the Action key (written <kbd>&#9680;</kbd>), 
+which exposes the **Nav-Fn** layer that hold the navigation cluster and 
+F-keys. Tragically, this layer has been split in twain.
 
 [^1]: *Meta* is also sometimes referred to as the *Super*, *Windows*, 
 *OS* or *GUI*-key.
 
-- The action key first activates the **Nav/Meta** layer. Here, the 
-  navigation cluster is placed so that you can control the directional 
-  keys with only your *left* hand. The *right*-hand side exposes normal 
-  keys augmented with the <kbd>Meta</kbd> modifier, handy for mapping 
+- In principle, <kbd>&#9680;</kbd> accesses the **Nav/Meta** layer. 
+  Here, the navigation cluster is placed so that you can control the 
+  directional keys with only your left hand. The bottom row has 
+  programmable keys. The right-hand side remains unchanged, except for 
+  the activation of the <kbd>Meta</kbd> modifier, handy for mapping 
   actions in your window manager.
 
 - This is flipped around by also holding <kbd>Space</kbd>: then the 
-  layer becomes **Meta/Fn**, in which the *left* side holds 
-  <kbd>Meta</kbd>-keys and the *right*-hand side has your F-keys.
+  layer becomes **Meta/Fn**, in which the *left*-hand side holds 
+  <kbd>Meta</kbd>-augmented keys and the *right*-hand side has your 
+  F-keys.
 
 - Just tapping <kbd>Space</kbd> will emit <kbd>Meta</kbd> on its own, 
   which plays well with the convention, as established in multiple OSes 
@@ -111,19 +114,15 @@ other modifier, is the obvious choice for switching between these two
 half-layers.
 -->
 
+## Other tricks
 
-### Overloading the action key
+### Overloading escape
 
-The action key occupies a very accessible location. Since it does not 
-map to a conventional key, we can choose an additional action on tap 
-without worry.
+The <kbd>&#9680;</kbd> key occupies a very accessible location. Since it 
+does not map to a conventional key, we can choose an additional key on 
+tap. The default is <kbd>Esc</kbd>, which is perfect if you use modal 
+applications like Vim --- as you likely do, if you are reading this.
 
-<kbd>Meta</kbd> would be a good choice, but if you use modal 
-applications like Vim, which I imagine many people interested in this 
-document do, <kbd>Esc</kbd> is a more useful choice.
-
-
-## Other changes
 
 ### Sticky modifiers
 
@@ -135,24 +134,23 @@ holding and consciously releasing them *just* before pressing the next
 unmodified key, you can just tap once and forget about it. MUch better!
 
 
-### Shift
+### Shift on a standard keyboard
 
-We need to compromise on the lack of thumb keys on a laptop keyboard, in 
-as unobtrusive a way as possible. I have landed on the following:
+You may have noticed that <kbd>Shift</kbd> is on your right-hand thumb, 
+but on a laptop keyboard, that's just <kbd>Space</kbd>! The compromise 
+is as unobtrusive as possible:
 
-<kbd>Shift</kbd> will retain its function on a laptop keyboard, but, 
-combined with the <kbd>Shift</kbd>- or <kbd>AltGr</kbd> modifier, it 
-becomes a backslash. That is, double tapping <kbd>Shift</kbd>, or 
-tapping while holding <kbd>AltGr</kbd>, will get you `\`, and if you 
-keep holding it, the associated <kbd>Shift</kbd> modifier will also stay 
+<kbd>Shift</kbd> will retain its function at the bottom-left of the 
+keyboard, but, when combined with <kbd>AltGr</kbd> or a preceding tap of 
+<kbd>Shift</kbd>, it becomes a backslash <kbd>\\</kbd>. If you keep 
+holding it, the associated <kbd>Shift</kbd> modifier will also stay 
 active.
 
-Because `\` is often for escaping, it will often be followed by a 
-special character. Therefore, you would have needed to activate 
-<kbd>AltGr</kbd> or <kbd>Shift</kbd> *anyway*! And so, in this way, we 
-retain an easily accessible <kbd>Shift</kbd> on generic keyboards, 
-including oneshot behaviour, without wasting a good spot for a useful 
-symbol key.
+Because the backslash is commonly used for escaping characters, it will 
+often be followed by a special character, meaning that you will usually 
+need to activate the <kbd>AltGr</kbd> or <kbd>Shift</kbd> anyway. In 
+this way, we retain an easily accessible <kbd>Shift</kbd> on generic 
+keyboards, without wasting a good spot for a useful symbol key.
 
 
 ### Backspace
@@ -161,7 +159,7 @@ symbol key.
 move your pinky would have made.
 
 
-### Locking
+### CapsLock and NumLock
 
 Holding <kbd>Shift</kbd> on its own gets you <kbd>CapsLk</kbd> and 
 holding <kbd>AltGr</kbd> gets you <kbd>NumLk</kbd>.
@@ -178,10 +176,10 @@ placed at the position of <kbd>ShiftR</kbd>.
 ### Right modifier variants
 
 In general, it doesn't matter whether you press the right or left 
-variant of a modifier, so we choose the left arbitrarily. However, 
-pulling up a menu or escaping a virtual machine sometimes involves 
-tapping a specific modifier on the right side, which is accommodated by 
-pressing that modifier in the **Nav/Meta/Fn** layer.
+variant of a modifier, so we choose the left arbitrarily. However, some 
+tasks, like pulling up a menu or escaping a virtual machine sometimes 
+involves tapping a specific modifier on the right side. This is 
+accommodated by pressing that modifier in the **Nav/Meta** layer.
 
 <!--
 You will often need a decimal point while typing numbers, but it is 
@@ -200,26 +198,28 @@ pressing something in the **Nav/Meta** layer some milliseconds after
 using the arrow keys. **(TODO)**
 -->
 
-## Optional: Bonus modifiers
+### Optional: Bonus modifiers
 
-If you do not have thumb keys for <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, it 
-may be useful to work around that with the Pinky tweak.
+If you do not have the thumb keys for <kbd>Ctrl</kbd> and 
+<kbd>Alt</kbd>, you may want to consider the Pinky tweak.
 
-While in the **Meta/Nav** layer, the keys on your pinky, <kbd>a</kbd> 
-and <kbd>z</kbd>, turn into sticky <kbd>Ctrl</kbd> and <kbd>Alt</kbd> 
-keys, respectively. Try it --- it makes it very easy to type common 
-shortcuts like <kbd>Ctrl</kbd><kbd>c</kbd> and 
-<kbd>Ctrl</kbd><kbd>f</kbd>.
+While in the **Meta/Nav** layer, the keys on your pinky, 
+<kbd>&#9680;</kbd><kbd>a</kbd> and <kbd>&#9680;</kbd><kbd>z</kbd>, turn 
+into sticky <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys, respectively. Try 
+it --- it makes it very easy to type common shortcuts like 
+<kbd>Ctrl</kbd><kbd>c</kbd> and <kbd>Ctrl</kbd><kbd>f</kbd>.
 
 However, this tweak is optional, because hiding a modifier behind 
-another modifier violates the design principles set out for Handalf. 
-Even so, the keys it overrides --- <kbd>Esc</kbd> and <kbd>Prog4</kbd> 
---- are deliberately chosen to be expendable: <kbd>Prog4</kbd> is 
-user-programmable and <kbd>Esc</kbd> can be put as tap-action on the 
+another key violates our design principles. Stack more modifiers on top, 
+and you will need to pause your typing to think about it.
+
+That said, the tweak is very useful, so the keys it overrides are 
+deliberately chosen to be expendable: <kbd>Prog4</kbd> is 
+user-programmable and <kbd>Esc</kbd> is also the tap-action on the 
 action key.
 
 
-# Keysyms
+## Keysyms
 
 When you press a key, your keyboard will send a *scancode* to the 
 computer; the kernel maps that to a *keycode*; and finally, your 
@@ -238,7 +238,7 @@ like this has several benefits:
 - It becomes easier to reason about key composition. We don't have to 
   explicitly write and remember rules for how layers and modifiers 
   combine. Suppose, for example, you want to type 
-  <kbd>Meta</kbd><kbd>1</kbd>: the first key would be <kbd>Action</kbd> 
+  <kbd>Meta</kbd><kbd>1</kbd>: the first key would be <kbd>&#9680;</kbd> 
   and the second would be <kbd>AltGr</kbd><kbd>n</kbd>.
 - For layout-independent keybindings in your window manager, it is 
   important that emitted keycodes stay the same even as symbols change.
