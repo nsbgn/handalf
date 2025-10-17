@@ -14,7 +14,7 @@ d = down
 f = right
 g = pagedown
 
-leftshift = layer(shift)
+leftshift = timeout(overload(shift, prog5), 500, overload(shift, rightshift))
 z = prog4
 x = prog3
 c = prog2
