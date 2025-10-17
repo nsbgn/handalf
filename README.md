@@ -60,7 +60,7 @@ Unfortunately, the layout is biased toward right-handed people.
 
 ## Symbol keys
 
-![The Handalf-qwerty keyboard layout.](kb-qwerty.svg)
+![The symbol portion of the Handalf keyboard layout.](handalf-symbols.svg)
 
 If you are currently using US Colemak or Workman or good ol' 
 Qwerty/Azerty, then all alpha keys will stay in the same place. The 
@@ -76,7 +76,7 @@ number pad can now be operated entirely with your right-hand. -->
 
 ## Action keys
 
-![The action portion of the Handalf keyboard layout.](kb-action.svg)
+![The action portion of the Handalf keyboard layout.](handalf-action.svg)
 
 The key to the left of <kbd>Space</kbd>, what would have been your 
 <kbd>Alt</kbd>, is now the Action key (written <kbd>&#9680;</kbd>), 
