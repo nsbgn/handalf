@@ -215,8 +215,8 @@ and you will need to pause your typing to think about it.
 
 That said, the tweak is very useful, so the keys it overrides are 
 deliberately chosen to be expendable: <kbd>Prog4</kbd> is 
-user-programmable and <kbd>Esc</kbd> is also the tap-action on the 
-action key.
+user-programmable and <kbd>Esc</kbd> can also be produced by combining 
+<kbd>Ctrl</kbd> with the tap-action on the action key.
 
 
 ## Keysyms

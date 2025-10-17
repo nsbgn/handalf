@@ -149,7 +149,7 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>a</text>
       <text>A</text>
       <text>*</text>
-      <text>Esc</text>
+      <text>C-Esc</text>
     </g>
     <g class="c2">
       <text>s</text>
@@ -332,7 +332,10 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
   </g>
   <g class="r3">
-    <text class="c0 mod shift">Shift</text>
+    <g class="c0 mod shift">
+      <text>ShiftR</text>
+      <text>ShiftL</text>
+    </g>
     <text class="c1 mod altgr">AltGr</text>
     <text class="c2 mod">Alt</text>
   </g>

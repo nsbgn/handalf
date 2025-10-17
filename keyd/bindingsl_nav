@@ -8,7 +8,7 @@ r = end
 t = pageup
 
 backspace = backspace
-a = esc
+a = C-esc
 s = left
 d = down
 f = right
