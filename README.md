@@ -59,11 +59,12 @@ Unfortunately, the layout is biased toward right-handed people.
 
 ![The Handalf-qwerty keyboard layout.](kb-qwerty.svg)
 
-If you are currently using US Colemak or Workman or good ol' Qwerty, 
-then all alpha keys will stay in the same place. The major addition is 
-that the Level-3 symbols on those keys (accessed through 
-<kbd>AltGr</kbd>) have been crammed full with numbers and the other 
-ASCII symbols for which you would normally have had contort your hands.
+If you are currently using US Colemak or Workman or good ol' 
+Qwerty/Azerty, then all alpha keys will stay in the same place. The 
+major addition is that the Level-3 symbols on those keys (accessed 
+through <kbd>AltGr</kbd>) have been crammed full with numbers and the 
+other ASCII symbols for which you would normally have had contort your 
+hands.
 
 <!-- Because AltGr is pressed with your right-hand thumb, the left-hand 
 side of the keyboard is preferred for things like parentheses, while the 
@@ -231,6 +232,17 @@ system in which the layout is not installed.
 
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
 `sudo make install`. Activate the `handalf` layout in your environment.
+
+
+## Notes
+
+A tap on the <kbd>Meta</kbd> key brings up a global menu in many 
+environments. While this is easy to do in Handalf with the 
+<kbd>Action</kbd><kbd>Space</kbd> combination, consider putting a global 
+menu on <kbd>Ctrl</kbd> instead. In Sway or i3, that would be something 
+like:
+
+    bindsym --no-repeat --release Control_L exec ...
 
 <!--
 ## Other
