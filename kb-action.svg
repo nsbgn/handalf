@@ -76,11 +76,11 @@ text { font-size: 7px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r2">
     <text class="c0 mod">ShiftL</text>
-    <text class="c1">PrtSc</text>
-    <text class="c2">Prog1</text>
+    <text class="c1">Prog4</text>
+    <text class="c2">Prog3</text>
     <text class="c3">Prog2</text>
-    <text class="c4">Prog3</text>
-    <text class="c5">Prog4</text>
+    <text class="c4">Prog1</text>
+    <text class="c5">PrtSc</text>
   </g>
   <g class="r3">
     <text class="c3 mod">CtrlR</text>

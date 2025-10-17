@@ -15,9 +15,9 @@ f = right
 g = pagedown
 
 leftshift = layer(shift)
-z = sysrq
-x = prog1
+z = prog4
+x = prog3
 c = prog2
-v = prog3
-b = prog4
+v = prog1
+b = sysrq
 
