@@ -93,7 +93,7 @@ layer has been split in twain.
   layer becomes **Meta/Fn**, in which the *left* side holds 
   <kbd>Meta</kbd>-keys and the *right*-hand side has your F-keys.
 
-- Just tapping <kbd>Space</kdb> will emit <kbd>Meta</kdb> on its own, 
+- Just tapping <kbd>Space</kbd> will emit <kbd>Meta</kdb> on its own, 
   which plays well with the convention, as established in multiple OSes 
   and DEs, of having <kbd>Meta</kdb> bring up a global menu.
 
@@ -197,6 +197,25 @@ still be active. For this reason, the right half will be disabled when
 pressing something in the **Nav/Meta** layer some milliseconds after 
 using the arrow keys. **(TODO)**
 -->
+
+## Optional: Bonus modifiers
+
+If you do not have thumb keys for <kbd>Ctrl</kbd> and <kbd>Alt</kbd>, it 
+may be useful to work around that with the Pinky tweak.
+
+While in the **Meta/Nav** layer, the keys on your pinky, <kbd>a</kbd> 
+and <kbd>z</kbd>, turn into sticky <kbd>Ctrl</kbd> and <kbd>Alt</kbd> 
+keys, respectively. Try it --- it makes it very easy to type common 
+shortcuts like <kbd>Ctrl</kbd><kbd>c</kbd> and 
+<kbd>Ctrl</kbd><kbd>f</kbd>.
+
+However, this tweak is optional, because hiding a modifier behind 
+another modifier violates the design principles set out for Handalf. 
+Even so, the keys it overrides --- <kbd>Esc</kbd> and <kbd>Prog4</kbd> 
+--- are deliberately chosen to be expendable: <kbd>Prog4</kbd> is 
+user-programmable and <kbd>Esc</kbd> can be put as tap-action on the 
+action key.
+
 
 # Keysyms
 
