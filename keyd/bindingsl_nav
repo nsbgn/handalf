@@ -1,6 +1,6 @@
 # Left (Fn)
 
-tab = tab
+tab = A-tab
 q = del
 w = home
 e = up
