@@ -1,88 +1,53 @@
-default partial alphanumeric_keys
-xkb_symbols "handalf" {
+default partial alphanumeric_keys xkb_symbols "basic" {
     include "us(basic)"
-    name[Group1]= "English (Handalf, QWERTY)";
-
-    key <TAB> { [ Tab, Tab, Tab, Tab ] };
-
-    key <AD01> { [ q, Q, bar, bar ] };
-    key <AD02> { [ w, W, bracketleft, bracketleft ] };
-    key <AD03> { [ e, E, plus, plus ] };
-    key <AD04> { [ r, R, numbersign, numbersign ] };
-    key <AD05> { [ t, T, bracketright, bracketright ] };
-    key <AD06> { [ y, Y, asciicircum, asciicircum ] };
-    key <AD07> { [ u, U, 7, 7 ] };
-    key <AD08> { [ i, I, 8, 8 ] };
-    key <AD09> { [ o, O, 9, 9 ] };
-    key <AD10> { [ p, P, percent, percent ] };
-    key <BKSL> { [ backslash, backslash, backslash, backslash ] };
-
-    key <AC01> { [ a, A, asterisk, asterisk ] };
-    key <AC02> { [ s, S, parenleft, parenleft ] };
-    key <AC03> { [ d, D, minus, minus ] };
-    key <AC04> { [ f, F, equal, equal ] };
-    key <AC05> { [ g, G, parenright, parenright ] };
-    key <AC06> { [ h, H, at, at ] };
-    key <AC07> { [ j, J, 4, 4 ] };
-    key <AC08> { [ k, K, 5, 5 ] };
-    key <AC09> { [ l, L, 6, 6 ] };
-    key <AC10> { [ semicolon, colon, 0, 0 ] };
-    key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
-
-    key <AB01> { [ z, Z, ampersand, ampersand ] };
-    key <AB02> { [ x, X, braceleft, braceleft ] };
-    key <AB03> { [ c, C, dollar, dollar ] };
-    key <AB04> { [ v, V, underscore, underscore ] };
-    key <AB05> { [ b, B, braceright, braceright ] };
-    key <AB06> { [ n, N, exclam, exclam ] };
-    key <AB07> { [ m, M, 1, 1 ] };
-    key <AB08> { [ comma, less, 2, 2 ] };
-    key <AB09> { [ period, greater, 3, 3 ] };
-    key <AB10> { [ slash, question, asciitilde, asciitilde ] };
-
-    include "level3(ralt_switch)"
+    name[Group1]= "Handalf";
+    include "handalf(handalf)"
 };
 
-partial alphanumeric_keys
-xkb_symbols "handalf-colemak" {
-    include "us(basic)"
-    name[Group1]= "English (Handalf, Colemak)";
+partial alphanumeric_keys xkb_symbols "colemak_dh" {
+    include "us(colemak_dh_ortho)"
+    name[Group1]= "Handalf (Colemak)";
+    include "handalf(handalf)"
+};
 
-    key <AD01> { [ q, Q, exclam, exclam ] };
-    key <AD02> { [ w, W, bracketleft, bracketleft ] };
-    key <AD03> { [ f, F, plus, plus ] };
-    key <AD04> { [ p, P, numbersign, numbersign ] };
-    key <AD05> { [ b, B, bracketright, bracketright ] };
-    key <AD06> { [ j, J, asciicircum, asciicircum ] };
-    key <AD07> { [ l, L, 7, 7 ] };
-    key <AD08> { [ u, U, 8, 8 ] };
-    key <AD09> { [ y, Y, 9, 9 ] };
-    key <AD10> { [ semicolon, colon, period, period ] };
-    key <BKSL> { [ backslash, bar, at, at ] };
-
-    key <AC01> { [ a, A, asterisk, asterisk ] };
-    key <AC02> { [ r, R, parenleft, parenleft ] };
-    key <AC03> { [ s, S, minus, minus ] };
-    key <AC04> { [ t, T, equal, equal ] };
-    key <AC05> { [ g, G, parenright, parenright ] };
-    key <AC06> { [ m, M, asciitilde, asciitilde ] };
-    key <AC07> { [ n, N, 4, 4 ] };
-    key <AC08> { [ e, E, 5, 5 ] };
-    key <AC09> { [ i, I, 6, 6 ] };
-    key <AC10> { [ o, O, 0, 0 ] };
-    key <AC11> { [ apostrophe, quotedbl, grave, grave ] };
-
-    key <AB01> { [ z, Z, ampersand, ampersand ] };
-    key <AB02> { [ x, X, braceleft, braceleft ] };
-    key <AB03> { [ c, C, dollar, dollar ] };
-    key <AB04> { [ d, D, underscore, underscore ] };
-    key <AB05> { [ v, V, braceright, braceright ] };
-    key <AB06> { [ k, K, percent, percent ] };
-    key <AB07> { [ h, H, 1, 1 ] };
-    key <AB08> { [ comma, less, 2, 2 ] };
-    key <AB09> { [ period, greater, 3, 3 ] };
-    key <AB10> { [ slash, question, slash, slash ] };
-
+partial alphanumeric_keys xkb_symbols "handalf" {
     include "level3(ralt_switch)"
 
+    key.type = "THREE_LEVEL";
+    key <TAB> { [ NoSymbol, NoSymbol, Tab ] };
+
+    key <AD01> { [ NoSymbol, NoSymbol, bar ] }; // q
+    key <AD02> { [ NoSymbol, NoSymbol, bracketleft ] }; // w
+    key <AD03> { [ NoSymbol, NoSymbol, plus ] }; // e
+    key <AD04> { [ NoSymbol, NoSymbol, numbersign ] }; // r
+    key <AD05> { [ NoSymbol, NoSymbol, bracketright ] }; // t
+    key <AD06> { [ NoSymbol, NoSymbol, asciicircum ] }; // y
+    key <AD07> { [ NoSymbol, NoSymbol, 7 ] }; // u
+    key <AD08> { [ NoSymbol, NoSymbol, 8 ] }; // i
+    key <AD09> { [ NoSymbol, NoSymbol, 9 ] }; // o
+    key <AD10> { [ NoSymbol, NoSymbol, percent ] }; // p
+    key <BKSL> { [ NoSymbol, NoSymbol, backslash ] }; // backslash
+
+    key <AC01> { [ NoSymbol, NoSymbol, asterisk ] }; // a
+    key <AC02> { [ NoSymbol, NoSymbol, parenleft ] }; // s
+    key <AC03> { [ NoSymbol, NoSymbol, minus ] }; // d
+    key <AC04> { [ NoSymbol, NoSymbol, equal ] }; // f
+    key <AC05> { [ NoSymbol, NoSymbol, parenright ] }; // g
+    key <AC06> { [ NoSymbol, NoSymbol, at ] }; // h
+    key <AC07> { [ NoSymbol, NoSymbol, 4 ] }; // j
+    key <AC08> { [ NoSymbol, NoSymbol, 5 ] }; // k
+    key <AC09> { [ NoSymbol, NoSymbol, 6 ] }; // l
+    key <AC10> { [ NoSymbol, NoSymbol, 0 ] }; // semicolon
+    key <AC11> { [ NoSymbol, NoSymbol, grave ] }; // apostrophe
+
+    key <AB01> { [ NoSymbol, NoSymbol, ampersand ] }; // z
+    key <AB02> { [ NoSymbol, NoSymbol, braceleft ] }; // x
+    key <AB03> { [ NoSymbol, NoSymbol, dollar ] }; // c
+    key <AB04> { [ NoSymbol, NoSymbol, underscore ] }; // v
+    key <AB05> { [ NoSymbol, NoSymbol, braceright ] }; // b
+    key <AB06> { [ NoSymbol, NoSymbol, exclam ] }; // n
+    key <AB07> { [ NoSymbol, NoSymbol, 1 ] }; // m
+    key <AB08> { [ NoSymbol, NoSymbol, 2 ] }; // comma
+    key <AB09> { [ NoSymbol, NoSymbol, 3 ] }; // period
+    key <AB10> { [ NoSymbol, NoSymbol, asciitilde ] }; // slash
 };
