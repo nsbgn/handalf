@@ -76,7 +76,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
     <text class="c5">)</text>
   </g>
   <g class="r2">
-    <text class="c0">\</text>
+    <text class="c0 tiny">Multi</text>
     <text class="c1">&amp;</text>
     <text class="c2">{</text>
     <text class="c3">$</text>
@@ -109,7 +109,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
     <text class="c2">2</text>
     <text class="c3">3</text>
     <text class="c4">~</text>
-    <text class="c5 tiny">Multi</text>
+    <text class="c5">\</text>
   </g>
 </g>
 </svg>

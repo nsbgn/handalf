@@ -178,7 +178,7 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   </g>
   <g class="r2">
     <g class="c0">
-      <text>\</text>
+      <text>Multi</text>
       <text>Prog5</text>
     </g>
     <g class="c1">
@@ -327,7 +327,7 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>F12</text>
     </g>
     <g class="c5">
-      <text>Multi</text>
+      <text>\</text>
       <text>Help</text>
     </g>
   </g>

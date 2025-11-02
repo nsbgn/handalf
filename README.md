@@ -140,17 +140,19 @@ You may have noticed that <kbd>Shift</kbd> is on your right-hand thumb,
 but on a laptop keyboard, that's just <kbd>Space</kbd>! The compromise 
 is as unobtrusive as possible:
 
-<kbd>Shift</kbd> will retain its function at the bottom-left of the 
-keyboard, but, when combined with <kbd>AltGr</kbd> or a preceding tap of 
-<kbd>Shift</kbd>, it becomes a backslash <kbd>\\</kbd>. If you keep 
-holding it, the associated <kbd>Shift</kbd> modifier will also stay 
-active.
+<kbd>Shift</kbd> will also retain its function at the bottom of the 
+outer edges of the keyboard, but, when combined with <kbd>AltGr</kbd> or 
+a preceding tap of <kbd>Shift</kbd>, it becomes a either a backslash 
+<kbd>\\</kbd> or a <kbd>Multi</kbd>. If you keep holding it, the 
+associated <kbd>Shift</kbd> modifier will also stay active.
 
-Because the backslash is commonly used for escaping characters, it will 
-often be followed by a special character, meaning that you will usually 
-need to activate the <kbd>AltGr</kbd> or <kbd>Shift</kbd> anyway. In 
-this way, we retain an easily accessible <kbd>Shift</kbd> on generic 
-keyboards, without wasting a good spot for a useful symbol key.
+Both of these keys are often followed by special characters, so you will 
+usually need to activate the <kbd>AltGr</kbd> or <kbd>Shift</kbd> 
+anyway. In this way, we retain an easily accessible <kbd>Shift</kbd> on 
+generic keyboards, without wasting a good spot for a useful symbol key.
+
+Optionally, you can keep shift functionality on only the left side, if 
+that suits your typing style.
 
 
 ### Backspace

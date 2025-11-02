@@ -4,6 +4,8 @@ space = space
 capslock = backspace
 [ = enter
 
+rightshift = \
+
 # Left
 
 q = |
