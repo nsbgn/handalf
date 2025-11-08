@@ -12,10 +12,12 @@ partial alphanumeric_keys xkb_symbols "colemak_dh" {
 
 partial alphanumeric_keys xkb_symbols "handalf" {
     include "level3(ralt_switch)"
+    include "compose(rwin)"
 
     key.type = "THREE_LEVEL";
-    key <TAB> { [ NoSymbol, NoSymbol, Tab ] };
+    key <CAPS> { [ BackSpace, BackSpace, BackSpace, BackSpace ] };
 
+    key <TAB> { [ NoSymbol, NoSymbol, Tab ] };
     key <AD01> { [ NoSymbol, NoSymbol, bar ] }; // q
     key <AD02> { [ NoSymbol, NoSymbol, bracketleft ] }; // w
     key <AD03> { [ NoSymbol, NoSymbol, plus ] }; // e
