@@ -1,7 +1,7 @@
 # Left (Fn)
 
 tab = A-tab
-q = del
+q = delete
 w = home
 e = up
 r = end
