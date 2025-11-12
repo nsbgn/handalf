@@ -173,19 +173,19 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>g</text>
       <text>G</text>
       <text>)</text>
-      <text>PgDn</text>
+      <text>Del</text>
     </g>
   </g>
   <g class="r2">
     <g class="c0">
       <text>Multi</text>
-      <text>Prog5</text>
+      <text></text>
     </g>
     <g class="c1">
       <text>z</text>
       <text>Z</text>
       <text>&amp;</text>
-      <text>Prog4</text>
+      <text></text>
     </g>
     <g class="c2">
       <text>x</text>
@@ -197,13 +197,13 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>c</text>
       <text>C</text>
       <text>$</text>
-      <text>Prog2</text>
+      <text>PgUp</text>
     </g>
     <g class="c4">
       <text>v</text>
       <text>V</text>
       <text>_</text>
-      <text>Prog1</text>
+      <text>PgDn</text>
     </g>
     <g class="c5">
       <text>b</text>

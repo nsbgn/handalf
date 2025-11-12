@@ -1,23 +1,23 @@
 # Left (Fn)
 
 tab = A-tab
-q = delete
+q = noop
 w = home
 e = up
 r = end
-t = pageup
+t = noop
 
 backspace = backspace
 a = C-esc
 s = left
 d = down
 f = right
-g = pagedown
+g = delete
 
 leftshift = timeout(overload(shift, prog5), 500, overload(shift, rightshift))
-z = prog4
-x = prog3
-c = prog2
-v = prog1
+z = noop
+x = noop
+c = pageup
+v = pagedown
 b = sysrq
 
