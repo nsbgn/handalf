@@ -1,3 +1,23 @@
+# Left (Meta)
+
+q = M-q
+w = M-w
+e = M-e
+r = M-r
+t = M-t
+
+a = M-a
+s = M-s
+d = M-d
+f = M-f
+g = M-g
+
+z = M-z
+x = M-x
+c = M-c
+v = M-v
+b = M-b
+
 # Right (Meta)
 
 y = M-y
