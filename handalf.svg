@@ -33,20 +33,21 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
 /* 4-variant keys */
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(1) {
   font-size: 10px;
-  transform: translate(0px, 4px);
-  text-anchor: middle;
-  opacity: 20%;
+  transform: translate(-5px, 3px);
+  text-anchor: end;
+  opacity: 30%;
 }
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
-  transform: translate(-5px, 4px);
-  text-anchor: end;
-  font-size: 12px;
+  transform: translate(5px, 3px);
+  text-anchor: start;
+  font-size: 10px;
+  opacity: 30%;
 }
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
-  font-size: 12px;
+  font-size: 13px;
   fill: #004488;
-  transform: translate(5px, 4px);
-  text-anchor: start;
+  transform: translate(0px, 5px);
+  text-anchor: middle;
 }
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4) {
   font-size: 8px;
@@ -109,65 +110,67 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   <use href="#lhs"/>
   <g class="r0">
     <g class="c0">
-      <text>Tab</text>
-      <text>A-Tab</text>
+      <text>Enter</text>
     </g>
     <g class="c1">
       <text>q</text>
       <text>Q</text>
       <text>|</text>
-      <text>Del</text>
+      <text>Home</text>
     </g>
     <g class="c2">
       <text>w</text>
       <text>W</text>
       <text>[</text>
-      <text>Home</text>
+      <text>&#9650;</text>
     </g>
-    <g class="key c3">
+    <g class="c3">
       <text>e</text>
       <text>E</text>
       <text>+</text>
-      <text>&#9650;</text>
+      <text>End</text>
     </g>
     <g class="c4">
       <text>r</text>
       <text>R</text>
       <text>#</text>
-      <text>End</text>
+      <text>PgUp</text>
     </g>
     <g class="c5">
       <text>t</text>
       <text>T</text>
       <text>]</text>
-      <text>PgUp</text>
+      <text>PrtSc</text>
     </g>
   </g>
   <g class="r1">
-    <text class="c0">BkSp</text>
+    <g class="c0">
+      <text>Esc</text>
+      <text class="mod">Fn</text>
+    </g>
     <g class="c1">
       <text>a</text>
       <text>A</text>
       <text>*</text>
-      <text>C-Esc</text>
+      <text>&#9664;</text>
     </g>
     <g class="c2">
       <text>s</text>
       <text>S</text>
       <text>(</text>
-      <text>&#9664;</text>
+      <text>&#9660;</text>
     </g>
     <g class="c3">
       <text>d</text>
       <text>D</text>
       <text>-</text>
-      <text>&#9660;</text>
+      <text>&#9654;</text>
     </g>
     <g class="c4">
       <text>f</text>
       <text>F</text>
       <text>=</text>
-      <text>&#9654;</text>
+      <text>PgDn</text>
     </g>
     <g class="c5">
       <text>g</text>
@@ -179,7 +182,6 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   <g class="r2">
     <g class="c0">
       <text>Multi</text>
-      <text></text>
     </g>
     <g class="c1">
       <text>z</text>
@@ -191,33 +193,36 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>x</text>
       <text>X</text>
       <text>{</text>
-      <text>Prog3</text>
+      <text></text>
     </g>
     <g class="c3">
       <text>c</text>
       <text>C</text>
       <text>$</text>
-      <text>PgUp</text>
+      <text></text>
     </g>
     <g class="c4">
       <text>v</text>
       <text>V</text>
       <text>_</text>
-      <text>PgDn</text>
+      <text></text>
     </g>
     <g class="c5">
       <text>b</text>
       <text>B</text>
       <text>}</text>
-      <text>PrtSc</text>
+      <text></text>
     </g>
   </g>
   <g class="r3">
-    <text class="c3 mod">Ctrl</text>
-    <text class="c4 mod navsuper"><tspan style="font-size: 1.5em">&#9680;</tspan>Esc</text>
+    <text class="c3 mod">Alt</text>
+    <g class="c4">
+      <text>Tab</text>
+      <text class="mod">Ctrl</text>
+    </g>
     <g class="c5">
       <text>Space</text>
-      <text class="mod superfn"><tspan style="font-size: 1.5em;">&#9681;</tspan>Meta</text>
+      <text class="mod">Meta</text>
     </g>
   </g>
 </g>
@@ -255,7 +260,7 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>%</text>
       <text>F10</text>
     </g>
-    <text class="c5">Enter</text>
+    <text class="c5">BkSp</text>
   </g>
   <g class="r1">
     <g class="c0">
@@ -328,13 +333,11 @@ g#left.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
     <g class="c5">
       <text>\</text>
-      <text>Help</text>
     </g>
   </g>
   <g class="r3">
     <g class="c0 mod shift">
-      <text>ShiftR</text>
-      <text>ShiftL</text>
+      <text>Shift</text>
     </g>
     <text class="c1 mod altgr">AltGr</text>
     <text class="c2 mod">Alt</text>
