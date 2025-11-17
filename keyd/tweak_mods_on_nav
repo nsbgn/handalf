@@ -82,6 +82,6 @@ m = A-,
 / = A-/
 
 [empty]
-[NavMeta]
+[Fn]
 a = timeout(oneshot(Control), 300, layer(Control))
 z = timeout(oneshot(Alt), 300, layer(Alt))

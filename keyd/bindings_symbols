@@ -1,8 +1,8 @@
 #space = oneshotm(doublespace, space)
-tab = tab
-space = space
-capslock = backspace
-[ = enter
+# tab = tab
+# space = space
+# capslock = backspace
+# [ = enter
 
 rightshift = \
 
