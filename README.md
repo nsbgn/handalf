@@ -18,9 +18,8 @@ constraints of a laptop keyboard.
 
 -   **Each finger travels one key at most.** Your thumbs pick up the 
     slack.
--   **Graceful degradation.** You can keep a somewhat consistent layout 
-    even when you're stuck on a laptop keyboard. Only the backslash key 
-    <kbd>\\</kbd> is used slightly differently.
+-   **Graceful degradation.** You can keep a consistent layout, even 
+    when you're stuck on a laptop keyboard.
 -   **Easy to learn & remember.** The alpha keys won't change from 
     whatever layout you already use, and all other symbols are 
     accessible with *only* the <kbd>AltGr</kbd> modifier. There is a 
@@ -38,7 +37,7 @@ constraints of a laptop keyboard.
     overloading has the above downsides, albeit to a lesser degree. 
     Therefore, only *one* key has two functions, because it tends to 
     punctuate a keystroke anyway: <kbd>Esc</kbd>.
--   **Stateless.** Modal editing is great, but you shouldn't need to 
+-   **Stateless.** Modal editors great, but you shouldn't need to *also*
     remember what state your keyboard is in. The key that your software 
     sees will depend only on what keys you are *currently* pressing, or 
     at most which keys you were pressing some fraction of a second ago.
@@ -134,6 +133,24 @@ holding and consciously releasing them *just* before pressing the next
 unmodified key, you can just tap once and forget about it. MUch better!
 
 
+### CapsLock and NumLock
+
+Double tapping <kbd>Shift</kbd> on its own gets you <kbd>CapsLk</kbd> 
+and double tapping <kbd>AltGr</kbd> gets you <kbd>NumLk</kbd>.
+
+
+### Compose
+
+The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
+special characters by typing intuitive keys in succession. For example, 
+<kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`. This key has been 
+placed at the position of <kbd>ShiftL</kbd>.
+
+It is *virtual*, in the sense that there is no physical key that has 
+this property by default. We assigned it to <kbd>SuperR</kbd>, because
+that key that is often not present on keyboards anyway.
+
+
 ### Shift on a standard keyboard
 
 You may have noticed that <kbd>Shift</kbd> is on your right-hand thumb, 
@@ -159,20 +176,6 @@ that suits your typing style.
 
 <kbd>BkSp</kbd> takes the place of <kbd>CapsLk</kbd>, avoiding the huge 
 move your pinky would have made.
-
-
-### CapsLock and NumLock
-
-Holding <kbd>Shift</kbd> on its own gets you <kbd>CapsLk</kbd> and 
-holding <kbd>AltGr</kbd> gets you <kbd>NumLk</kbd>.
-
-
-### Compose
-
-The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
-special characters by typing intuitive keys in succession. For example, 
-<kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`. This key has been 
-placed at the position of <kbd>ShiftR</kbd>.
 
 
 ### Right modifier variants
@@ -257,15 +260,41 @@ Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run
 `sudo make install`. Activate the `handalf` layout in your environment.
 
 
-## Notes
+## Notes on modifiers and layers
 
-A tap on the <kbd>Meta</kbd> key brings up a global menu in many 
-environments. While this is easy to do in Handalf with the 
-<kbd>Action</kbd><kbd>Space</kbd> combination, consider putting a global 
-menu on <kbd>Ctrl</kbd> instead. In Sway or i3, that would be something 
-like:
+Modifiers are keys like <kbd>Shift</kbd>, <kbd>AltGr</kbd>, 
+<kbd>Control</kbd>, <kbd>Alt</kbd>, and <kbd>Meta</kbd>. These keys are 
+sent along with the key you press to modify their behaviour. A layer key 
+like <kbd>Fn</kbd> is similar, but it modifies the key directly.
 
-    bindsym --no-repeat --release Control_L exec ...
+You can rearrange the alphanumeric keys and action keys internally, and 
+while some arrangements will be more comfortable than others, it will 
+not lead to a fundamentally different typing experience. The same can 
+not be said for modifier and layer keys. These keys can be *overloaded*, 
+and it is to be expected that they are sometimes pressed in 
+*conjunction*. I considered several permutations, landing on the 
+following rules:
+
+- The order in which you press modifiers and layers should not matter. 
+  That is, holding <kbd>Fn</kbd> and then <kbd>Alt</kbd> should have the 
+  same effect as the other way around.
+- You should not have to press more than one key to activate a layer or 
+  modifier.
+- All modifier and layer keys should be on the thumb.
+- It should be assumed that the fingers are in the home row position; 
+  shifting your fingers a column or row is not always comfortable on 
+  sculpted keyboards like the Kinesis Advantage, MoErgo, Dactyl, or 
+  Keyboardio Model 100. (Dropping this requirement, along with the one 
+  preceding it, allows an interesting variant where the pinky activates 
+  a layer in which the arrow keys are on WASD. This works well on laptop 
+  keyboards, and frees up a thumb key for <kbd>Ctrl</kbd>.)
+
+<!--
+- When overloading a modifier, take care of potential misfires: choose 
+  'tap' actions that are not destructive, and make sure that the 'hold' 
+  actions are also safe. This is easier to do when associating the 
+  overloaded key with Window Manager actions.
+-->
 
 <!--
 ## Other
