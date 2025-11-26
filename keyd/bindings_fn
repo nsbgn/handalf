@@ -1,7 +1,7 @@
 # Left (Fn)
 
 tab = A-tab
-q = noop
+q = compose
 w = home
 e = up
 r = end
@@ -35,7 +35,7 @@ j = f4
 k = f5
 l = f6
 ; = f11
-' = compose
+' = noop
 
 n = pause
 m = f1
