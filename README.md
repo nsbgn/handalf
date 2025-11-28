@@ -10,9 +10,9 @@ while your weakest finger contorts to reach keys like <kbd>Esc</kbd> and
 a comfortable hand position entirely. Exotic keyboards can remedy all 
 this, but lack portability.
 
-Handalf is a keyboard layout that works well for fancy keyboards with 2 
-or more thumb keys per hand, but it *also* fits broadly within the 
-constraints of a laptop keyboard.
+Handalf is a keyboard layout scheme that works well for fancy keyboards 
+with 2 or more thumb keys per hand, but it *also* fits broadly within 
+the constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
 
@@ -22,25 +22,27 @@ constraints of a laptop keyboard.
     when you're stuck on a laptop keyboard.
 -   **Easy to learn & remember.** The alpha keys won't change from 
     whatever layout you already use, and all other symbols are 
-    accessible with *only* the <kbd>AltGr</kbd> modifier. There is a 
+    accessible with the <kbd>AltGr</kbd> modifier on its own. There is a 
     *single* additional layer beyond that, for navigation and function 
-    keys. There's no need to learn it all at once; I've found the 
-    symbols under <kbd>AltGr</kbd> to be the most ergonomically 
-    significant.
+    keys. No need to learn it all at once: I've found the symbols under 
+    <kbd>AltGr</kbd> to be the most ergonomically significant.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
     cause misfires. You can train yourself and there are other 
     [ways][urob] to mitigate it, but I have not made such sacrifices 
     here.
--   **Overloading is used sparingly.** Even on non-alpha keys, 
-    overloading has the above downsides, albeit to a lesser degree. 
-    Therefore, only *one* key has two functions, because it tends to 
-    punctuate a keystroke anyway: <kbd>Esc</kbd>.
--   **Stateless.** Modal editors great, but you shouldn't need to *also*
-    remember what state your keyboard is in. The key that your software 
-    sees will depend only on what keys you are *currently* pressing, or 
-    at most which keys you were pressing some fraction of a second ago.
+-   **Overloading is used sparingly, if at all.** Even on non-alpha 
+    keys, overloading has the above downsides, albeit to a lesser 
+    degree. Therefore, only *one* key has two functions, because it 
+    tends to punctuate a keystroke anyway: <kbd>Esc</kbd>.
+-   **Stateless.** Modal editors are great, but only when they provide 
+    constant feedback on the current mode. On a keyboard, the only 
+    substrate upon which your brain can build associations is the 
+    physical position of your hands. Therefore, the key that is 
+    registered will depend *only* on the keys you are currently 
+    pressing, or at most which keys you were pressing some fraction of a 
+    second ago.
 -   **Regressions are avoided.** When stuffing so much functionality 
     into a limited space, it is inevitable that some key sequences will 
     become hard to type. However, care has been taken to avoid making 
@@ -78,34 +80,24 @@ number pad can now be operated entirely with your right-hand. -->
 ![The action portion of the Handalf keyboard layout.](handalf-action.svg)
 
 The key to the left of <kbd>Space</kbd>, what would have been your 
-<kbd>Alt</kbd>, is now the Action key (written <kbd>&#9680;</kbd>), 
-which exposes the **Nav-Fn** layer that hold the navigation cluster and 
-F-keys. Tragically, this layer has been split in twain.
+<kbd>Alt</kbd>, is now the <kbd>Fn</kbd> key. Here, the navigation 
+cluster is placed so that you can control the directional keys with only 
+your left hand. The F-keys are on the right-hand side.
 
-[^1]: *Meta* is also sometimes referred to as the *Super*, *Windows*, 
-*OS* or *GUI*-key.
+> [!NOTE]
+> Since the F-keys are not often used in modern applications, I use that 
+> half for navigating the window manager. Should the F-keys be needed in 
+> an application, the window manager enters a passthrough mode upon 
+> pressing <kbd>Cancel</kbd>.
 
-- In principle, <kbd>&#9680;</kbd> accesses the **Nav/Meta** layer. 
-  Here, the navigation cluster is placed so that you can control the 
-  directional keys with only your left hand. The bottom row has 
-  programmable keys. The right-hand side remains unchanged, except for 
-  the activation of the <kbd>Meta</kbd> modifier, handy for mapping 
-  actions in your window manager.
+Global keybindings are often assigned to the <kbd>Meta</kbd> key (also 
+sometimes referred to as the *Super*, *Windows*, *Command* or 
+*GUI*-key). More importantly: there is a convention, established in 
+multiple operating systems and desktop environments, of having a tap on 
+<kbd>Meta</kbd> bring up a global menu.
 
-- This is flipped around by also holding <kbd>Space</kbd>: then the 
-  layer becomes **Meta/Fn**, in which the *left*-hand side holds 
-  <kbd>Meta</kbd>-augmented keys and the *right*-hand side has your 
-  F-keys.
-
-- Just tapping <kbd>Space</kbd> will emit <kbd>Meta</kbd> on its own, 
-  which plays well with the convention, as established in multiple OSes 
-  and DEs, of having <kbd>Meta</kbd> bring up a global menu.
-
-This criss-crossed approach is an aesthetic sacrifice, worth it for the 
-practical convenience it brings. After all, the F-keys are not often 
-used in modern applications. And while it is useful to reserve some 
-<kbd>Meta</kbd> keys for frictionless window manager bindings, half a 
-keyboard should be plenty for that purpose.
+This is achieved simply by pressing the remaining thumb key while in the 
+**Fn** layer: <kbd>Space</kbd>.
 
 <!--
 <kbd>Space</kbd>, being a thumb key and having no associations with any 
@@ -120,7 +112,7 @@ half-layers.
 The <kbd>&#9680;</kbd> key occupies a very accessible location. Since it 
 does not map to a conventional key, we can choose an additional key on 
 tap. The default is <kbd>Esc</kbd>, which is perfect if you use modal 
-applications like Vim --- as you likely do, if you are reading this.
+applications like Vim.
 
 
 ### Sticky modifiers
