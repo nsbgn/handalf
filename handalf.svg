@@ -4,10 +4,11 @@
 <style type="text/css"><![CDATA[
 text { font-size: 8px; text-anchor: middle; font-family: monospace; }
 .mod { font-weight: bold; }
-.dbl {
+.note {
   font-size: 6px;
-  transform: translate(13px, 8px);
-  text-anchor: end;
+  transform: translate(0px, 8px);
+  text-anchor: middle;
+  opacity: .6;
 }
 
 .c0 { transform: translate(15px, 0); }
@@ -64,6 +65,7 @@ g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
   fill: #004488;
 }
+.fn,
 g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4),
 g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   fill: #801818;
@@ -111,7 +113,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>q</text>
       <text>Q</text>
       <text>|</text>
-      <text>Menu</text>
+      <text>C-Esc</text>
     </g>
     <g class="c2">
       <text>w</text>
@@ -135,7 +137,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>t</text>
       <text>T</text>
       <text>]</text>
-      <text>Term</text>
+      <text>PrtSc</text>
     </g>
   </g>
   <g class="r1">
@@ -146,7 +148,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>a</text>
       <text>A</text>
       <text>*</text>
-      <text></text>
+      <text>Esc</text>
     </g>
     <g class="c2">
       <text>s</text>
@@ -176,18 +178,19 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   <g class="r2">
     <g class="c0">
       <text>Multi</text>
+      <text>Shftᴸ</text>
     </g>
     <g class="c1">
       <text>z</text>
       <text>Z</text>
       <text>&amp;</text>
-      <text></text>
+      <text>Metaᴸ</text>
     </g>
     <g class="c2">
       <text>x</text>
       <text>X</text>
       <text>{</text>
-      <text></text>
+      <text>CMenu</text>
     </g>
     <g class="c3">
       <text>c</text>
@@ -205,21 +208,27 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>b</text>
       <text>B</text>
       <text>}</text>
-      <text>PrtSc</text>
+      <text>Menu</text>
     </g>
   </g>
   <g class="r3">
-    <text class="c3 mod">Ctrl</text>
+    <text class="c3 mod">Ctrlᴸ</text>
     <g class="c4">
       <text class="tap_hold">
-        <tspan class="mod">Fn</tspan><tspan>Esc</tspan>
+        <tspan class="mod fn">Fn</tspan><tspan></tspan>
       </text>
     </g>
     <g class="c5">
       <text>Space</text>
-      <text class="mod">Meta</text>
+      <text>Metaᴿ</text>
     </g>
   </g>
+  <g class="r3">
+    <g class="c3"><text class="note">Ctrlᴿ</text></g>
+    <g class="c4"><text class="note">Cancel</text></g>
+  </g>
+
+
 </g>
 
 <g class="kb" id="right" transform="translate(195, 0)">
@@ -332,14 +341,14 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   </g>
   <g class="r3">
     <g class="c0 mod shift">
-      <text>Shift</text>
+      <text>Shftᴿ</text>
     </g>
     <text class="c1 mod altgr">AltGr</text>
     <text class="c2 mod">Alt</text>
   </g>
   <g class="r3">
-    <g class="c0"><text class="dbl">&#450;Caps</text></g>
-    <g class="c1"><text class="dbl">&#450;NumLk</text></g>
+    <g class="c0"><text class="note">CapsLk</text></g>
+    <g class="c1"><text class="note">NumLk</text></g>
   </g>
 </g>
 </svg>
