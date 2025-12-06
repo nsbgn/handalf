@@ -34,7 +34,7 @@ the constraints of a laptop keyboard.
     here.
 -   **Overloading is used sparingly, if at all.** Even on non-alpha 
     keys, overloading has the above downsides, albeit to a lesser 
-    degree. Therefore, only *one* key has two functions, because it 
+    degree. Therefore, only *one* key may have two functions, because it 
     tends to punctuate a keystroke anyway: <kbd>Esc</kbd>.
 -   **Stateless.** Modal editors are great, but only when they provide 
     constant feedback on the current mode. On a keyboard, the only 
@@ -63,16 +63,16 @@ Unfortunately, the layout is biased toward right-handed people.
 
 ![The symbol portion of the Handalf keyboard layout.](handalf-symbols.svg)
 
-If you are currently using US Colemak or Workman or good ol' 
-Qwerty/Azerty, then all alpha keys will stay in the same place. The 
-major addition is that the **Level-3** symbols on those keys (accessed 
-through <kbd>AltGr</kbd>) have been crammed full with numbers and the 
-other ASCII symbols for which you would normally have had contort your 
-hands.
+If you are currently using US Colemak or Workman or good old 
+Qwerty/Azerty, then all alpha keys can stay in the same place. The major 
+addition is that the **Level-3** symbols on those keys (accessed through 
+<kbd>AltGr</kbd>) have been crammed full with numbers and the other 
+ASCII symbols for which you would normally have had contort your hands.
 
-<!-- Because AltGr is pressed with your right-hand thumb, the left-hand 
-side of the keyboard is preferred for things like parentheses, while the 
-number pad can now be operated entirely with your right-hand. -->
+> [!NOTE]
+> The left-hand side of the keyboard now gives comfortable cross-hand 
+> access to common symbols like parentheses, while the number pad can be 
+> operated entirely with your right-hand.
 
 
 ## Action keys
@@ -107,13 +107,10 @@ half-layers.
 
 ## Other tricks
 
-### Overloading escape
+### Backspace
 
-The <kbd>&#9680;</kbd> key occupies a very accessible location. Since it 
-does not map to a conventional key, we can choose an additional key on 
-tap. The default is <kbd>Esc</kbd>, which is perfect if you use modal 
-applications like Vim.
-
+<kbd>BkSp</kbd> takes the place of <kbd>CapsLk</kbd>, avoiding the huge 
+move your pinky would have made.
 
 ### Sticky modifiers
 
@@ -139,15 +136,20 @@ special characters by typing intuitive keys in succession. For example,
 placed at the position of <kbd>ShiftL</kbd>.
 
 It is *virtual*, in the sense that there is no physical key that has 
-this property by default. We assigned it to <kbd>SuperR</kbd>, because
-that key that is often not present on keyboards anyway.
+this property by default. We assigned it to the '102nd key', that is, 
+the <kbd>\\</kbd>/<kbd>|</kbd> key that would exist to the right of 
+<kbd>ShiftL</kbd> on ISO keyboards.
 
+This is a natural choice, because (if your keyboard has this key) it is 
+already in the right spot, and there are other ways to generate the 
+symbols it is associated with.
 
 ### Shift on a standard keyboard
 
 You may have noticed that <kbd>Shift</kbd> is on your right-hand thumb, 
-but on a laptop keyboard, that's just <kbd>Space</kbd>! The compromise 
-is as unobtrusive as possible:
+but on a laptop keyboard, that's just <kbd>Space</kbd>! In trying to 
+compromise in as unobtrusive a way as possible, I have landed on the 
+following:
 
 <kbd>Shift</kbd> will also retain its function at the bottom of the 
 outer edges of the keyboard, but, when combined with <kbd>AltGr</kbd> or 
@@ -162,13 +164,6 @@ generic keyboards, without wasting a good spot for a useful symbol key.
 
 Optionally, you can keep shift functionality on only the left side, if 
 that suits your typing style.
-
-
-### Backspace
-
-<kbd>BkSp</kbd> takes the place of <kbd>CapsLk</kbd>, avoiding the huge 
-move your pinky would have made.
-
 
 ### Right modifier variants
 
@@ -195,26 +190,45 @@ pressing something in the **Nav/Meta** layer some milliseconds after
 using the arrow keys. **(TODO)**
 -->
 
-### Optional: Bonus modifiers
+## Optional tweaks
 
-If you do not have the thumb keys for <kbd>Ctrl</kbd> and 
-<kbd>Alt</kbd>, you may want to consider the Pinky tweak.
+By default, the <kbd>Fn</kbd> key accesses a sticky layer that exposes 
+'simple' action keys. However, there exist two tempting tweaks to this 
+situation.
 
-While in the **Meta/Nav** layer, the keys on your pinky, 
-<kbd>&#9680;</kbd><kbd>a</kbd> and <kbd>&#9680;</kbd><kbd>z</kbd>, turn 
-into sticky <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys, respectively. Try 
-it --- it makes it very easy to type common shortcuts like 
-<kbd>Ctrl</kbd><kbd>c</kbd> and <kbd>Ctrl</kbd><kbd>f</kbd>.
+### Overloading Escape
+
+The <kbd>Fn</kbd> key occupies a very accessible location. Since it does 
+not map to a conventional key, we can freely choose to emit a different 
+key on tap. <kbd>Esc</kbd> is perfect if you use modal applications like 
+Vim. In this case, you lose the <kbd>Ctrl</kbd><kbd>Esc</kbd> on double 
+tap, but since you no longer need the <kbd>Esc</kbd> on 
+<kbd>Fn</kbd><kbd>a</kbd>, it can become <kbd>Ctrl</kbd><kbd>Esc</kbd>.
+
+This is not the default because of the aforementioned risks to 
+overloading.
+
+### Pinky Control
+
+If you do not have the thumb keys to give <kbd>Ctrl</kbd> a good spot, 
+you may want to consider the Pinky tweak.
+
+While in the **Fn** layer, the <kbd>a</kbd> on your pinky would turn 
+into an overloaded <kbd>Ctrl/Esc</kbd>. Try it --- it makes it very easy 
+to type common shortcuts like <kbd>Ctrl</kbd><kbd>c</kbd> and 
+<kbd>Ctrl</kbd><kbd>f</kbd>.
 
 However, this tweak is optional, because hiding a modifier behind 
 another key violates our design principles. Stack more modifiers on top, 
-and you will need to pause your typing to think about it.
+and you may need to pause your typing to think.
 
-That said, the tweak is very useful, so the keys it overrides are 
-deliberately chosen to be expendable: <kbd>Prog4</kbd> is 
-user-programmable and <kbd>Esc</kbd> can also be produced by combining 
-<kbd>Ctrl</kbd> with the tap-action on the action key.
+### Combining Pinky Control and Escape Overloading
 
+If you use both of the above tweaks, we get an overloaded 
+<kbd>Fn/Esc</kbd> on your left thumb and a sticky <kbd>Ctrl</kbd> on 
+your left pinky. Now you lose <kbd>Ctrl</kbd><kbd>Esc</kbd>, but this 
+key was deliberately chosen to be useful yet expendable: it can still be 
+produced in other ways.
 
 ## Keysyms
 
@@ -287,6 +301,11 @@ following rules:
   actions are also safe. This is easier to do when associating the 
   overloaded key with Window Manager actions.
 -->
+
+### More keys
+
+Actual numpad keys and media control keys have been left out of the 
+layout. However, it would make sense to add them on an extra layer.
 
 <!--
 ## Other
