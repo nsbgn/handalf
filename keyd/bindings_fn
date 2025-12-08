@@ -1,25 +1,25 @@
 # Left (Fn)
 
 tab = A-tab
-q = compose
+q = rightmeta
 w = home
 e = up
 r = end
-t = noop
+t = sysrq
 
 backspace = backspace
-a = layer(Meta)
+a = esc
 s = left
 d = down
 f = right
 g = delete
 
-leftshift = timeout(overload(shift, prog5), 500, overload(shift, rightshift))
-z = noop
-x = noop
+leftshift = rightshift
+z = rightcontrol
+x = compose
 c = pageup
 v = pagedown
-b = sysrq
+b = calc
 
 # Right (Fn)
 
@@ -35,7 +35,7 @@ j = f4
 k = f5
 l = f6
 ; = f11
-' = noop
+' = M-'
 
 n = pause
 m = f1

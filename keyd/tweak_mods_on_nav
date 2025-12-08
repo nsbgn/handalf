@@ -83,5 +83,5 @@ m = A-,
 
 [empty]
 [Fn]
-a = timeout(oneshot(Control), 300, layer(Control))
-z = timeout(oneshot(Alt), 300, layer(Alt))
+a = timeout(overload(Control, esc), 300, layer(Control))
+z = timeout(oneshot(Control), 301, overload(Control, rightcontrol))
