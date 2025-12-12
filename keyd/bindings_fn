@@ -42,4 +42,4 @@ m = f1
 , = f2
 . = f3
 / = f12
-rightshift = help
+rightshift = M-\

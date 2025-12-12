@@ -1,0 +1,47 @@
+# On an ANSI laptop keyboard, the compose key is hidden behind the shift. The
+# behaviour we'd like is that one tap or a hold on the shift shifts the next
+# letter, while two taps emits the Compose key and then only also shift the
+# next letter if you continue to hold it.
+# This cannot be achieved by `layerm(shift, 102nd)`, because then the oneshot
+# shift from the first tap wants to carry over.
+
+[shift:S]
+leftshift = overload(ComposeShift, clearm(102nd))
+
+[ComposeShift:S]
+space = swapm(shift, macro(102nd space))
+
+q = swapm(shift, macro(102nd S-q))
+w = swapm(shift, macro(102nd S-w))
+e = swapm(shift, macro(102nd S-e))
+r = swapm(shift, macro(102nd S-r))
+t = swapm(shift, macro(102nd S-t))
+y = swapm(shift, macro(102nd S-y))
+u = swapm(shift, macro(102nd S-u))
+i = swapm(shift, macro(102nd S-i))
+o = swapm(shift, macro(102nd S-o))
+p = swapm(shift, macro(102nd S-p))
+\ = swapm(shift, macro(102nd S-\))
+
+a = swapm(shift, macro(102nd S-a))
+s = swapm(shift, macro(102nd S-s))
+d = swapm(shift, macro(102nd S-d))
+f = swapm(shift, macro(102nd S-f))
+g = swapm(shift, macro(102nd S-g))
+h = swapm(shift, macro(102nd S-h))
+j = swapm(shift, macro(102nd S-j))
+k = swapm(shift, macro(102nd S-k))
+l = swapm(shift, macro(102nd S-l))
+; = swapm(shift, macro(102nd S-;))
+' = swapm(shift, macro(102nd S-'))
+
+z = swapm(shift, macro(102nd S-z))
+x = swapm(shift, macro(102nd S-x))
+c = swapm(shift, macro(102nd S-c))
+v = swapm(shift, macro(102nd S-v))
+b = swapm(shift, macro(102nd S-b))
+n = swapm(shift, macro(102nd S-n))
+m = swapm(shift, macro(102nd S-,))
+. = swapm(shift, macro(102nd S-.))
+/ = swapm(shift, macro(102nd S-/))
+rightshift = swapm(shift, macro(102nd \))

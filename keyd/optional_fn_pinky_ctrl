@@ -1,8 +1,8 @@
 # This tweak overloads pinky keys (at the position of the `a` and `z` keys on
-# the _Nav/Meta_ layer) to act as a `ctrl` and `alt` keys. This gives you a
-# comfortable way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach
-# dedicated thumb control key, at the expense of some of the beauty and
-# simplicity of the vanilla layout.
+# the _Nav/Meta_ layer) to act as a `ctrl` keys. This gives you a comfortable
+# way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach dedicated thumb
+# control key, at the expense of some of the beauty and simplicity of the
+# vanilla layout.
 
 # We use a `Control` layer overlaid on the currently active layer, because
 # there is no oneshotswap or overloadswap (see issue
@@ -34,7 +34,7 @@ l = C-l
 ; = C-;
 ' = C-'
 
-z = overload(alt, C-z)
+z = C-z
 x = C-x
 c = C-c
 v = C-v
@@ -43,43 +43,6 @@ n = C-n
 m = C-,
 . = C-.
 / = C-/
-
-[Alt:A]
-space = overload(meta, A-space)
-
-q = A-q
-w = A-w
-e = A-e
-r = A-r
-t = A-t
-y = A-y
-u = A-u
-i = A-i
-o = A-o
-p = A-p
-\ = A-\
-
-a = overload(control, A-a)
-s = A-s
-d = A-d
-f = A-f
-g = A-g
-h = A-h
-j = A-j
-k = A-k
-l = A-l
-; = A-;
-' = A-'
-
-z = A-z
-x = A-x
-c = A-c
-v = A-v
-b = A-b
-n = A-n
-m = A-,
-. = A-.
-/ = A-/
 
 [empty]
 [Fn]

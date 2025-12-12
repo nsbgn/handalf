@@ -1,0 +1,8 @@
+# On a typical keyboard, enter is far away. To bring it in line with the
+# ortholinear variant where enter is on the top right, simply swap the square
+# brackets. We don't need \ as it is also on rightshift.
+
+[main]
+[ = enter
+] = [
+\ = ]
