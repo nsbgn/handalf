@@ -1,5 +1,5 @@
-# This tweak overloads pinky keys (at the position of the `a` and `z` keys on
-# the _Nav/Meta_ layer) to act as a `ctrl` keys. This gives you a comfortable
+# This tweak overloads the rightcontrol key (at the position of the `z` key in
+# the _Fn_ layer) to act as a sticky `ctrl` keys. This gives you a comfortable
 # way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach dedicated thumb
 # control key, at the expense of some of the beauty and simplicity of the
 # vanilla layout.
@@ -44,7 +44,5 @@ m = C-,
 . = C-.
 / = C-/
 
-[empty]
 [Fn]
-a = timeout(overload(Control, esc), 300, layer(Control))
-z = timeout(oneshot(Control), 301, overload(Control, rightcontrol))
+z = overload(Control, timeout(oneshot(Control), 400, rightcontrol))

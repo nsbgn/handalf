@@ -2,4 +2,4 @@
 leftalt = timeout(overload(Fn, esc), 140, layer(Fn))
 
 [Fn]
-a = M-esc
+a = layer(meta)
