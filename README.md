@@ -32,29 +32,29 @@ the constraints of a laptop keyboard.
     cause misfires. You can train yourself and there are other 
     [ways][urob] to mitigate it, but I have not made such sacrifices 
     here.
--   **Overloading is used sparingly, if at all.** Even on non-alpha 
+-   **Overloading is used sparingly, if at all.** Even for non-alpha 
     keys, overloading has the above downsides, albeit to a lesser 
-    degree. Therefore, only *one* key may have two functions, because it 
-    tends to punctuate a keystroke anyway: <kbd>Esc</kbd>.
--   **Stateless.** Modal editors are great, but only when they provide 
-    constant feedback on the current mode. On a keyboard, the only 
-    substrate upon which your brain can build associations is the 
-    physical position of your hands. Therefore, the key that is 
-    registered will depend *only* on the keys you are currently 
-    pressing, or at most which keys you were pressing some fraction of a 
-    second ago.
+    degree. Therefore, only a *single* key has judiciously been given 
+    double duty: <kbd>Esc</kbd>. Even then, the overload is optional.
+-   **Stateless.** Modal editors are great, but only because they can 
+    provide continuous feedback about the current mode. Without looking 
+    at the keyboard, the only substrate upon which your brain can build 
+    associations is the physical position of your hands. Therefore, the 
+    key sent to your computer will depend *only* on the keys you are 
+    currently pressing, or at most which keys you were pressing some 
+    fraction of a second ago.
 -   **Regressions are avoided.** When stuffing so much functionality 
-    into a limited space, it is inevitable that some key sequences will 
-    become hard to type. However, care has been taken to avoid making 
+    into a cramped space, it is inevitable that some key sequences will 
+    become harder to type. However, care has been taken to avoid making 
     assumptions about the programs you will be running. That is, all 
     modifier combinations should still be available, they should still 
     stack in an intuitive and consistent way, and no reasonable shortcut 
-    should be made impossible to type.
+    should become impossible to type.
 
 Above all, the layout should **feel good**. Many things are taken into 
 consideration: simplicity, rolling motions, muscle memory, semantic 
 clustering, symmetry, keeping actions and symbols separate, etcetera --- 
-but the final decision is based on vibes. :)
+but the final decision is based on vibes alone. :)
 
 Unfortunately, the layout is biased toward right-handed people.
 
@@ -63,9 +63,9 @@ Unfortunately, the layout is biased toward right-handed people.
 
 ![The symbol portion of the Handalf keyboard layout.](handalf-symbols.svg)
 
-If you are currently using US Colemak or Workman or good old 
-Qwerty/Azerty, then all alpha keys can stay in the same place. The major 
-addition is that the **Level-3** symbols on those keys (accessed through 
+If you are currently using Colemak, Workman or good old Qwerty/Azerty, 
+then all alpha keys can stay in the same place. The major addition is 
+that the **Level-3** symbols on those keys (accessed through 
 <kbd>AltGr</kbd>) have been crammed full with numbers and the other 
 ASCII symbols for which you would normally have had contort your hands.
 
@@ -90,20 +90,12 @@ your left hand. The F-keys are on the right-hand side.
 > an application, the window manager enters a passthrough mode upon 
 > pressing <kbd>Cancel</kbd>.
 
-Global keybindings are often assigned to the <kbd>Meta</kbd> key (also 
-sometimes referred to as the *Super*, *Windows*, *Command* or 
-*GUI*-key). More importantly: there is a convention, established in 
-multiple operating systems and desktop environments, of having a tap on 
-<kbd>Meta</kbd> bring up a global menu.
-
+In a multitude of operating systems and desktop environments, there 
+exists a convention to assign global keybindings to the <kbd>Meta</kbd> 
+key (also sometimes referred to as the *Super*, *Windows*, *Command* or 
+*GUI*-key). Moreover, a tap on this key should bring up a global menu. 
 This is achieved simply by pressing the remaining thumb key while in the 
 **Fn** layer: <kbd>Space</kbd>.
-
-<!--
-<kbd>Space</kbd>, being a thumb key and having no associations with any 
-other modifier, is the obvious choice for switching between these two 
-half-layers.
--->
 
 ## Other tricks
 
