@@ -10,9 +10,9 @@ while your weakest finger contorts to reach keys like <kbd>Esc</kbd> and
 a comfortable hand position entirely. Exotic keyboards can remedy all 
 this, but lack portability.
 
-Handalf is a keyboard layout scheme that works well for fancy keyboards 
-with 2 or more thumb keys per hand, but it *also* fits broadly within 
-the constraints of a laptop keyboard.
+Handalf is a keyboard layout scheme that works well for fancy 40% 
+keyboards with 2 or more thumb keys per hand, but it *also* fits broadly 
+within the constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
 
@@ -34,8 +34,8 @@ the constraints of a laptop keyboard.
     here.
 -   **Overloading is used sparingly, if at all.** Even for non-alpha 
     keys, overloading has the above downsides, albeit to a lesser 
-    degree. Therefore, only a *single* key has judiciously been given 
-    double duty: <kbd>Esc</kbd>. Even then, the overload is optional.
+    degree. Therefore, only a *single* key can be judiciously given 
+    double duty: <kbd>Esc</kbd>. Even then, it is optional.
 -   **Stateless.** Modal editors are great, but only because they can 
     provide continuous feedback about the current mode. Without looking 
     at the keyboard, the only substrate upon which your brain can build 
@@ -50,6 +50,9 @@ the constraints of a laptop keyboard.
     modifier combinations should still be available, they should still 
     stack in an intuitive and consistent way, and no reasonable shortcut 
     should become impossible to type.
+-   **Complete.** A 42-key board should have access to all keys that you 
+    might find on a standard tenkeyless keyboard. This notably does not 
+    include a keypad or media keys.
 
 Above all, the layout should **feel good**. Many things are taken into 
 consideration: simplicity, rolling motions, muscle memory, semantic 
@@ -281,11 +284,33 @@ following rules:
 - All modifier and layer keys should be on the thumb.
 - It should be assumed that the fingers are in the home row position; 
   shifting your fingers a column or row is not always comfortable on 
-  sculpted keyboards like the Kinesis Advantage, MoErgo, Dactyl, or 
-  Keyboardio Model 100. (Dropping this requirement, along with the one 
-  preceding it, allows an interesting variant where the pinky activates 
-  a layer in which the arrow keys are on WASD. This works well on laptop 
-  keyboards, and frees up a thumb key for <kbd>Ctrl</kbd>.)
+  sculpted keyboards like the Kinesis Advantage, MoErgo Glove80, Dactyl, 
+  or Keyboardio Model 100. (Dropping this requirement, along with the 
+  one preceding it, allows an interesting variant where the pinky 
+  activates a layer in which the arrow keys are on WASD. This works well 
+  on laptop keyboards, and frees up a thumb key for <kbd>Ctrl</kbd>.)
+
+<!--
+## Notes on switching between alphanumeric layouts
+
+I reckon it's a good idea to use Colemak-DH on ortholinear boards, while 
+using Qwerty on anything else. This allows your brain to lock into the 
+right layout based on what your fingers are feeling.
+
+Perhaps encouraging the use of different layouts for different keyboards 
+feels somewhat contradictory to Handalf's stated goal of universality, 
+so here I will introduce some nuance: Handalf is a universal *base* that 
+makes it easy to mentally compartmentalize the atomic changes that you 
+*do* make.
+
+When you switch between Qwerty and Colemak, everything except the alpha 
+keys will stay the same. And because the remapping happens on the XKB 
+level, you can have visual feedback, and your window manager's shortcuts 
+can remain unaffected.
+-->
+
+* * *
+
 
 <!--
 - When overloading a modifier, take care of potential misfires: choose 
