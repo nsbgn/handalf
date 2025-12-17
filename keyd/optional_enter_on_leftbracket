@@ -6,3 +6,6 @@
 [ = enter
 ] = [
 \ = ]
+
+[Meta:M]
+[ = M-enter

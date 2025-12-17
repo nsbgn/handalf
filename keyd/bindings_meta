@@ -1,4 +1,5 @@
 # Left (Meta)
+space = M-space
 
 q = M-q
 w = M-w
@@ -25,7 +26,6 @@ u = M-u
 i = M-i
 o = M-o
 p = M-p
-\ = M-\
 
 h = M-h
 j = M-j

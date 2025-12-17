@@ -1,4 +1,5 @@
 # Left (Fn)
+space = timeout(layer(Meta), 140, oneshot(Meta))
 
 tab = A-tab
 q = rightmeta
@@ -28,7 +29,6 @@ u = f7
 i = f8
 o = f9
 p = f10
-enter = enter
 
 h = insert
 j = f4

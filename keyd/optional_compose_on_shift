@@ -1,9 +1,12 @@
-# On an ANSI laptop keyboard, the compose key is hidden behind the shift. The
-# behaviour we'd like is that one tap or a hold on the shift shifts the next
-# letter, while two taps emits the Compose key and then only also shift the
-# next letter if you continue to hold it.
-# This cannot be achieved by `layerm(shift, 102nd)`, because then the oneshot
-# shift from the first tap wants to carry over.
+# On an ISO keyboard, there is a key to the right of the left shift, which is
+# set to be the Compose key. On an ANSI keyboard, this key is absent, but we
+# still want Compose, so we hide it behind a double tap of shift.
+
+# The behaviour we'd like is that one tap or a hold on the shift shifts the
+# next letter, while two taps emits the Compose key and then only also shift
+# the next letter if you continue to hold it. This cannot be achieved by
+# `layerm(shift, 102nd)`, because then the oneshot shift from the first tap
+# wants to carry over.
 
 [shift:S]
 leftshift = overload(ComposeShift, clearm(102nd))
