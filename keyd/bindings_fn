@@ -2,7 +2,7 @@
 space = timeout(layer(Meta), 140, oneshot(Meta))
 
 tab = A-tab
-q = rightmeta
+q = C-esc
 w = home
 e = up
 r = end
@@ -16,7 +16,7 @@ f = right
 g = delete
 
 leftshift = rightshift
-z = rightcontrol
+z = A-esc
 x = compose
 c = pageup
 v = pagedown
@@ -35,11 +35,11 @@ j = f4
 k = f5
 l = f6
 ; = f11
-' = M-'
+' = rightcontrol
 
 n = pause
 m = f1
 , = f2
 . = f3
 / = f12
-rightshift = M-\
+rightshift = rightmeta

@@ -1,5 +1,5 @@
-# This tweak overloads the rightcontrol key (at the position of the `z` key in
-# the _Fn_ layer) to act as a sticky `ctrl` keys. This gives you a comfortable
+# This tweak overloads the esc key (at the position of the `a` key in
+# the _Fn_ layer) to act as a sticky `ctrl` key. This gives you a comfortable
 # way to type `ctrl+{a,c,v,s,f,p,d}` without an easy-to-reach dedicated thumb
 # control key, at the expense of some of the beauty and simplicity of the
 # vanilla layout.
@@ -44,5 +44,10 @@ m = C-,
 . = C-.
 / = C-/
 
+[ControlTap]
+q = C-q
+a = C-a
+z = C-z
+
 [Fn]
-z = overload(Control, timeout(oneshot(Control), 400, rightcontrol))
+a = timeout(overload(Control, esc), 200, overload(Control, oneshot(ControlTap)))

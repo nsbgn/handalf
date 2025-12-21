@@ -1,9 +1,9 @@
 # Overload the Fn key to act as escape when tapped. There is no longer a need
 # for the Escape key on the Fn layer, so this also maps the key at its position
-# to LMeta.
+# to LCtrl.
 
 [main]
 leftalt = timeout(overload(Fn, esc), 140, layer(Fn))
 
 [Fn]
-a = layer(meta)
+a = layer(control)
