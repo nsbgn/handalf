@@ -1,0 +1,42 @@
+# This tweak overloads the spacebar in the _Fn_ layer to an `alt` key. This
+# gives you a comfortable way to still use the `alt` modifier despite its key
+# being occupied by `fn`.
+[Alt:A]
+space = overload(alt, A-space)
+
+q = A-q
+w = A-w
+e = A-e
+r = A-r
+t = A-t
+y = A-y
+u = A-u
+i = A-i
+o = A-o
+p = A-p
+\ = A-\
+
+a = A-a
+s = A-s
+d = A-d
+f = A-f
+g = A-g
+h = A-h
+j = A-j
+k = A-k
+l = A-l
+; = A-;
+' = A-'
+
+z = A-z
+x = A-x
+c = A-c
+v = A-v
+b = A-b
+n = A-n
+m = A-,
+. = A-.
+/ = A-/
+
+[Fn]
+space = timeout(oneshot(Alt), 100, layer(Alt))

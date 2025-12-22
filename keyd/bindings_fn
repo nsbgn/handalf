@@ -1,5 +1,5 @@
 # Left (Fn)
-space = timeout(layer(Meta), 140, oneshot(Meta))
+space = layer(alt)
 
 tab = A-tab
 q = C-esc
@@ -15,12 +15,12 @@ d = down
 f = right
 g = delete
 
-leftshift = rightshift
-z = A-esc
+leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
+z = layer(meta)
 x = compose
 c = pageup
 v = pagedown
-b = calc
+b = capslock
 
 # Right (Fn)
 

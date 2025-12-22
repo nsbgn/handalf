@@ -8,7 +8,7 @@
 # there is no oneshotswap or overloadswap (see issue
 # <https://github.com/rvaiya/keyd/issues/673>)
 [Control:C]
-space = overload(meta, C-space)
+space = overload(alt, C-space)
 
 q = C-q
 w = C-w
