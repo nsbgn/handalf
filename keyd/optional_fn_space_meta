@@ -1,6 +1,8 @@
+[Meta:M]
 # Left (Meta)
 space = M-space
 
+tab = M-tab
 q = M-q
 w = M-w
 e = M-e
@@ -39,3 +41,7 @@ m = M-m
 , = M-,
 . = M-.
 / = M-/
+rightshift = M-backslash
+
+[Fn]
+space = timeout(layer(Meta), 200, oneshot(Meta))

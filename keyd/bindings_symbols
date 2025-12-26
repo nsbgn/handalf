@@ -1,11 +1,7 @@
 # Left
 space = space
 
-# We add the AltGr modifier here because the xkb layout sets S-backslash to
-# emit just a backslash again, so if the xkb layout is active, this doesn't
-# work. G-q would emit the pipe, but that doesn't work if the xkb layer is NOT
-# active. This covers both bases.
-q = G-|
+q = |
 w = [
 e = +
 r = #

@@ -1,8 +1,8 @@
-# This tweak overloads the spacebar in the _Fn_ layer to an `alt` key. This
-# gives you a comfortable way to still use the `alt` modifier despite its key
-# being occupied by `fn`.
+# This tweak overloads the `z` key in the _Fn_ layer to an `alt` key. This
+# gives you a comfortable way to still use the `alt` modifier when there
+# are no available thumb keys.
 [Alt:A]
-space = overload(alt, A-space)
+space = overload(meta, A-space)
 
 q = A-q
 w = A-w
@@ -39,4 +39,4 @@ m = A-,
 / = A-/
 
 [Fn]
-space = timeout(oneshot(Alt), 100, layer(Alt))
+z = timeout(oneshot(Alt), 100, layer(Alt))

@@ -1,8 +1,8 @@
 # Left (Fn)
-space = layer(alt)
+space = space
 
 tab = A-tab
-q = C-esc
+q = M-C-q
 w = home
 e = up
 r = end
@@ -16,7 +16,7 @@ f = right
 g = delete
 
 leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
-z = layer(meta)
+z = M-C-z
 x = compose
 c = pageup
 v = pagedown
