@@ -61,7 +61,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
   <use href="#left"/>
   <g class="r0">
     <text class="c0 tiny">Tab</text>
-    <text class="c1">|</text>
+    <text class="c1">!</text>
     <text class="c2">[</text>
     <text class="c3">+</text>
     <text class="c4">#</text>
@@ -77,7 +77,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
   </g>
   <g class="r2">
     <text class="c0 tiny">Multi</text>
-    <text class="c1">&amp;</text>
+    <text class="c1">|</text>
     <text class="c2">{</text>
     <text class="c3">$</text>
     <text class="c4">_</text>
@@ -104,7 +104,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
     <text class="c5">`</text>
   </g>
   <g class="r2">
-    <text class="c0">!</text>
+    <text class="c0">&amp;</text>
     <text class="c1">1</text>
     <text class="c2">2</text>
     <text class="c3">3</text>

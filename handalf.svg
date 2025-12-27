@@ -112,7 +112,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     <g class="c1">
       <text>q</text>
       <text>Q</text>
-      <text>|</text>
+      <text>!</text>
       <text>Lock</text>
     </g>
     <g class="c2">
@@ -184,7 +184,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     <g class="c1">
       <text>z</text>
       <text>Z</text>
-      <text>&amp;</text>
+      <text>|</text>
       <text>M-C-z</text>
     </g>
     <g class="c2">
@@ -304,7 +304,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     <g class="c0">
       <text>n</text>
       <text>N</text>
-      <text>!</text>
+      <text>&amp;</text>
       <text>Pause</text>
     </g>
     <g class="c1">
