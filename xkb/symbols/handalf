@@ -28,9 +28,9 @@ partial alphanumeric_keys xkb_symbols "handalf" {
     key <AD08> { [ NoSymbol, NoSymbol, 8 ] }; // i
     key <AD09> { [ NoSymbol, NoSymbol, 9 ] }; // o
     key <AD10> { [ NoSymbol, NoSymbol, percent ] }; // p
-    key <BKSL> { [ backslash, bar, backslash ] }; // backslash
-    // the backslash shift is still bar, to give a way to generate a bar with
-    // just keycodes that works whether this layout is active or not
+    // key <BKSL> { [ backslash, backslash, backslash ] }; // backslash
+    // The above remapping is done on the keycode level, so that you can still
+    // generate a pipe with just keycodes, whether this layout is active or not
 
     key <AC01> { [ NoSymbol, NoSymbol, asterisk ] }; // a
     key <AC02> { [ NoSymbol, NoSymbol, parenleft ] }; // s
