@@ -54,10 +54,12 @@ within the constraints of a laptop keyboard.
     might find on a standard tenkeyless keyboard. This notably does not 
     include a keypad or media keys.
 
-Above all, the layout should **feel good**. Many things are taken into 
-consideration: simplicity, rolling motions, muscle memory, semantic 
+Above all, the layout should **feel good**. Many concepts are taken into 
+consideration, like simplicity, rolling motions, muscle memory, semantic 
 clustering, symmetry, keeping actions and symbols separate, etcetera --- 
-but the final decision is based on vibes alone. :)
+but the final decision is based on vibes. I know that a mapping is good 
+when a handful of practice keystrokes will immediately render its 
+absence on other keyboards painful.
 
 Unfortunately, the layout is biased toward right-handed people.
 
@@ -147,7 +149,7 @@ compromise in as unobtrusive a way as possible, I have landed on the
 following:
 
 <kbd>Shift</kbd> will also retain its function at the bottom of the 
-outer edges of the keyboard, but, when combined with <kbd>AltGr</kbd> or 
+outer edges of thae keyboard, but, when combined with <kbd>AltGr</kbd> or 
 a preceding tap of <kbd>Shift</kbd>, it becomes a either a backslash 
 <kbd>\\</kbd> or a <kbd>Multi</kbd>. If you keep holding it, the 
 associated <kbd>Shift</kbd> modifier will also stay active.
@@ -163,10 +165,21 @@ that suits your typing style.
 ### Right modifier variants
 
 In general, it doesn't matter whether you press the right or left 
-variant of a modifier, so we choose the left arbitrarily. However, some 
-tasks, like pulling up a menu or escaping a virtual machine sometimes 
-involves tapping a specific modifier on the right side. This is 
-accommodated by pressing that modifier in the **Nav/Meta** layer.
+variant of a modifier, so the satisfying approach is to choose the left 
+variant when the key occurs on the the left side (left Control and left 
+Meta) and the right variant when the key occurs on the right side (right 
+Shift). Left and Right Alt are a special case, because they often *do* 
+perform distinguishable functions, and so we want to have access to 
+both. We put them on the same side and refer to them by names that 
+minimize their handedness: Alt and AltGr.
+
+However, some tasks, like pulling up a menu or escaping a virtual 
+machine, involve tapping a specific modifier on the right side. This is 
+accommodated by the **Fn** layer, in which the rightmost keys are 
+<kbd>CtrlR</kbd> and <kbd>MetaR</kbd>. Not coincidentally, since these 
+are on the right hand, they also allow you to type otherwise 
+inconvenient combinations in which your left thumb is already occupied,
+like <kbd>Ctrl</kbd><kbd>&#9664;</kbd>.
 
 <!--
 You will often need a decimal point while typing numbers, but it is 
@@ -289,6 +302,8 @@ following rules:
   one preceding it, allows an interesting variant where the pinky 
   activates a layer in which the arrow keys are on WASD. This works well 
   on laptop keyboards, and frees up a thumb key for <kbd>Ctrl</kbd>.)
+
+We can break these rules with explanation.
 
 <!--
 ## Notes on switching between alphanumeric layouts
