@@ -113,7 +113,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>q</text>
       <text>Q</text>
       <text>!</text>
-      <text>Lock</text>
+      <text>Esc</text>
     </g>
     <g class="c2">
       <text>w</text>
@@ -148,9 +148,8 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>a</text>
       <text>A</text>
       <text>*</text>
-      <text>Esc</text>
+      <text>Ctrlᴸ</text>
     </g>
-    <g class="c1"><text class="note">Ctrlᴸ</text></g>
     <g class="c2">
       <text>s</text>
       <text>S</text>
@@ -185,7 +184,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>z</text>
       <text>Z</text>
       <text>|</text>
-      <text>M-C-z</text>
+      <text>Alt</text>
     </g>
     <g class="c2">
       <text>x</text>
@@ -219,7 +218,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
         <tspan class="mod fn">Fn</tspan><tspan></tspan>
       </text>
     </g>
-    <g class="c4"><text class="note">Esc</text></g>
+    <g class="c4"><text class="note">Cancel</text></g>
     <g class="c5">
       <text>Space</text>
       <text>Metaᴸ</text>

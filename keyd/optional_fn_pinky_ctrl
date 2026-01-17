@@ -44,10 +44,5 @@ m = C-,
 . = C-.
 / = C-/
 
-[ControlTap]
-q = C-q
-a = C-a
-z = C-z
-
 [Fn]
-a = timeout(overload(Control, esc), 200, overload(Control, oneshot(ControlTap)))
+a = timeout(oneshot(Control), 100, layer(Control))

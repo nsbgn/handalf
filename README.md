@@ -24,8 +24,9 @@ within the constraints of a laptop keyboard.
     whatever layout you already use, and all other symbols are 
     accessible with the <kbd>AltGr</kbd> modifier on its own. There is a 
     *single* additional layer beyond that, for navigation and function 
-    keys. No need to learn it all at once: I've found the symbols under 
-    <kbd>AltGr</kbd> to be the most ergonomically significant.
+    keys. Even then, there's no need to learn it all at once: I've found 
+    the symbols under <kbd>AltGr</kbd> to be the most ergonomically 
+    urgent.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at overloading alpha keys must 
     resort to timeouts. This introduces [visual delay][pftwp] and can 
@@ -198,23 +199,37 @@ pressing something in the **Nav/Meta** layer some milliseconds after
 using the arrow keys. **(TODO)**
 -->
 
-## Optional tweaks
-
-By default, the <kbd>Fn</kbd> key accesses a sticky layer that exposes 
-'simple' action keys. However, there exist two tempting tweaks to this 
-situation.
-
-### Overloading Escape
+## On Cancel and overloading Escape
 
 The <kbd>Fn</kbd> key occupies a very accessible location. Since it does 
-not map to a conventional key, we can freely choose to emit a different 
-key on tap. <kbd>Esc</kbd> is perfect if you use modal applications like 
-Vim. In this case, you lose the <kbd>Ctrl</kbd><kbd>Esc</kbd> on double 
-tap, but since you no longer need the <kbd>Esc</kbd> on 
-<kbd>Fn</kbd><kbd>a</kbd>, it can become <kbd>Ctrl</kbd><kbd>Esc</kbd>.
+not map to a conventional key anyway, you might be tempted, as I was, to 
+give it double duty: emit another key when it is tapped in isolation. 
+Particularly if you are a Vim user, <kbd>Esc</kbd> seems perfect for 
+this. It is used frequently, and since it tends to punctuate a 
+keystroke, the risk of accidentally triggering a <kbd>Fn</kbd>-hold is 
+low.
 
-This is not the default because of the aforementioned risks to 
-overloading.
+Indeed, it is reasonable to take this approach. However, accidentally 
+triggering <kbd>Esc</kbd> can be *really* annoying. Outside of Vim, it 
+wreaks havoc by closing windows, cancelling spreadsheet formulas, and 
+losing focus on input fields.
+
+That is why I have chosen to overload it with <kbd>Cancel</kbd> instead 
+--- a key that is barely used and not even present on contemporary 
+keyboards. *Specific programs* must then be explicitly configured to 
+interpret this key in a useful way.
+
+If you now do get the itch to overload <kbd>Esc</kbd> for Vim purposes, 
+the effect will be contained to your terminal emulator.[^1] In foot, you 
+would put `\x1b = Cancel` in the `[text-bindings]` section, and in 
+Alacritty, you would put `bindings = [{key = "Cancel", mods = "None", 
+chars = "\u001b"}]` in the `[keyboard]` section.
+
+[^1]: You could even directly configure (Neo)Vim itself to interpret 
+    your special key (see 
+    [key-notation](https://neovim.io/doc/user/intro.html#_keycodes)), 
+    but since most terminal emulators do not support wacky keys (cf. 
+    `terminfo`), you would need to use another keystroke.
 
 ### Pinky Control
 
@@ -338,6 +353,7 @@ can remain unaffected.
 
 Actual numpad keys and media control keys have been left out of the 
 layout. However, it would make sense to add them on an extra layer.
+
 
 <!--
 ## Other

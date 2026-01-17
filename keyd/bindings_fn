@@ -2,21 +2,21 @@
 space = space
 
 tab = A-tab
-q = M-C-q
+q = esc
 w = home
 e = up
 r = end
 t = sysrq
 
 backspace = backspace
-a = esc
+a = noop
 s = left
 d = down
 f = right
 g = delete
 
 leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
-z = M-C-z
+z = noop
 x = compose
 c = pageup
 v = pagedown
