@@ -1,0 +1,46 @@
+[Fn]
+tab = swapm(AltTabFn, A-tab)
+
+[AltTabFn:A]
+space = swapm(Fn, space)
+
+q = swapm(Fn, esc)
+w = swapm(Fn, home)
+e = swapm(Fn, up)
+r = swapm(Fn, end)
+t = swapm(Fn, sysrq)
+
+backspace = swapm(Fn, backspace)
+a = swapm(Fn, noop)
+s = swapm(Fn, left)
+d = swapm(Fn, down)
+f = swapm(Fn, right)
+g = swapm(Fn, delete)
+
+leftshift = swapm(Fn, timeout(overload(shift, rightshift), 140, layer(shift)))
+z = swapm(Fn, noop)
+x = swapm(Fn, compose)
+c = swapm(Fn, pageup)
+v = swapm(Fn, pagedown)
+b = swapm(Fn, capslock)
+
+y = swapm(Fn, scrolllock)
+u = swapm(Fn, f7)
+i = swapm(Fn, f8)
+o = swapm(Fn, f9)
+p = swapm(Fn, f10)
+
+h = swapm(Fn, insert)
+j = swapm(Fn, f4)
+k = swapm(Fn, f5)
+l = swapm(Fn, f6)
+; = swapm(Fn, f11)
+' = swapm(Fn, rightcontrol)
+
+n = swapm(Fn, pause)
+m = swapm(Fn, f1)
+, = swapm(Fn, f2)
+. = swapm(Fn, f3)
+/ = swapm(Fn, f12)
+rightshift = swapm(Fn, rightmeta)
+

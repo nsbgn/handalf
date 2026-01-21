@@ -253,6 +253,15 @@ your left pinky. Now you lose <kbd>Ctrl</kbd><kbd>Esc</kbd>, but this
 key was deliberately chosen to be useful yet expendable: it can still be 
 produced in other ways.
 
+## On Alt-Tab
+
+Many computer users will have muscle memory associated with 
+<kbd>Alt</kbd><kbd>Tab</kbd>, so pressing <kbd>Tab</kbd> in the **Fn** 
+layer will still emit exactly that. It will also keep the <kbd>Alt</kbd> 
+modifier active until you either exit the **Fn** layer, or press another 
+key in the **Fn** layer --- this is necessary to keep the overview of 
+windows up.
+
 ## Keysyms
 
 When you press a key, your keyboard will send a *scancode* to the 
