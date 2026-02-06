@@ -6,39 +6,39 @@ q = esc
 w = home
 e = up
 r = end
-t = sysrq
+t = pageup
 
 backspace = backspace
 a = noop
 s = left
 d = down
 f = right
-g = delete
+g = pagedown
 
 leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
 z = noop
-x = compose
-c = pageup
-v = pagedown
-b = capslock
+x = cut
+c = copy
+v = paste
+b = delete
 
 # Right (Fn)
 
-y = scrolllock
+y = insert
 u = f7
 i = f8
 o = f9
 p = f10
 [ = rightmeta
 
-h = insert
+h = sysrq
 j = f4
 k = f5
 l = f6
 ; = f11
 ' = rightcontrol
 
-n = pause
+n = compose
 m = f1
 , = f2
 . = f3
