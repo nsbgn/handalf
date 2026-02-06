@@ -259,7 +259,10 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>%</text>
       <text>F10</text>
     </g>
-    <text class="c5">Enter</text>
+    <g class="c5">
+      <text>Enter</text>
+      <text>Metaᴿ</text>
+    </g>
   </g>
   <g class="r1">
     <g class="c0">
@@ -332,7 +335,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
     <g class="c5">
       <text>\</text>
-      <text>Metaᴿ</text>
+      <text>Alt</text>
     </g>
   </g>
   <g class="r3">

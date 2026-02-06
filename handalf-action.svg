@@ -25,12 +25,6 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   stroke: "#E6EAEF";
   fill: "#454C54";
 }
-.navsuper {
-  fill: #801818;
-}
-.superfn {
-  fill: #800080;
-}
 
 ]]></style>
   <g id="key">
@@ -60,7 +54,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
 
 <g class="kb" id="left-keyboard">
   <use href="#left"/>
-  <g class="r0 navsuper">
+  <g class="r0">
     <text class="c0">A-Tab</text>
     <text class="c1">Esc</text>
     <text class="c2">Home</text>
@@ -68,7 +62,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c4">End</text>
     <text class="c5">PrtSc</text>
   </g>
-  <g class="r1 navsuper">
+  <g class="r1">
     <text class="c0">BkSp</text>
     <text class="c1">Ctrlᴸ</text>
     <text class="c2">◀</text>
@@ -76,7 +70,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c4">▶</text>
     <text class="c5">Del</text>
   </g>
-  <g class="r2 navsuper">
+  <g class="r2">
     <text class="c0">Shftᴸ</text>
     <text class="c1">Alt</text>
     <text class="c2">Menu</text>
@@ -88,15 +82,15 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
 
 <g class="kb" id="right-keyboard" transform="translate(196, 0)">
   <use href="#right"/>
-  <g class="r0 superfn">
+  <g class="r0">
     <text class="c0">ScrLk</text>
     <text class="c1">F7</text>
     <text class="c2">F8</text>
     <text class="c3">F9</text>
     <text class="c4">F10</text>
-    <text class="c5">Enter</text>
+    <text class="c5">Metaᴿ</text>
   </g>
-  <g class="r1 superfn">
+  <g class="r1">
     <text class="c0">Ins</text>
     <text class="c1">F4</text>
     <text class="c2">F5</text>
@@ -104,13 +98,13 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c4">F11</text>
     <text class="c5">Ctrlᴿ</text>
   </g>
-  <g class="r2 superfn">
+  <g class="r2">
     <text class="c0">Pause</text>
     <text class="c1">F1</text>
     <text class="c2">F2</text>
     <text class="c3">F3</text>
     <text class="c4">F12</text>
-    <text class="c5">Metaᴿ</text>
+    <text class="c5">Alt</text>
   </g>
   </g>
 </svg>

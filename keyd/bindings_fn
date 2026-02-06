@@ -29,6 +29,7 @@ u = f7
 i = f8
 o = f9
 p = f10
+[ = rightmeta
 
 h = insert
 j = f4
@@ -42,4 +43,4 @@ m = f1
 , = f2
 . = f3
 / = f12
-rightshift = rightmeta
+rightshift = layer(alt)
