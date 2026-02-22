@@ -31,14 +31,14 @@ o = f9
 p = f10
 [ = rightmeta
 
-h = insert
+h = pause
 j = f4
 k = f5
 l = f6
 ; = f11
 ' = rightcontrol
 
-n = pause
+n = insert
 m = f1
 , = f2
 . = f3
