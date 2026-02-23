@@ -233,7 +233,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>y</text>
       <text>Y</text>
       <text>^</text>
-      <text>ScrLk</text>
+      <text>F10</text>
     </g>
     <g class="c1">
       <text>u</text>
@@ -257,7 +257,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>p</text>
       <text>P</text>
       <text>%</text>
-      <text>F10</text>
+      <text>Ins</text>
     </g>
     <g class="c5">
       <text>Enter</text>
@@ -269,7 +269,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>h</text>
       <text>H</text>
       <text>@</text>
-      <text>Pause</text>
+      <text>F11</text>
     </g>
     <g class="c1">
       <text>j</text>
@@ -293,7 +293,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>;</text>
       <text>:</text>
       <text>0</text>
-      <text>F11</text>
+      <text>Pause</text>
     </g>
     <g class="c5">
       <text>'</text>
@@ -307,7 +307,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>n</text>
       <text>N</text>
       <text>&amp;</text>
-      <text>Ins</text>
+      <text>F12</text>
     </g>
     <g class="c1">
       <text>m</text>
@@ -331,7 +331,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>/</text>
       <text>?</text>
       <text>~</text>
-      <text>F12</text>
+      <text>ScrLk</text>
     </g>
     <g class="c5">
       <text>\</text>

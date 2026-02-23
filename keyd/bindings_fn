@@ -24,23 +24,23 @@ b = capslock
 
 # Right (Fn)
 
-y = scrolllock
+y = f10
 u = f7
 i = f8
 o = f9
-p = f10
+p = insert
 [ = rightmeta
 
-h = pause
+h = f11
 j = f4
 k = f5
 l = f6
-; = f11
+; = pause
 ' = rightcontrol
 
-n = insert
+n = f12
 m = f1
 , = f2
 . = f3
-/ = f12
+/ = scrolllock
 rightshift = layer(alt)
