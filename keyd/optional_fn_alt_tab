@@ -17,7 +17,7 @@ d = swapm(Fn, down)
 f = swapm(Fn, right)
 g = swapm(Fn, delete)
 
-leftshift = swapm(Fn, timeout(overload(shift, rightshift), 140, layer(shift)))
+leftshift = swap(Fn)
 z = swapm(Fn, noop)
 x = swapm(Fn, compose)
 c = swapm(Fn, pageup)
