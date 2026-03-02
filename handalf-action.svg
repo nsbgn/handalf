@@ -60,7 +60,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">Home</text>
     <text class="c3">▲</text>
     <text class="c4">End</text>
-    <text class="c5">PrtSc</text>
+    <text class="c5">PgUp</text>
   </g>
   <g class="r1">
     <text class="c0">BkSp</text>
@@ -68,7 +68,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">◀</text>
     <text class="c3">▼</text>
     <text class="c4">▶</text>
-    <text class="c5">Del</text>
+    <text class="c5">PgDn</text>
   </g>
   <g class="r2">
     <text class="c0">Shftᴸ</text>
@@ -76,7 +76,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">Menu</text>
     <text class="c3">PgUp</text>
     <text class="c4">PgDn</text>
-    <text class="c5">Caps</text>
+    <text class="c5">Del</text>
   </g>
 </g>
 
@@ -87,16 +87,16 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c1">F7</text>
     <text class="c2">F8</text>
     <text class="c3">F9</text>
-    <text class="c4">Ins</text>
-    <text class="c5">Metaᴿ</text>
+    <text class="c4">Pause</text>
+    <text class="c5">Enter</text>
   </g>
   <g class="r1">
     <text class="c0">F11</text>
     <text class="c1">F4</text>
     <text class="c2">F5</text>
     <text class="c3">F6</text>
-    <text class="c4">Pause</text>
-    <text class="c5">Ctrlᴿ</text>
+    <text class="c4">Altᴿ</text>
+    <text class="c5">Menu</text>
   </g>
   <g class="r2">
     <text class="c0">F12</text>
@@ -104,7 +104,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F2</text>
     <text class="c3">F3</text>
     <text class="c4">ScrLk</text>
-    <text class="c5">Alt</text>
+    <text class="c5">Ins</text>
   </g>
   </g>
 </svg>

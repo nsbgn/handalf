@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
+<!--caps insert -->
 <defs>
 <style type="text/css"><![CDATA[
 text { font-size: 8px; text-anchor: middle; font-family: monospace; }
@@ -137,7 +138,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>t</text>
       <text>T</text>
       <text>]</text>
-      <text>PrtSc</text>
+      <text>PgUp</text>
     </g>
   </g>
   <g class="r1">
@@ -172,7 +173,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>g</text>
       <text>G</text>
       <text>)</text>
-      <text>Del</text>
+      <text>PgDn</text>
     </g>
   </g>
   <g class="r2">
@@ -184,35 +185,35 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>z</text>
       <text>Z</text>
       <text>|</text>
-      <text>Alt</text>
+      <text>PrtSc</text>
     </g>
     <g class="c2">
       <text>x</text>
       <text>X</text>
       <text>{</text>
-      <text>Menu</text>
+      <text>Cut</text>
     </g>
     <g class="c3">
       <text>c</text>
       <text>C</text>
       <text>$</text>
-      <text>PgUp</text>
+      <text>Copy</text>
     </g>
     <g class="c4">
       <text>v</text>
       <text>V</text>
       <text>_</text>
-      <text>PgDn</text>
+      <text>Paste</text>
     </g>
     <g class="c5">
       <text>b</text>
       <text>B</text>
       <text>}</text>
-      <text>Caps</text>
+      <text>Del</text>
     </g>
   </g>
   <g class="r3">
-    <text class="c3 mod">Ctrlᴸ</text>
+    <text class="c3 mod">Altᴸ</text>
     <g class="c4">
       <text class="tap_hold">
         <tspan class="mod fn">Fn</tspan><tspan></tspan>
@@ -257,11 +258,10 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>p</text>
       <text>P</text>
       <text>%</text>
-      <text>Ins</text>
+      <text>Pause</text>
     </g>
     <g class="c5">
       <text>Enter</text>
-      <text>Metaᴿ</text>
     </g>
   </g>
   <g class="r1">
@@ -293,13 +293,13 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>;</text>
       <text>:</text>
       <text>0</text>
-      <text>Pause</text>
+      <text>Altᴿ</text>
     </g>
     <g class="c5">
       <text>'</text>
       <text>"</text>
       <text>`</text>
-      <text>Ctrlᴿ</text>
+      <text>Menu</text>
     </g>
   </g>
   <g class="r2">
@@ -335,7 +335,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
     <g class="c5">
       <text>\</text>
-      <text>Alt</text>
+      <text>Ins</text>
     </g>
   </g>
   <g class="r3">
@@ -343,9 +343,12 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>Shftᴿ</text>
     </g>
     <!--<g class="c0"><text class="note">²S-Caps</text></g>-->
-    <text class="c1 mod altgr">AltGr</text>
+    <g class="c1">
+      <text class="mod altgr">Sym</text>
+      <text>Metaᴿ</text>
+    </g>
     <!--<g class="c1"><text class="note">²G-Caps</text></g>-->
-    <text class="c2 mod">Alt</text>
+    <text class="c2 mod">Ctrlᴿ</text>
   </g>
 </g>
 </svg>
