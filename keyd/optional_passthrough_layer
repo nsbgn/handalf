@@ -3,11 +3,12 @@
 # unless you have some key that temporarily disables the binding. You could
 # press that key manually, press F1, and re-enable the binding. This does all
 # that in a sequence for each key, so that everything that you press while
-# holding esc will get passed through to an application. It assumes that your
-# passthrough key is `M-cancel` and your re-enabling key is `cancel`. 
+# holding Fn-z (ie. PrtSc/SysRq) will get passed through to an application. It
+# assumes that your passthrough key is `M-cancel` and your re-enabling key is
+# `cancel`. 
 
 [Fn]
-q = overload(Passthrough, esc)
+z = overload(Passthrough, sysrq)
 
 [Passthrough]
 q = macro(M-cancel esc cancel)
