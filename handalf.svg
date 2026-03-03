@@ -213,7 +213,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
   </g>
   <g class="r3">
-    <text class="c3 mod">Altᴸ</text>
+    <text class="c3 mod">Alt</text>
     <g class="c4">
       <text class="tap_hold">
         <tspan class="mod fn">Fn</tspan><tspan></tspan>
@@ -293,7 +293,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>;</text>
       <text>:</text>
       <text>0</text>
-      <text>Altᴿ</text>
+      <text>Metaᴿ</text>
     </g>
     <g class="c5">
       <text>'</text>
@@ -344,8 +344,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     </g>
     <!--<g class="c0"><text class="note">²S-Caps</text></g>-->
     <g class="c1">
-      <text class="mod altgr">Sym</text>
-      <text>Metaᴿ</text>
+      <text class="mod altgr">AltGr</text>
     </g>
     <!--<g class="c1"><text class="note">²G-Caps</text></g>-->
     <text class="c2 mod">Ctrlᴿ</text>

@@ -45,4 +45,4 @@ m = C-,
 / = C-/
 
 [Fn]
-a = timeout(oneshot(Control), 100, layer(Control))
+a = timeout(oneshot(Control), 150, layer(Control))

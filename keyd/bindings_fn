@@ -35,7 +35,7 @@ h = f11
 j = f4
 k = f5
 l = f6
-; = layer(altgr)
+; = rightmeta
 ' = compose
 
 n = f12
