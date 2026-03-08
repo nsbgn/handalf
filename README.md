@@ -363,6 +363,16 @@ Actual numpad keys and media control keys have been left out of the
 layout. However, it would make sense to add them on an extra layer.
 
 
+### Keyboard controls
+
+Keystrokes for keyboard control, such as bluetooth connectivity, should 
+not obscure any keystroke meant for the connected device. For that 
+reason, they are hidden away behind *combinations* of keys on the same 
+column. To avoid incurring any lag, this is further limited to when all 
+left thumb controls are simultaneously pressed (that is, when the **Fn** 
+layer and the <kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers are 
+activated).
+
 <!--
 ## Other
 
