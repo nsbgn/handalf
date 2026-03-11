@@ -1,0 +1,44 @@
+# Left
+space = space
+
+tab = S-A-tab
+q = noop
+w = previoussong
+e = volumeup
+r = nextsong
+t = pagedown
+
+a = noop
+s = rewind
+d = volumedown
+f = fastforward
+g = brightnessdown
+
+z = micmute
+x = pause
+c = mute
+v = play
+b = record
+
+# Right
+
+y = f22
+u = f19
+i = f20
+o = f21
+p = pause
+[ = enter
+
+h = f23
+j = f16
+k = f17
+l = f18
+; = capslock
+' = insert
+
+n = f24
+m = f13
+, = f14
+. = f15
+/ = scrolllock
+rightshift = insert

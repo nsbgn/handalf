@@ -24,10 +24,11 @@ within the constraints of a laptop keyboard.
     when you're stuck on a laptop keyboard.
 -   **Easy to learn & remember.** The alpha keys may not change from 
     what you're used to, and all other symbols are accessible with just 
-    <kbd>AltGr</kbd> modifier. There is a *single* additional layer 
-    beyond that, for navigation and function keys. Even then, there's no 
-    need to learn it all at once: I've found the symbols under 
-    <kbd>AltGr</kbd> to carry the most ergonomic benefit.
+    <kbd>AltGr</kbd> modifier. There is one additional layer beyond 
+    that, for navigation and function keys, and, when combined with 
+    <kbd>AltGr</kbd>, media keys. There's no need to learn it all at 
+    once: I've found the symbols under <kbd>AltGr</kbd> to carry the 
+    most ergonomic benefit.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at assigning multiple 
     functions to the spacebar or alpha keys must resort to timeouts. 
@@ -40,8 +41,8 @@ within the constraints of a laptop keyboard.
     judiciously.
 -   **Stateless.** Modal editors are great, but only because they can 
     provide continuous feedback about the current mode. Without glancing 
-    at the keyboard, the only substrate upon which your brain can build 
-    its associations is the physical position of your hands. Therefore, 
+    at the keyboard, the only association upon which your brain can 
+    build is tactile: the physical position of your hands. Therefore, 
     the key sent to your computer will depend *only* on the keys you are 
     currently pressing, or, at most, which keys you were pressing some 
     fraction of a second ago.
@@ -52,8 +53,7 @@ within the constraints of a laptop keyboard.
     modifier combinations are available, and they should still stack in 
     an intuitive and consistent way.
 -   **Complete.** A 42-key board should have access to all keys that you 
-    might find on a standard tenkeyless keyboard. This does not yet 
-    include a keypad or media keys.
+    might find on a standard tenkeyless keyboard.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
 consideration, like simplicity, rolling motions, muscle memory, semantic 
@@ -109,6 +109,15 @@ emulators (without throwing in a <kbd>Shft</kbd> to distinguish the `^C`
 signal from copying).
 
 <!-- Add a compatibility mode that just uses C-c etc, for Windows? -->
+
+
+### Media keys
+
+![The media portion of the Handalf keyboard layout.](handalf-media.svg)
+
+Numpad keys have been left out of the layout. Media control keys are 
+obtained by combining the **Fn** layer with the <kbd>AltGr</kbd> 
+modifier.
 
 
 ## Other tricks
@@ -357,21 +366,15 @@ can remain unaffected.
   overloaded key with Window Manager actions.
 -->
 
-### Media keys
-
-Actual numpad keys and media control keys have been left out of the 
-layout. However, it would make sense to add them on an extra layer.
-
-
 ### Keyboard controls
 
-Keystrokes for keyboard control, such as bluetooth connectivity, should 
+Keystrokes for keyboard control, such as Bluetooth connectivity, should 
 not obscure any keystroke meant for the connected device. For that 
 reason, they are hidden away behind *combinations* of keys on the same 
 column. To avoid incurring any lag, this is further limited to when all 
-left thumb controls are simultaneously pressed (that is, when the **Fn** 
-layer and the <kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers are 
-activated).
+left thumb controls are simultaneously pressed (that is, when the 
+<kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers as well as the **Fn** layer 
+are simultaneously activated).
 
 <!--
 ## Other

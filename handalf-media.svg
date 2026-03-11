@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="784" height="254" version="1.1" viewBox="-1 -1 390 130" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style type="text/css"><![CDATA[
+text { font-size: 9px; text-anchor: middle; font-family: monospace; }
+.mod { font-weight: bold; }
+.dbl { font-style: italic; }
+.c0 { transform: translate(15px, 0); }
+.c1 { transform: translate(47px, 0); }
+.c2 { transform: translate(79px, 0); }
+.c3 { transform: translate(111px, 0); }
+.c4 { transform: translate(143px, 0); }
+.c5 { transform: translate(175px, 0); }
+.r0 { transform: translate(0, 18px); }
+.r1 { transform: translate(0, 50px); }
+.r2 { transform: translate(0, 82px); }
+.r3 { transform: translate(0, 114px); }
+.tiny { font-size: 7px; }
+.tiny text { font-size: 7px; }
+.big {
+  font-size: 14px;
+}
+
+.active rect {
+  stroke: "#E6EAEF";
+  fill: "#454C54";
+}
+
+]]></style>
+  <g id="key">
+    <rect width="29" height="28" ry="5" x="0.5" y="1.5" fill="#454C54" stroke="#454C54" stroke-width="1px"/>
+    <rect width="29" height="28" ry="5" x="0.5" fill="#E6EAEF" stroke="#454C54" stroke-width="1px"/>
+  </g>
+  <g id="3x1">
+    <use href="#key" x="0"  y="0"/>
+    <use href="#key" x="32" y="0"/>
+    <use href="#key" x="64" y="0"/>
+  </g>
+  <g id="6x1">
+    <use href="#3x1" x="0"  y="0"/>
+    <use href="#3x1" x="96" y="0"/>
+  </g>
+  <g id="left">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+  </g>
+  <g id="right">
+    <use href="#6x1" x="0" y="0"/>
+    <use href="#6x1" x="0" y="32"/>
+    <use href="#6x1" x="0" y="64"/>
+  </g>
+</defs>
+
+<g class="kb" id="left-keyboard">
+  <use href="#left"/>
+  <g class="r0">
+    <text class="c0">SA-Tab</text>
+    <text class="c1">Mic+</text>
+    <text class="c2">⏮</text>
+    <text class="c3">Vol+</text>
+    <text class="c4">⏭</text>
+    <text class="c5">Bri+</text>
+  </g>
+  <g class="r1">
+    <text class="c0">BkSp</text>
+    <text class="c1">Mic-</text>
+    <text class="c2">⏪</text>
+    <text class="c3">Vol-</text>
+    <text class="c4">⏩</text>
+    <text class="c5">Bri-</text>
+  </g>
+  <g class="r2">
+    <text class="c0">Shftᴸ</text>
+    <text class="c1">MicMt</text>
+    <text class="c2">⏸️</text>
+    <text class="c3">Mute</text>
+    <text class="c4">▶️</text>
+    <text class="c5">Rec</text>
+  </g>
+</g>
+
+<g class="kb" id="right-keyboard" transform="translate(196, 0)">
+  <use href="#right"/>
+  <g class="r0">
+    <text class="c0">F24</text>
+    <text class="c1">F19</text>
+    <text class="c2">F20</text>
+    <text class="c3">F21</text>
+    <text class="c4">Pause</text>
+    <text class="c5">Enter</text>
+  </g>
+  <g class="r1">
+    <text class="c0">F23</text>
+    <text class="c1">F16</text>
+    <text class="c2">F17</text>
+    <text class="c3">F18</text>
+    <text class="c4">Caps</text>
+    <text class="c5">Ins</text>
+  </g>
+  <g class="r2">
+    <text class="c0">F22</text>
+    <text class="c1">F13</text>
+    <text class="c2">F14</text>
+    <text class="c3">F15</text>
+    <text class="c4">ScrLk</text>
+    <text class="c5"></text>
+  </g>
+  </g>
+</svg>
