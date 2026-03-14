@@ -178,7 +178,6 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   </g>
   <g class="r2">
     <g class="c0">
-      <text>Multi</text>
       <text>Shftᴸ</text>
     </g>
     <g class="c1">

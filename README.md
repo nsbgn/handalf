@@ -145,32 +145,16 @@ unmodified key, you can just tap once and forget about it. MUch better!
 
 The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
 special characters by typing intuitive keys in succession. For example, 
-<kbd>Multi</kbd><kbd>c</kbd><kbd>=</kbd> becomes `€`. This key has been 
-placed at the position of <kbd>ShiftL</kbd>.
+<kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
 
 It is *virtual*, in the sense that there is no physical key that has 
-this property by default. We assigned it to the '102nd key', that is, 
-the <kbd>\\</kbd>/<kbd>|</kbd> key that would exist to the right of 
-<kbd>ShiftL</kbd> on ISO keyboards.
+this property by default. I have assigned it to the '102nd key', that 
+is, the <kbd>\\</kbd> key that hangs out next to the left 
+<kbd>Shift</kbd> on ISO keyboards.
 
-This is a natural choice, because (if your keyboard has this key) it is 
-already in the right spot, and there are other ways to generate the 
-symbols it is associated with.
-
-### Shift on a standard keyboard
-
-You may have noticed that <kbd>Shift</kbd> is on your right-hand thumb, 
-but on a laptop keyboard, that's just <kbd>Space</kbd>! In trying to 
-compromise in as unobtrusive a way as possible, I have landed on the 
-following:
-
-On a keyboard without the 102nd key, <kbd>Shift</kbd> will retain its 
-function at the bottom left. and only when combined with a preceding tap 
-of <kbd>Shift</kbd>, it becomes <kbd>Multi</kbd>. If you keep holding 
-it, the associated <kbd>Shift</kbd> modifier will also stay active.
-
-In this way, we retain an easily accessible <kbd>Shift</kbd> on generic 
-keyboards, without wasting a good spot for a useful symbol key.
+It is accessible by tapping the <kbd>Fn</kbd> key while holding 
+<kbd>Shift</kbd> or <kbd>AltGr</kbd>. This is convenient, because many 
+subsequent symbols already require you to hold a modifier anyway.
 
 
 ### Left and right modifier variants
@@ -196,6 +180,8 @@ But we really do need both variants for all modifiers:
   specific side.
 - We want to accommodate typing inconvenient combinations in which one 
   of your thumbs is already occupied.
+- We want to have a <kbd>Shift</kbd> on the left pinky still, because 
+  sometimes it needs to be pressed while using the mouse.
 - Left <kbd>Meta</kbd> is conveniently placed on a laptop keyboard, 
   because you can press <kbd>Fn</kbd> with your left thumb and 
   <kbd>Space</kbd> with your right one to generate <kbd>Meta</kbd>. But 
