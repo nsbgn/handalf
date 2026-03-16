@@ -72,7 +72,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r2">
     <text class="c0">Shftᴸ</text>
-    <text class="c1">PrtSc</text>
+    <text class="c1">Metaᴸ</text>
     <text class="c2">Menu</text>
     <text class="c3">PgUp</text>
     <text class="c4">PgDn</text>
@@ -95,8 +95,8 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c1">F4</text>
     <text class="c2">F5</text>
     <text class="c3">F6</text>
-    <text class="c4">Metaᴿ</text>
-    <text class="c5">Menu</text>
+    <text class="c4">Menu</text>
+    <text class="c5">PrtSc</text>
   </g>
   <g class="r2">
     <text class="c0">F12</text>

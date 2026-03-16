@@ -44,4 +44,4 @@ m = M-m
 rightshift = M-backslash
 
 [Fn]
-space = timeout(layer(Meta), 200, oneshot(Meta))
+space = overload(Meta, rightmeta)

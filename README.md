@@ -171,10 +171,9 @@ combine them with other keys.
 
 In general, it doesn't matter whether you press the right or left 
 variant of a modifier, so we choose the left variant when the key occurs 
-on the the left side of the thumb cluster (left <kbd>Alt</kbd> and left 
-<kbd>Meta</kbd>) and the right variant when the key occurs on the right 
-side (right <kbd>Shft</kbd>, right <kbd>AltGr</kbd>, and right 
-<kbd>Ctrl<kbd>).
+on the the left side (left <kbd>Alt</kbd>) and the right variant when 
+the key occurs on the right side (right <kbd>Shft</kbd>, right 
+<kbd>AltGr</kbd>, and right <kbd>Ctrl<kbd>).
 
 Left and right Alt are a special case, because they perform 
 distinguishable functions. I refer to them by distinct names that 
@@ -189,18 +188,18 @@ But we really do need both variants for all modifiers:
   of your thumbs is already occupied.
 - We want to have a <kbd>Shift</kbd> on the left pinky still, because 
   sometimes it needs to be pressed while using the mouse.
-- Left <kbd>Meta</kbd> is conveniently placed on a laptop keyboard, 
+- Right <kbd>Meta</kbd> is conveniently placed on a laptop keyboard, 
   because you can press <kbd>Fn</kbd> with your left thumb and 
   <kbd>Space</kbd> with your right one to generate <kbd>Meta</kbd>. But 
   saner keyboards where the right thumb can't reach <kbd>Space</kbd> 
-  need a right <kbd>Meta</kbd> too.
+  need a left <kbd>Meta</kbd> too.
 - Most importantly, we want common shortcuts like 
   <kbd>Ctrl</kbd><kbd>c</kbd> and <kbd>Ctrl</kbd><kbd>f</kbd> to remain 
   easy to type, even if your right hand is on the mouse or if you're on 
   a laptop keyboard without a thumb key for <kbd>Ctrl</kbd>.
 
-Therefore, in the **Fn** layer, your left and right pinkies access a 
-sticky left <kbd>Ctrl</kbd> and right <kbd>Meta</kbd> respectively. The 
+Therefore, in the **Fn** layer, your left pinky accesses a sticky left 
+<kbd>Ctrl</kbd> and non-sticky left <kbd>Meta</kbd> respectively. The 
 **Fn** layer itself is then temporarily disabled.
 
 It does violate our design principles to hide a modifier behind another 

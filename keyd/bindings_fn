@@ -16,7 +16,7 @@ f = right
 g = pagedown
 
 leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
-z = sysrq
+z = layer(Meta)
 x = cut
 c = copy
 v = paste
@@ -35,8 +35,8 @@ h = f11
 j = f4
 k = f5
 l = f6
-; = rightmeta
-' = compose
+; = compose
+' = sysrq
 
 n = f12
 m = f1
