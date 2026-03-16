@@ -64,6 +64,13 @@ immediately render its absence on other keyboards painful.
 Unfortunately, Handalf is biased toward right-handed people. Let me know 
 if you have a left-handed layout following the same principles.
 
+## A word of caution
+
+Many lower-end keyboards, and in particular integrated keyboards on 
+laptops, have limited rollover. That means that they cannot physically 
+register all combinations of keys. If you run into issues, this might be 
+the culprit.
+
 
 ## Symbol keys
 
