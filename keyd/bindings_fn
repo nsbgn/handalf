@@ -24,7 +24,7 @@ b = delete
 
 # Right (Fn)
 
-y = f10
+y = f12
 u = f7
 i = f8
 o = f9
@@ -38,7 +38,7 @@ l = f6
 ; = compose
 ' = sysrq
 
-n = f12
+n = f10
 m = f1
 , = f2
 . = f3

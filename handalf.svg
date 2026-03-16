@@ -233,7 +233,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>y</text>
       <text>Y</text>
       <text>^</text>
-      <text>F10</text>
+      <text>F12</text>
     </g>
     <g class="c1">
       <text>u</text>
@@ -306,7 +306,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>n</text>
       <text>N</text>
       <text>&amp;</text>
-      <text>F12</text>
+      <text>F10</text>
     </g>
     <g class="c1">
       <text>m</text>
