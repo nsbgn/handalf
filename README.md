@@ -91,15 +91,14 @@ have been crammed full with numbers and the other ASCII symbols.
 
 ![The action portion of the Handalf keyboard layout.](handalf-action.svg)
 
-The key to the left of <kbd>Space</kbd>, what would have been your 
-<kbd>Alt</kbd>, is now the <kbd>Fn</kbd> key. Here, the navigation 
+The key to the left of <kbd>Space</kbd>, the one that would have been 
+your <kbd>Alt</kbd>, is now the <kbd>Fn</kbd> key. Here, the navigation 
 cluster is placed so that you can control the directional keys with only 
-your left hand. The F-keys are on the right-hand side.
+your left hand.
 
-> [!NOTE]
-> Since the F-keys are not often used in modern applications, I use that 
-> half for navigating the window manager. Should the F-keys be needed in 
-> an application, there is a passthrough mode in my window manager.
+The keys on your right hand do not change, except for activating the 
+<kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers. These keys are intended to 
+be used for window manager shortcuts.
 
 In a multitude of operating systems and desktop environments, there 
 exists a convention to assign global keybindings to the <kbd>Meta</kbd> 
@@ -122,9 +121,10 @@ signal from copying).
 
 ![The media portion of the Handalf keyboard layout.](handalf-media.svg)
 
-Numpad keys have been left out of the layout. Media control keys are 
-obtained by combining the **Fn** layer with the <kbd>AltGr</kbd> 
-modifier.
+F-keys and media control keys are obtained by combining the **Fn** layer 
+with the <kbd>AltGr</kbd> modifier.
+
+Numpad keys have been left out of the layout for now.
 
 
 ## Other tricks

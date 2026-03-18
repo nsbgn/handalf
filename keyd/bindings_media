@@ -22,23 +22,23 @@ b = record
 
 # Right
 
-y = f22
-u = f19
-i = f20
-o = f21
+y = f12
+u = f7
+i = f8
+o = f9
 p = pause
 [ = enter
 
-h = f23
-j = f16
-k = f17
-l = f18
-; = capslock
-' = insert
+h = f11
+j = f4
+k = f5
+l = f6
+; = compose
+' = sysrq
 
-n = f24
-m = f13
-, = f14
-. = f15
+n = f10
+m = f1
+, = f2
+. = f3
 / = scrolllock
 rightshift = insert

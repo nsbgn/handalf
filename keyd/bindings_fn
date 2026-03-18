@@ -24,23 +24,23 @@ b = delete
 
 # Right (Fn)
 
-y = f12
-u = f7
-i = f8
-o = f9
-p = pause
-[ = enter
+y = M-A-y
+u = M-A-u
+i = M-A-i
+o = M-A-o
+p = M-A-p
+[ = M-A-[
 
-h = f11
-j = f4
-k = f5
-l = f6
-; = compose
-' = sysrq
+h = M-A-h
+j = M-A-j
+k = M-A-k
+l = M-A-l
+; = M-A-;
+' = M-A-'
 
-n = f10
-m = f1
-, = f2
-. = f3
-/ = scrolllock
-rightshift = insert
+n = M-A-n
+m = M-A-m
+, = M-A-,
+. = M-A-.
+/ = M-A-/
+rightshift = M-A-backslash

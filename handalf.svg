@@ -215,7 +215,7 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
     <text class="c3 mod">Alt</text>
     <g class="c4">
       <text class="tap_hold">
-        <tspan class="mod fn">Fn</tspan><tspan></tspan>
+        <tspan class="mod fn">Nav</tspan><tspan></tspan>
       </text>
     </g>
     <g class="c4"><text class="note">Cancel</text></g>
