@@ -110,9 +110,9 @@ This is achieved simply by pressing the remaining thumb key while in the
 The **Fn** layer also contains dedicated <kbd>Cut</kbd>, 
 <kbd>Copy</kbd>, and <kbd>Paste</kbd> keys. These are convenient, not 
 only because they keep the familiar keys in the same spot regardless of 
-your underlying layout, but also because they can be used in terminal 
-emulators (without throwing in a <kbd>Shft</kbd> to distinguish the `^C` 
-signal from copying).
+your underlying layout, but also because they can be used in some 
+terminal emulators (without throwing in a <kbd>Shft</kbd> to distinguish 
+the `^C` signal from copying).
 
 <!-- Add a compatibility mode that just uses C-c etc, for Windows? -->
 
@@ -223,6 +223,12 @@ for anything more complex.
 <!-- still be active. For this reason, the right half will be disabled when --> 
 <!-- pressing something in the **Nav/Meta** layer some milliseconds after --> 
 <!-- using the arrow keys. **(TODO)** -->
+
+
+### Caps Lock
+
+<kbd>CapsLk</kbd> can be activated by pressing both left 
+<kbd>Shift</kbd> and <kbd>AltGr</kbd>.
 
 
 ## On overloading Escape
