@@ -10,9 +10,16 @@ partial alphanumeric_keys xkb_symbols "colemak_dh" {
     include "handalf(handalf)"
 };
 
+
+partial modifier_keys xkb_symbols "cancel" {
+    key <STOP> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
+    key <I231> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
+};
+
+
 partial alphanumeric_keys xkb_symbols "handalf" {
     include "level3(ralt_switch)"
-    include "compose(102)"
+    include "handalf(cancel)"
 
     key.type = "THREE_LEVEL";
     key <CAPS> { [ BackSpace, BackSpace, BackSpace ] };

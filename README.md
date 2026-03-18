@@ -155,13 +155,14 @@ special characters by typing intuitive keys in succession. For example,
 <kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
 
 It is *virtual*, in the sense that there is no physical key that has 
-this property by default. I have assigned it to the '102nd key', that 
-is, the <kbd>\\</kbd> key that hangs out next to the left 
-<kbd>Shift</kbd> on ISO keyboards.
+this property by default. You need to assign it on the software level.
 
-It is accessible by tapping the <kbd>Fn</kbd> key while holding 
-<kbd>Shift</kbd> or <kbd>AltGr</kbd>. This is convenient, because many 
-subsequent symbols already require you to hold a modifier anyway.
+In the Handalf XKB layout, Compose is accessible by tapping the 
+<kbd>Fn</kbd> key while holding <kbd>Shift</kbd> or <kbd>AltGr</kbd>. 
+This is convenient, firstly because it does not obscure any keys you 
+might want to use for something else, and secondly because many 
+subsequent symbols already require you to hold one of these modifiers 
+anyway.
 
 
 ### Left and right modifier variants
