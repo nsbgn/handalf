@@ -12,8 +12,8 @@ thumbs idle while your weakest finger contorts to reach keys like
 force your hands to abandon the home row entirely. Exotic keyboards can 
 remedy all this, but lack portability.
 
-Handalf is a keyboard layout scheme that works well for fancy 40% 
-keyboards with 3 or more thumb keys per hand, but it *also* fits broadly 
+Handalf is a 42-key layout scheme that works well for fancy 40% 
+keyboards with 3 thumb keys per hand, but it *also* fits comfortably 
 within the constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
@@ -22,13 +22,13 @@ within the constraints of a laptop keyboard.
     slack.
 -   **Graceful degradation.** You can keep a consistent layout, even 
     when you're stuck on a laptop keyboard.
--   **Easy to learn & remember.** The alpha keys may not change from 
-    what you're used to, and all other symbols are accessible with just 
+-   **Easy to learn & remember.** You may be able to keep your letter 
+    keys unchanged, and all other symbols are accessible with just 
     <kbd>AltGr</kbd> modifier. There is one additional layer beyond 
-    that, for navigation and function keys, and, when combined with 
-    <kbd>AltGr</kbd>, media keys. There's no need to learn it all at 
-    once: I've found the symbols under <kbd>AltGr</kbd> to carry the 
-    most ergonomic benefit.
+    that, for navigation keys. Combined with <kbd>AltGr</kbd>, you get 
+    function and media keys. There's no need to learn it all at once: 
+    I've found the symbols under <kbd>AltGr</kbd> to carry the most 
+    ergonomic benefit.
 -   **No homerow mods.** While typing at speed, keypresses will often 
     overlap, which means that any attempt at assigning multiple 
     functions to the spacebar or alpha keys must resort to timeouts. 
@@ -53,7 +53,7 @@ within the constraints of a laptop keyboard.
     modifier combinations are available, and they should still stack in 
     an intuitive and consistent way.
 -   **Complete.** A 42-key board should have access to all keys that you 
-    might find on a standard tenkeyless keyboard.
+    might find on a standard keyboard.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
 consideration, like simplicity, rolling motions, muscle memory, semantic 
@@ -67,12 +67,14 @@ if you have a left-handed layout following the same principles.
 ## A word of caution
 
 Many lower-end keyboards, and in particular integrated keyboards on 
-laptops, have limited rollover. That means that they cannot physically 
-register all combinations of keys. If you run into issues, this might be 
-the culprit.
+laptops, have limited rollover --- meaning that they cannot physically 
+register all combinations of keys. Keep this in mind when you run into 
+issues.
 
 
-## Symbol keys
+## Layers
+
+### Symbol keys
 
 ![The symbol portion of the Handalf keyboard layout.](handalf-symbols.svg)
 
@@ -81,40 +83,26 @@ then all alpha keys can stay put. The major addition is that the
 **Level-3 symbols** on those keys (accessed through <kbd>AltGr</kbd>) 
 have been crammed full with numbers and the other ASCII symbols.
 
-> [!NOTE]
-> The left-hand side of the keyboard now gives comfortable cross-hand 
-> access to common symbols like parentheses, while the number pad can be 
-> operated entirely with your right-hand.
+While pressing <kbd>AltGr</kbd>, the left-hand side of the keyboard 
+provides comfortable cross-hand access to common symbols like 
+parentheses, while the number pad can be operated entirely with your 
+right hand.
 
 
-## Action keys
+### Action keys
 
 ![The action portion of the Handalf keyboard layout.](handalf-action.svg)
 
 The key to the left of <kbd>Space</kbd>, the one that would have been 
-your <kbd>Alt</kbd>, is now the <kbd>Fn</kbd> key. Here, the navigation 
-cluster is placed so that you can control the directional keys with only 
-your left hand.
+your <kbd>Alt</kbd>, is now the <kbd>Fn</kbd> key. This key accesses a 
+layer for keys that perform *actions* rather than symbols.
 
-The keys on your right hand do not change, except for activating the 
-<kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers. These keys are intended to 
-be used for window manager shortcuts.
+Here, the navigation cluster is placed so that you can control the 
+directional keys with only your left hand.
 
-In a multitude of operating systems and desktop environments, there 
-exists a convention to assign global keybindings to the <kbd>Meta</kbd> 
-key (also sometimes referred to as the *Super*, *Windows*, *Command* or 
-*GUI*-key). Moreover, a tap on this key should bring up a global menu. 
-This is achieved simply by pressing the remaining thumb key while in the 
-**Fn** layer: <kbd>Space</kbd>.
-
-The **Fn** layer also contains dedicated <kbd>Cut</kbd>, 
-<kbd>Copy</kbd>, and <kbd>Paste</kbd> keys. These are convenient, not 
-only because they keep the familiar keys in the same spot regardless of 
-your underlying layout, but also because they can be used in some 
-terminal emulators (without throwing in a <kbd>Shft</kbd> to distinguish 
-the `^C` signal from copying).
-
-<!-- Add a compatibility mode that just uses C-c etc, for Windows? -->
+The keys on your right hand are the usual letter keys augmented with 
+both the <kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers. This is intended 
+to be used for custom window manager shortcuts.
 
 
 ### Media keys
@@ -126,126 +114,31 @@ with the <kbd>AltGr</kbd> modifier.
 
 Numpad keys have been left out of the layout for now.
 
-
-## Other tricks
-
-### Backspace
+## Backspace
 
 <kbd>BkSp</kbd> takes the place of <kbd>CapsLk</kbd>, avoiding the huge 
-move your pinky would have made.
+move your pinky would have had to make.
 
-### Sticky modifiers
-
-<kbd>Shift</kbd> and <kbd>AltGr</kbd> are modifiers, but unlike 
-<kbd>Ctrl</kbd> and <kbd>Alt</kbd>, they don't access shortcuts --- they 
-simply provide more symbols. To make for a more comfortable typing 
-experience, these keys are made *sticky* (or *oneshot*). Instead of 
-holding and consciously releasing them *just* before pressing the next 
-unmodified key, you can just tap once and forget about it. MUch better!
-
-<!-- ### CapsLock and NumLock -->
-
-<!-- Double tapping <kbd>Shift</kbd> on its own gets you <kbd>CapsLk</kbd> --> 
-<!-- and double tapping <kbd>AltGr</kbd> gets you <kbd>NumLk</kbd>. -->
-
-### Compose
-
-The <kbd>Multi</kbd> key (also called *Compose*) allows you to type 
-special characters by typing intuitive keys in succession. For example, 
-<kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
-
-It is *virtual*, in the sense that there is no physical key that has 
-this property by default. You need to assign it on the software level.
-
-In the Handalf XKB layout, Compose is accessible by tapping the 
-<kbd>Fn</kbd> key while holding <kbd>Shift</kbd> or <kbd>AltGr</kbd>. 
-This is convenient, firstly because it does not obscure any keys you 
-might want to use for something else, and secondly because many 
-subsequent symbols already require you to hold one of these modifiers 
-anyway.
+<kbd>CapsLk</kbd>, in turn, can be activated by pressing both left and 
+right <kbd>Shift</kbd> (or double tapping <kbd>Shift</kbd>).
 
 
-### Left and right modifier variants
-
-Modifiers are your thumbs' responsibility, because that makes it easy to 
-combine them with other keys.
-
-In general, it doesn't matter whether you press the right or left 
-variant of a modifier, so we choose the left variant when the key occurs 
-on the the left side (left <kbd>Alt</kbd>) and the right variant when 
-the key occurs on the right side (right <kbd>Shft</kbd>, right 
-<kbd>AltGr</kbd>, and right <kbd>Ctrl<kbd>).
-
-Left and right Alt are a special case, because they perform 
-distinguishable functions. I refer to them by distinct names that 
-minimize their handedness, and your thumbs are given direct access to 
-both of them.
-
-But we really do need both variants for all modifiers:
-
-- Some tasks, like escaping a virtual machine, may involve tapping a 
-  specific side.
-- We want to accommodate typing inconvenient combinations in which one 
-  of your thumbs is already occupied.
-- We want to have a <kbd>Shift</kbd> on the left pinky still, because 
-  sometimes it needs to be pressed while using the mouse.
-- Right <kbd>Meta</kbd> is conveniently placed on a laptop keyboard, 
-  because you can press <kbd>Fn</kbd> with your left thumb and 
-  <kbd>Space</kbd> with your right one to generate <kbd>Meta</kbd>. But 
-  saner keyboards where the right thumb can't reach <kbd>Space</kbd> 
-  need a left <kbd>Meta</kbd> too.
-- Most importantly, we want common shortcuts like 
-  <kbd>Ctrl</kbd><kbd>c</kbd> and <kbd>Ctrl</kbd><kbd>f</kbd> to remain 
-  easy to type, even if your right hand is on the mouse or if you're on 
-  a laptop keyboard without a thumb key for <kbd>Ctrl</kbd>.
-
-Therefore, in the **Fn** layer, your left pinky accesses a sticky left 
-<kbd>Ctrl</kbd> and non-sticky left <kbd>Meta</kbd> respectively. The 
-**Fn** layer itself is then temporarily disabled.
-
-It does violate our design principles to hide a modifier behind another 
-key. You can't combine these modifiers with other keys in **Fn**. And 
-you may need to pause before typing complex combinations.
-
-In this case, this an acceptable compromise, because these are 
-second-class variants; their thumb cluster counterparts should be used 
-for anything more complex.
-
-<!-- You will often need a decimal point while typing numbers, but it is --> 
-<!-- cumbersome to exit the symbol layer just to grab one and return. The --> 
-<!-- same holds for the underscore when typing in all-caps. For this reason, --> 
-<!-- double-tapping <kbd>Space</kbd> while holding <kbd>AltGr</kbd> will emit --> 
-<!-- a decimal point (resulting in `.` or `,` depending on your locale), and --> 
-<!-- doing so while holding <kbd>Shift</kbd> will emit an underscore `_`. --> 
-<!-- **(TODO)** -->
-
-<!-- You will usually use the arrows in the **Nav/Meta** layer while typing a --> 
-<!-- sentence, but if you continue typing quickly, the **Meta** portion may --> 
-<!-- still be active. For this reason, the right half will be disabled when --> 
-<!-- pressing something in the **Nav/Meta** layer some milliseconds after --> 
-<!-- using the arrow keys. **(TODO)** -->
-
-
-### Caps Lock
-
-<kbd>CapsLk</kbd> can be activated by pressing both left 
-<kbd>Shift</kbd> and <kbd>AltGr</kbd>.
-
-
-## On overloading Escape
+## Overloading <kbd>Fn</kbd>/<kbd>Esc</kbd>
 
 The <kbd>Fn</kbd> key occupies a very accessible location. Since it does 
 not map to a conventional key anyway, you might be tempted, as I was, to 
-give it double duty: emit another key when it is tapped in isolation. 
-Particularly if you are a Vim user, <kbd>Esc</kbd> seems perfect for 
-this. It is used frequently, and since it tends to punctuate a 
-keystroke, the risk of accidentally triggering a <kbd>Fn</kbd>-hold is 
-low.
+give it double duty: to make it do something else when it is tapped in 
+isolation.
 
-Indeed, it is reasonable to take this approach. However, accidentally 
-triggering <kbd>Esc</kbd> can be *really* annoying. Outside of Vim, it 
-wreaks havoc by closing windows, losing focus on input fields, and 
-erasing the spreadsheet formula you just typed.
+If you are a Vim user, one key in particular might come to mind. You 
+need it all the time and it tends to punctuate a sequence of keystrokes, 
+so it is relatively easy to disambiguate your intent.
+
+Indeed, it is entirely reasonable to overload <kbd>Fn</kbd> with 
+<kbd>Esc</kbd>. However, when you accidentally trigger <kbd>Esc</kbd>, 
+it can be *really* annoying. Outside of Vim, it wreaks havoc by closing 
+windows, losing focus on input fields, and erasing the spreadsheet 
+formula you just typed.
 
 That is why I have chosen to overload it with <kbd>Cancel</kbd> instead 
 --- a key that is barely used and not even present on contemporary 
@@ -263,14 +156,146 @@ section.
     `terminfo`), you would need to use another key.
 
 
-## On Alt-Tab
+## The Compose key
+
+The <kbd>Multi</kbd> key (also called the Compose key) allows you to 
+type special characters by typing intuitive keys in succession. For 
+example, <kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
+
+It is *virtual*, in the sense that there is no physical key that has 
+this property by default. You need to assign it on the software level.
+
+In the Handalf XKB layout, Compose is accessible by tapping the 
+<kbd>Fn</kbd> key while holding <kbd>Shift</kbd> or <kbd>AltGr</kbd> (or 
+vice versa). This is convenient, firstly because it does not obscure any 
+keys you might want to use for something else, and secondly because many 
+subsequent symbols already require you to hold one of these modifiers 
+anyway.
+
+
+## Copy/paste/cut
+
+The **Fn** layer contains dedicated <kbd>Cut</kbd>, <kbd>Copy</kbd>, and 
+<kbd>Paste</kbd> keys. This keeps these keys in the same spot regardless 
+of the layout of your alphanumerics, but more importantly: they can be 
+used in some terminal emulators (without the need to distinguish the 
+`^C` signal from copying).
+
+<!-- Add a compatibility mode that just uses C-c etc, for Windows? -->
+
+
+## Alt-Tab
 
 Many computer users will have muscle memory associated with 
 <kbd>Alt</kbd><kbd>Tab</kbd>, so pressing <kbd>Tab</kbd> in the **Fn** 
 layer will still emit exactly that. It will also keep the <kbd>Alt</kbd> 
 modifier active until you either exit the **Fn** layer, or press another 
-key in the **Fn** layer --- this keeps the overview of windows up, just 
-as they would if you keep holding <kbd>Alt</kbd>.
+key in the **Fn** layer. This keeps the window list in view, just as it 
+would be in the original situation holding <kbd>Alt</kbd>.
+
+
+## Modifiers and layers
+
+Modifiers are keys like <kbd>Shift</kbd>, <kbd>AltGr</kbd>, 
+<kbd>Ctrl</kbd>, <kbd>Alt</kbd>, and <kbd>Meta</kbd>. These keys are 
+sent along with the key you press, for your software to interpret. A 
+layer key like <kbd>Fn</kbd> is similar, but it modifies the key 
+directly, before it even leaves the (virtual) keyboard.
+
+The position of modifier and layer keys is fundamental to the layout: 
+they change everything your other fingers can do. Therefore, I 
+considered many different permutations, eventually landing on the 
+following insights:
+
+- Ideally, these keys should be your thumbs' responsibility, because 
+  that makes it easy to combine them with other keys.
+- The symbol modifiers, <kbd>Shift</kbd> and <kbd>AltGr</kbd>, should be 
+  on the hand opposite from <kbd>Space</kbd>. They don't need to be 
+  combined, so they can be on the same hand.
+- The order in which you activate modifiers and layers should not 
+  matter. That is, holding <kbd>Fn</kbd> and then <kbd>Alt</kbd> should 
+  have the same effect as the other way around.
+- You should not have to press more than one key to activate a layer or 
+  modifier.
+- It should be assumed that the fingers are in the home row position; 
+  shifting your fingers a column or row is not comfortable on sculpted 
+  keyboards like the Kinesis Advantage, MoErgo Glove80, Dactyl, or 
+  Keyboardio Model 100.
+- When overloading a modifier, consider potential misfires: choose 'tap' 
+  and 'hold' actions that are not destructive. This is easier to do when 
+  associating the overloaded key with Window Manager actions.
+
+
+### Sticky modifiers
+
+<kbd>Shift</kbd> and <kbd>AltGr</kbd> are are modifiers that you use in 
+the context of a longer sequence --- since they expose symbols rather 
+than actions. To make for a more comfortable typing experience, these 
+keys are made *sticky* (or *oneshot*). Instead of holding and 
+consciously releasing them *just* before pressing the next unmodified 
+key, you can just tap once and forget about it. MUch better!
+
+<!-- ### CapsLock and NumLock -->
+
+<!-- Double tapping <kbd>Shift</kbd> on its own gets you <kbd>CapsLk</kbd> --> 
+<!-- and double tapping <kbd>AltGr</kbd> gets you <kbd>NumLk</kbd>. -->
+
+
+### Left and right modifier variants
+
+In general, it doesn't matter whether you press the right or left 
+variant of a modifier, so we choose the left variant when the key occurs 
+on the the left side (left <kbd>Alt</kbd>) and the right variant when 
+the key occurs on the right side (right <kbd>Shift</kbd>, 
+<kbd>AltGr</kbd>, and right <kbd>Ctrl</kbd>).
+
+But all variants should be available:
+
+- Some tasks, like escaping a virtual machine, may involve tapping a 
+  specific side.
+- I want to accommodate typing inconvenient modifier combinations, like 
+  <kbd>Ctrl</kbd><kbd>Shift</kbd>, in which one of your thumbs is 
+  already occupied.
+- <kbd>Shift</kbd> should be available to the left pinky still, because 
+  sometimes it needs to be pressed while using the mouse. Similarly, I 
+  want shortcuts involving <kbd>Cntrl</kbd> to remain easy to type with 
+  the left hand, even if your right hand is on the mouse, or if you're 
+  on a laptop keyboard without a thumb key for <kbd>Ctrl</kbd>.
+
+Therefore, in the **Fn** layer, your left pinky accesses a sticky left 
+<kbd>Ctrl</kbd>. The **Fn** layer itself is then temporarily disabled. 
+This makes it very easy to hit common shortcuts like 
+<kbd>Ctrl</kbd><kbd>s</kbd>.
+
+In many operating systems and desktop environments, there exists a 
+convention to open a global menu upon tapping the <kbd>Meta</kbd> key 
+(also sometimes referred to as the *Super*, *Windows*, *Command* or 
+*GUI*-key). On a laptop keyboard, right <kbd>Meta</kbd> is easy to tap, 
+because you can press <kbd>Fn</kbd> with your left thumb and 
+<kbd>Space</kbd> with your right one. But saner keyboards where the 
+right thumb can't reach <kbd>Space</kbd> need a left variant too --- 
+which is why the pinky also gets a non-sticky left <kbd>Meta</kbd>.
+
+It does violate our design principles to hide modifier keys behind other 
+keys. There are real downsides: you can't combine these modifiers with 
+other keys in **Fn**, and typing complex combinations may cause you to 
+pause to think. This compromise is acceptable, because these are 
+second-class variants anyway; their thumb counterparts should be used in 
+the general case.
+
+<!-- You will often need a decimal point while typing numbers, but it is --> 
+<!-- cumbersome to exit the symbol layer just to grab one and return. The --> 
+<!-- same holds for the underscore when typing in all-caps. For this reason, --> 
+<!-- double-tapping <kbd>Space</kbd> while holding <kbd>AltGr</kbd> will emit --> 
+<!-- a decimal point (resulting in `.` or `,` depending on your locale), and --> 
+<!-- doing so while holding <kbd>Shift</kbd> will emit an underscore `_`. --> 
+<!-- **(TODO)** -->
+
+<!-- You will usually use the arrows in the **Nav/Meta** layer while typing a --> 
+<!-- sentence, but if you continue typing quickly, the **Meta** portion may --> 
+<!-- still be active. For this reason, the right half will be disabled when --> 
+<!-- pressing something in the **Nav/Meta** layer some milliseconds after --> 
+<!-- using the arrow keys. **(TODO)** -->
 
 <!-- ## Keysyms -->
 
@@ -307,38 +332,6 @@ as they would if you keep holding <kbd>Alt</kbd>.
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
 `sudo make install`. Activate the `handalf` layout in your environment.
 
-
-## Notes on modifiers and layers
-
-Modifiers are keys like <kbd>Shift</kbd>, <kbd>AltGr</kbd>, 
-<kbd>Control</kbd>, <kbd>Alt</kbd>, and <kbd>Meta</kbd>. These keys are 
-sent along with the key you press to modify their behaviour. A layer key 
-like <kbd>Fn</kbd> is similar, but it modifies the key directly, before 
-it even reaches your desktop environment.
-
-You can rearrange the alphanumeric keys and action keys internally, and 
-while some arrangements will be more comfortable than others, it will 
-not lead to a fundamentally different typing experience. The same can 
-not be said for modifier and layer keys. These keys can be *overloaded*, 
-and it is to be expected that they are sometimes pressed in 
-*conjunction*. I considered several permutations, landing on the 
-following rules:
-
-- The order in which you press modifiers and layers should not matter. 
-  That is, holding <kbd>Fn</kbd> and then <kbd>Alt</kbd> should have the 
-  same effect as the other way around.
-- You should not have to press more than one key to activate a layer or 
-  modifier.
-- All modifier and layer keys should be on the thumb.
-- It should be assumed that the fingers are in the home row position; 
-  shifting your fingers a column or row is not always comfortable on 
-  sculpted keyboards like the Kinesis Advantage, MoErgo Glove80, Dactyl, 
-  or Keyboardio Model 100.
-  <!-- (Dropping this requirement, along with the one preceding it, allows an --> 
-  <!-- interesting variant where the pinky activates a layer in which the --> 
-  <!-- arrow keys are on WASD. This works well on laptop keyboards, and frees --> 
-  <!-- up a thumb key for <kbd>Ctrl</kbd>.) -->
-
 <!--
 ## Notes on switching between alphanumeric layouts
 
@@ -358,22 +351,17 @@ level, you can have visual feedback, and your window manager's shortcuts
 can remain unaffected.
 -->
 
-<!--
-- When overloading a modifier, take care of potential misfires: choose 
-  'tap' actions that are not destructive, and make sure that the 'hold' 
-  actions are also safe. This is easier to do when associating the 
-  overloaded key with Window Manager actions.
--->
 
-### Keyboard controls
+## Keyboard controls
 
-Keystrokes for keyboard control, such as Bluetooth connectivity, should 
-not obscure any keystroke meant for the connected device. For that 
-reason, they are hidden away behind *combinations* of keys on the same 
-column. To avoid incurring any lag, this is further limited to when all 
-left thumb controls are simultaneously pressed (that is, when the 
-<kbd>Alt</kbd> and <kbd>Meta</kbd> modifiers as well as the **Fn** layer 
-are simultaneously activated).
+Keystrokes for control of the keyboard *itself*, such as those handling 
+Bluetooth connectivity, should not obscure any keystroke that might be 
+used by an applications. For that reason, they are hidden away behind 
+combinations of keys *on the same column*. To avoid incurring any lag, 
+this is further limited to when all left thumb controls are 
+simultaneously pressed (that is, when the <kbd>Alt</kbd> and 
+<kbd>Meta</kbd> modifiers as well as the **Fn** layer are simultaneously 
+activated).
 
 <!--
 ## Other
