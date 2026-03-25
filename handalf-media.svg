@@ -55,8 +55,8 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
 <g class="kb" id="left-keyboard">
   <use href="#left"/>
   <g class="r0">
-    <text class="c0">SA-Tab</text>
-    <text class="c1">Mic+</text>
+    <text class="c0">SATab</text>
+    <text class="c1">Lock</text>
     <text class="c2">⏮</text>
     <text class="c3">Vol+</text>
     <text class="c4">⏭</text>
@@ -64,7 +64,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r1">
     <text class="c0">BkSp</text>
-    <text class="c1">Mic-</text>
+    <text class="c1">Ctrlᴸ</text>
     <text class="c2">⏪</text>
     <text class="c3">Vol-</text>
     <text class="c4">⏩</text>
@@ -72,11 +72,11 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
   </g>
   <g class="r2">
     <text class="c0">Shftᴸ</text>
-    <text class="c1">MicMt</text>
+    <text class="c1">Metaᴸ</text>
     <text class="c2">⏸️</text>
     <text class="c3">Mute</text>
     <text class="c4">▶️</text>
-    <text class="c5">Rec</text>
+    <text class="c5">Quit</text>
   </g>
 </g>
 
@@ -88,15 +88,15 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F8</text>
     <text class="c3">F9</text>
     <text class="c4">Pause</text>
-    <text class="c5">Enter</text>
+    <text class="c5">Ins</text>
   </g>
   <g class="r1">
     <text class="c0">F11</text>
     <text class="c1">F4</text>
     <text class="c2">F5</text>
     <text class="c3">F6</text>
-    <text class="c4">Menu</text>
-    <text class="c5">PrtSc</text>
+    <text class="c4">PrtSc</text>
+    <text class="c5">Menu</text>
   </g>
   <g class="r2">
     <text class="c0">F10</text>
@@ -104,7 +104,7 @@ text { font-size: 9px; text-anchor: middle; font-family: monospace; }
     <text class="c2">F2</text>
     <text class="c3">F3</text>
     <text class="c4">ScrLk</text>
-    <text class="c5">Ins</text>
+    <text class="c5">Search</text>
   </g>
 </g>
 </svg>
