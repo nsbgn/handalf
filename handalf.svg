@@ -32,44 +32,54 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   transform: translate(0, -8px);
 }
 
-/* 4-variant keys */
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(1) {
+/* 5-variant keys */
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(1) {
   font-size: 10px;
-  transform: translate(-5px, 3px);
+  transform: translate(-5px, 0px);
   text-anchor: end;
   opacity: 30%;
 }
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
-  transform: translate(5px, 3px);
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(2) {
+  transform: translate(5px, 0px);
   text-anchor: start;
   font-size: 10px;
   opacity: 30%;
 }
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(3) {
   font-size: 13px;
   fill: #004488;
-  transform: translate(0px, 5px);
+  transform: translate(0px, 1px);
   text-anchor: middle;
 }
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4) {
-  font-size: 8px;
-  transform: translate(0, -9px);
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(4) {
+  font-size: 7px;
+  transform: translate(0, -11px);
+  text-anchor: middle;
+}
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5) {
+  font-size: 6px;
+  transform: translate(0, 8px);
   text-anchor: middle;
 }
 
 /* Color coding */
 .shift,
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(2) {
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(2) {
   fill: #225500;
 }
 .altgr,
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(3) {
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(3) {
   fill: #004488;
 }
 .fn,
-g.kb > g > g:has(> :last-child:nth-child(4)) > text:nth-child(4),
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(4),
 g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
   fill: #801818;
+}
+.media,
+g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5)
+{
+  fill: #801880;
 }
 
 ]]></style>
@@ -115,30 +125,35 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>Q</text>
       <text>!</text>
       <text>Esc</text>
+      <text>Lock</text>
     </g>
     <g class="c2">
       <text>w</text>
       <text>W</text>
       <text>[</text>
       <text>Home</text>
+      <text>Prev</text>
     </g>
     <g class="c3">
       <text>e</text>
       <text>E</text>
       <text>+</text>
       <text>&#9650;</text>
+      <text>Vol+</text>
     </g>
     <g class="c4">
       <text>r</text>
       <text>R</text>
       <text>#</text>
       <text>End</text>
+      <text>Next</text>
     </g>
     <g class="c5">
       <text>t</text>
       <text>T</text>
       <text>]</text>
       <text>PgUp</text>
+      <text>Bri+</text>
     </g>
   </g>
   <g class="r1">
@@ -150,72 +165,83 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>A</text>
       <text>*</text>
       <text>Ctrlᴸ</text>
+      <text></text>
     </g>
     <g class="c2">
       <text>s</text>
       <text>S</text>
       <text>(</text>
       <text>&#9664;</text>
+      <text>Rew</text>
     </g>
     <g class="c3">
       <text>d</text>
       <text>D</text>
       <text>-</text>
       <text>&#9660;</text>
+      <text>Vol-</text>
     </g>
     <g class="c4">
       <text>f</text>
       <text>F</text>
       <text>=</text>
       <text>&#9654;</text>
+      <text>Fwd</text>
     </g>
     <g class="c5">
       <text>g</text>
       <text>G</text>
       <text>)</text>
       <text>PgDn</text>
+      <text>Bri-</text>
     </g>
   </g>
   <g class="r2">
     <g class="c0">
       <text>Shftᴸ</text>
+      <text>Caps</text>
     </g>
     <g class="c1">
       <text>z</text>
       <text>Z</text>
       <text>|</text>
       <text>Metaᴸ</text>
+      <text></text>
     </g>
     <g class="c2">
       <text>x</text>
       <text>X</text>
       <text>{</text>
       <text>Cut</text>
+      <text>Pause</text>
     </g>
     <g class="c3">
       <text>c</text>
       <text>C</text>
       <text>$</text>
       <text>Copy</text>
+      <text>Mute</text>
     </g>
     <g class="c4">
       <text>v</text>
       <text>V</text>
       <text>_</text>
       <text>Paste</text>
+      <text>Play</text>
     </g>
     <g class="c5">
       <text>b</text>
       <text>B</text>
       <text>}</text>
       <text>Del</text>
+      <text>Close</text>
     </g>
   </g>
   <g class="r3">
     <text class="c3 mod">Alt</text>
     <g class="c4">
       <text class="tap_hold">
-        <tspan class="mod fn">Nav</tspan><tspan></tspan>
+        <tspan class="mod fn">Fn</tspan><tspan></tspan>
       </text>
     </g>
     <g class="c4"><text class="note">Cancel</text></g>
@@ -233,34 +259,40 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>y</text>
       <text>Y</text>
       <text>^</text>
+      <text></text>
       <text>F12</text>
     </g>
     <g class="c1">
       <text>u</text>
       <text>U</text>
       <text>7</text>
+      <text></text>
       <text>F7</text>
     </g>
     <g class="c2">
       <text>i</text>
       <text>I</text>
       <text>8</text>
+      <text></text>
       <text>F8</text>
     </g>
     <g class="c3">
       <text>o</text>
       <text>O</text>
       <text>9</text>
+      <text></text>
       <text>F9</text>
     </g>
     <g class="c4">
       <text>p</text>
       <text>P</text>
       <text>%</text>
-      <text>Pause</text>
+      <text></text>
+      <text>PauBr</text>
     </g>
     <g class="c5">
       <text>Enter</text>
+      <text>Insert</text>
     </g>
   </g>
   <g class="r1">
@@ -268,37 +300,43 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>h</text>
       <text>H</text>
       <text>@</text>
+      <text></text>
       <text>F11</text>
     </g>
     <g class="c1">
       <text>j</text>
       <text>J</text>
       <text>4</text>
+      <text></text>
       <text>F4</text>
     </g>
     <g class="c2">
       <text>k</text>
       <text>K</text>
       <text>5</text>
+      <text></text>
       <text>F5</text>
     </g>
     <g class="c3">
       <text>l</text>
       <text>L</text>
       <text>6</text>
+      <text></text>
       <text>F6</text>
     </g>
     <g class="c4">
       <text>;</text>
       <text>:</text>
       <text>0</text>
-      <text>Menu</text>
+      <text></text>
+      <text>PrtSc</text>
     </g>
     <g class="c5">
       <text>'</text>
       <text>"</text>
       <text>`</text>
-      <text>PrtSc</text>
+      <text></text>
+      <text>Menu</text>
     </g>
   </g>
   <g class="r2">
@@ -306,35 +344,43 @@ g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
       <text>n</text>
       <text>N</text>
       <text>&amp;</text>
+      <text></text>
       <text>F10</text>
     </g>
     <g class="c1">
       <text>m</text>
       <text>M</text>
       <text>1</text>
+      <text></text>
       <text>F1</text>
     </g>
     <g class="c2">
       <text>,</text>
       <text>&lt;</text>
       <text>2</text>
+      <text></text>
       <text>F2</text>
     </g>
     <g class="c3">
       <text>.</text>
       <text>&gt;</text>
       <text>3</text>
+      <text></text>
       <text>F3</text>
     </g>
     <g class="c4">
       <text>/</text>
       <text>?</text>
       <text>~</text>
+      <text></text>
       <text>ScrLk</text>
     </g>
     <g class="c5">
       <text>\</text>
-      <text>Ins</text>
+      <text>\</text>
+      <text>\</text>
+      <text></text>
+      <text>Search</text>
     </g>
   </g>
   <g class="r3">
