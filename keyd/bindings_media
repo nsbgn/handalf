@@ -2,23 +2,23 @@
 space = space
 
 tab = S-A-tab
-q = noop
+q = coffee
 w = previoussong
 e = volumeup
 r = nextsong
-t = pagedown
+t = brightnessup
 
-a = noop
+# a = noop
 s = rewind
 d = volumedown
 f = fastforward
 g = brightnessdown
 
-z = micmute
+# z = noop
 x = pause
 c = mute
 v = play
-b = record
+b = close
 
 # Right
 
@@ -27,18 +27,18 @@ u = f7
 i = f8
 o = f9
 p = pause
-[ = enter
+[ = insert
 
 h = f11
 j = f4
 k = f5
 l = f6
-; = compose
-' = sysrq
+; = sysrq
+' = compose
 
 n = f10
 m = f1
 , = f2
 . = f3
 / = scrolllock
-rightshift = insert
+rightshift = search
