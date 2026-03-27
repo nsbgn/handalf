@@ -3,13 +3,45 @@
 <!--caps insert -->
 <defs>
 <style type="text/css"><![CDATA[
-text { font-size: 8px; text-anchor: middle; font-family: monospace; }
-.mod { font-weight: bold; }
-.note {
-  font-size: 6px;
-  transform: translate(0px, 8px);
+text {
+  font-size: 8px;
   text-anchor: middle;
+  font-family: monospace;
+}
+.big {
+  font-size: 10px;
+}
+.mod {
+  font-weight: bold;
+}
+.tap, .doubletap {
+  font-size: 7px;
+  transform: translate(13px, -12px);
+  text-anchor: end;
   opacity: .6;
+  font-style: italic;
+}
+.tap {
+  text-decoration: underline;
+}
+.doubletap {
+  text-decoration: double underline;
+}
+.shift {
+  fill: #225500;
+}
+.altgr {
+  fill: #004488;
+}
+.fn {
+  fill: #801818;
+}
+.media {
+  fill: #801880;
+}
+.dim,
+#right .fn {
+  opacity: .25;
 }
 
 .c0 { transform: translate(15px, 0); }
@@ -23,63 +55,40 @@ text { font-size: 8px; text-anchor: middle; font-family: monospace; }
 .r2 { transform: translate(0, 82px); }
 .r3 { transform: translate(0, 114px); }
 
-/* 2-variant keys */
-g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(1) {
-  transform: translate(0, 4px);
-}
-g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
+g.kb > g > g > text:first-child {
   font-size: 8px;
-  transform: translate(0, -8px);
 }
 
-/* 5-variant keys */
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(1) {
+g.kb > g > g > g:first-child:has(> :last-child:nth-child(3)) > text:nth-child(1) {
   font-size: 10px;
   transform: translate(-5px, 0px);
   text-anchor: end;
   opacity: 30%;
 }
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(2) {
+g.kb > g > g > g:first-child:has(> :last-child:nth-child(3)) > text:nth-child(2) {
   transform: translate(5px, 0px);
   text-anchor: start;
   font-size: 10px;
   opacity: 30%;
 }
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(3) {
+g.kb > g > g > g:first-child:has(> :last-child:nth-child(3)) > text:nth-child(3) {
   font-size: 13px;
   fill: #004488;
   transform: translate(0px, 1px);
   text-anchor: middle;
 }
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(4) {
-  font-size: 7px;
+g.kb > g > g > text {
+  font-size: 5px;
+}
+g.kb > g > g > text.fn {
+  font-size: 6px;
   transform: translate(0, -11px);
   text-anchor: middle;
 }
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5) {
+g.kb > g > g > text.media {
   font-size: 6px;
   transform: translate(0, 8px);
   text-anchor: middle;
-}
-
-/* Color coding */
-.shift,
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(2) {
-  fill: #225500;
-}
-.altgr,
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(3) {
-  fill: #004488;
-}
-.fn,
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(4),
-g.kb > g > g:has(> :last-child:nth-child(2)) > text:nth-child(2) {
-  fill: #801818;
-}
-.media,
-g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5)
-{
-  fill: #801880;
 }
 
 ]]></style>
@@ -118,42 +127,53 @@ g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5)
   <g class="r0">
     <g class="c0">
       <text>Tab</text>
-      <text>A-Tab</text>
+      <text class="fn">A-Tab</text>
+      <text class="media">S-A-Tab</text>
     </g>
     <g class="c1">
-      <text>q</text>
-      <text>Q</text>
-      <text>!</text>
-      <text>Esc</text>
-      <text>Lock</text>
+      <g>
+        <text>q</text>
+        <text>Q</text>
+        <text>!</text>
+      </g>
+      <text class="fn">Esc</text>
+      <text class="media">Lock</text>
     </g>
     <g class="c2">
-      <text>w</text>
-      <text>W</text>
-      <text>[</text>
-      <text>Home</text>
-      <text>Prev</text>
+      <g>
+        <text>w</text>
+        <text>W</text>
+        <text>[</text>
+      </g>
+      <text class="fn">Home</text>
+      <text class="media">Prev</text>
     </g>
     <g class="c3">
+      <g>
       <text>e</text>
       <text>E</text>
       <text>+</text>
-      <text>&#9650;</text>
-      <text>Vol+</text>
+      </g>
+      <text class="fn">&#9650;</text>
+      <text class="media">Vol+</text>
     </g>
     <g class="c4">
+      <g>
       <text>r</text>
       <text>R</text>
       <text>#</text>
-      <text>End</text>
-      <text>Next</text>
+      </g>
+      <text class="fn">End</text>
+      <text class="media">Next</text>
     </g>
     <g class="c5">
+      <g>
       <text>t</text>
       <text>T</text>
       <text>]</text>
-      <text>PgUp</text>
-      <text>Bri+</text>
+      </g>
+      <text class="fn">PgUp</text>
+      <text class="media">Bri+</text>
     </g>
   </g>
   <g class="r1">
@@ -161,93 +181,111 @@ g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5)
       <text>BkSp</text>
     </g>
     <g class="c1">
+      <g>
       <text>a</text>
       <text>A</text>
       <text>*</text>
-      <text>Ctrlᴸ</text>
-      <text></text>
+      </g>
+      <text class="mod fn">Ctrlᴸ</text>
+      <text class="dim mod media">Ctrlᴸ</text>
     </g>
     <g class="c2">
+      <g>
       <text>s</text>
       <text>S</text>
       <text>(</text>
-      <text>&#9664;</text>
-      <text>Rew</text>
+      </g>
+      <text class="fn">&#9664;</text>
+      <text class="media">Rew</text>
     </g>
     <g class="c3">
+      <g>
       <text>d</text>
       <text>D</text>
       <text>-</text>
-      <text>&#9660;</text>
-      <text>Vol-</text>
+      </g>
+      <text class="fn">&#9660;</text>
+      <text class="media">Vol-</text>
     </g>
     <g class="c4">
+      <g>
       <text>f</text>
       <text>F</text>
       <text>=</text>
-      <text>&#9654;</text>
-      <text>Fwd</text>
+      </g>
+      <text class="fn">&#9654;</text>
+      <text class="media">Fwd</text>
     </g>
     <g class="c5">
+      <g>
       <text>g</text>
       <text>G</text>
       <text>)</text>
-      <text>PgDn</text>
-      <text>Bri-</text>
+      </g>
+      <text class="fn">PgDn</text>
+      <text class="media">Bri-</text>
     </g>
   </g>
   <g class="r2">
     <g class="c0">
-      <text>Shftᴸ</text>
-      <text>Caps</text>
+      <text class="mod shift">Shftᴸ</text>
+      <text class="doubletap">CapsLk</text>
     </g>
     <g class="c1">
+      <g>
       <text>z</text>
       <text>Z</text>
       <text>|</text>
-      <text>Metaᴸ</text>
-      <text></text>
+      </g>
+      <text class="mod fn">Metaᴸ</text>
+      <text class="dim mod media">Metaᴸ</text>
     </g>
     <g class="c2">
+      <g>
       <text>x</text>
       <text>X</text>
       <text>{</text>
-      <text>Cut</text>
-      <text>Pause</text>
+      </g>
+      <text class="fn">Cut</text>
+      <text class="media">Pause</text>
     </g>
     <g class="c3">
+      <g>
       <text>c</text>
       <text>C</text>
       <text>$</text>
-      <text>Copy</text>
-      <text>Mute</text>
+      </g>
+      <text class="fn">Copy</text>
+      <text class="media">Mute</text>
     </g>
     <g class="c4">
+      <g>
       <text>v</text>
       <text>V</text>
       <text>_</text>
-      <text>Paste</text>
-      <text>Play</text>
+      </g>
+      <text class="fn">Paste</text>
+      <text class="media">Play</text>
     </g>
     <g class="c5">
+      <g>
       <text>b</text>
       <text>B</text>
       <text>}</text>
-      <text>Del</text>
-      <text>Close</text>
+      </g>
+      <text class="fn">Del</text>
+      <text class="media">Close</text>
     </g>
   </g>
   <g class="r3">
     <text class="c3 mod">Alt</text>
     <g class="c4">
-      <text class="tap_hold">
-        <tspan class="mod fn">Fn</tspan><tspan></tspan>
-      </text>
+      <text class="mod"><tspan class="fn">Fn</tspan></text>
+      <text class="tap">Cancel</text>
     </g>
-    <g class="c4"><text class="note">Cancel</text></g>
     <g class="c5">
       <text>Space</text>
-      <text>Metaᴿ</text>
+      <text class="mod fn">Metaᴿ</text>
     </g>
   </g>
 </g>
@@ -256,143 +294,174 @@ g.kb > g > g:has(> :last-child:nth-child(5)) > text:nth-child(5)
   <use href="#rhs"/>
   <g class="r0">
     <g class="c0">
+      <g>
       <text>y</text>
       <text>Y</text>
       <text>^</text>
-      <text></text>
-      <text>F12</text>
+      </g>
+      <text class="fn">M-A-y</text>
+      <text class="media">F12</text>
     </g>
     <g class="c1">
+      <g>
       <text>u</text>
       <text>U</text>
       <text>7</text>
-      <text></text>
-      <text>F7</text>
+      </g>
+      <text class="fn">M-A-u</text>
+      <text class="media">F7</text>
     </g>
     <g class="c2">
+      <g>
       <text>i</text>
       <text>I</text>
       <text>8</text>
-      <text></text>
-      <text>F8</text>
+      </g>
+      <text class="fn">M-A-i</text>
+      <text class="media">F8</text>
     </g>
     <g class="c3">
+      <g>
       <text>o</text>
       <text>O</text>
       <text>9</text>
-      <text></text>
-      <text>F9</text>
+      </g>
+      <text class="fn">M-A-o</text>
+      <text class="media">F9</text>
     </g>
     <g class="c4">
+      <g>
       <text>p</text>
       <text>P</text>
       <text>%</text>
-      <text></text>
-      <text>PauBr</text>
+      </g>
+      <text class="fn">M-A-p</text>
+      <text class="media">PauBr</text>
     </g>
     <g class="c5">
-      <text>Enter</text>
-      <text>Insert</text>
+      <text>&#9166;</text>
+      <text class="fn">M-A-&#9166;</text>
+      <text class="media">Insert</text>
     </g>
   </g>
   <g class="r1">
     <g class="c0">
+      <g>
       <text>h</text>
       <text>H</text>
       <text>@</text>
-      <text></text>
-      <text>F11</text>
+      </g>
+      <text class="fn">M-A-h</text>
+      <text class="media">F11</text>
     </g>
     <g class="c1">
+      <g>
       <text>j</text>
       <text>J</text>
       <text>4</text>
-      <text></text>
-      <text>F4</text>
+      </g>
+      <text class="fn">M-A-j</text>
+      <text class="media">F4</text>
     </g>
     <g class="c2">
+      <g>
       <text>k</text>
       <text>K</text>
       <text>5</text>
-      <text></text>
-      <text>F5</text>
+      </g>
+      <text class="fn">M-A-k</text>
+      <text class="media">F5</text>
     </g>
     <g class="c3">
+      <g>
       <text>l</text>
       <text>L</text>
       <text>6</text>
-      <text></text>
-      <text>F6</text>
+      </g>
+      <text class="fn">M-A-l</text>
+      <text class="media">F6</text>
     </g>
     <g class="c4">
+      <g>
       <text>;</text>
       <text>:</text>
       <text>0</text>
-      <text></text>
-      <text>PrtSc</text>
+      </g>
+      <text class="fn">M-A-;</text>
+      <text class="media">PrtSc</text>
     </g>
     <g class="c5">
+      <g>
       <text>'</text>
       <text>"</text>
       <text>`</text>
-      <text></text>
-      <text>Menu</text>
+      </g>
+      <text class="fn">M-A-'</text>
+      <text class="media">Menu</text>
     </g>
   </g>
   <g class="r2">
     <g class="c0">
+      <g>
       <text>n</text>
       <text>N</text>
       <text>&amp;</text>
-      <text></text>
-      <text>F10</text>
+      </g>
+      <text class="fn">M-A-n</text>
+      <text class="media">F10</text>
     </g>
     <g class="c1">
+      <g>
       <text>m</text>
       <text>M</text>
       <text>1</text>
-      <text></text>
-      <text>F1</text>
+      </g>
+      <text class="fn">M-A-m</text>
+      <text class="media">F1</text>
     </g>
     <g class="c2">
+      <g>
       <text>,</text>
       <text>&lt;</text>
       <text>2</text>
-      <text></text>
-      <text>F2</text>
+      </g>
+      <text class="fn">M-A-,</text>
+      <text class="media">F2</text>
     </g>
     <g class="c3">
+      <g>
       <text>.</text>
       <text>&gt;</text>
       <text>3</text>
-      <text></text>
-      <text>F3</text>
+      </g>
+      <text class="fn">M-A-.</text>
+      <text class="media">F3</text>
     </g>
     <g class="c4">
+      <g>
       <text>/</text>
       <text>?</text>
       <text>~</text>
-      <text></text>
-      <text>ScrLk</text>
+      </g>
+      <text class="fn">M-A-/</text>
+      <text class="media">ScrLk</text>
     </g>
     <g class="c5">
-      <text>\</text>
-      <text>\</text>
-      <text>\</text>
-      <text></text>
-      <text>Search</text>
+      <text class="big">\</text>
+      <text class="fn">M-A-\</text>
+      <text class="media">Search</text>
     </g>
   </g>
   <g class="r3">
     <g class="c0 mod shift">
       <text>Shftᴿ</text>
     </g>
-    <!--<g class="c0"><text class="note">²S-Caps</text></g>-->
     <g class="c1">
       <text class="mod altgr">AltGr</text>
     </g>
-    <!--<g class="c1"><text class="note">²G-Caps</text></g>-->
-    <text class="c2 mod">Ctrlᴿ</text>
+    <g>
+      <text class="c2 mod">Ctrlᴿ</text>
+    </g>
   </g>
 </g>
 </svg>
