@@ -327,6 +327,26 @@ the general case.
 <!-- system in which the layout is not installed. -->
 
 
+## Compatibility mode
+
+Handalf uses some keys that are not present on standard contemporary 
+keyboards. As a result, they may not be recognized by all applications 
+and not even all operating systems.
+
+That is why there are two compatibility modes. The first only replaces 
+<kbd>Cancel</kbd> with <kbd>Esc</kbd>. The second replaces other funky 
+keys with similar shortcuts from Android/Windows/iOS/MacOS, namely:
+
+| Key               | Replacement                 |
+|-------------------|-----------------------------|
+| <kbd>Cut</kbd>    | <kbd>Ctrl</kbd><kbd>X</kbd> |
+| <kbd>Copy</kbd>   | <kbd>Ctrl</kbd><kbd>C</kbd> |
+| <kbd>Paste</kbd>  | <kbd>Ctrl</kbd><kbd>V</kbd> |
+| <kbd>Lock</kbd>   | <kbd>Meta</kbd><kbd>L</kbd> |
+| <kbd>Close</kbd>  | <kbd>Alt</kbd><kbd>F4</kbd> |
+| <kbd>Search</kbd> | <kbd>Meta</kbd><kbd>S</kbd> |
+
+
 ## Usage and installation
 
 Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
