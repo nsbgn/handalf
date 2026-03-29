@@ -293,41 +293,31 @@ pause to think. This compromise is acceptable, because these are
 second-class variants anyway; their thumb counterparts should be used in 
 the general case.
 
-<!-- You will usually use the arrows in the **Nav/Meta** layer while 
-typing a --> <!-- sentence, but if you continue typing quickly, the 
-**Meta** portion may --> <!-- still be active. For this reason, the 
-right half will be disabled when --> <!-- pressing something in the 
-**Nav/Meta** layer some milliseconds after --> <!-- using the arrow 
-keys. **(TODO)** -->
 
-<!-- ## Keysyms -->
+## Remapping scancodes, keycodes or keysyms
 
-<!-- When you press a key, your keyboard will send a *scancode* to the --> 
-<!-- computer; the kernel maps that to a *keycode*; and finally, your --> 
-<!-- keyboard layout considers that keycode (along with the active modifiers) --> 
-<!-- and emits a *keysym*. -->
+When you press a key, your keyboard will send a *scancode* to the 
+computer; the kernel maps that to a *keycode*; and finally, your 
+keyboard layout considers that keycode (along with the active modifiers) 
+and emits a *keysym*. Remappings can take place at any of these levels.
 
-<!-- By default, Handalf remaps *symbols* at this keysym level, while other --> 
-<!-- keys are mapped at the scan- or keycode-level. Teasing the two apart --> 
-<!-- like this has several benefits: -->
+- At the scan- and keycode-level, more tricks can be applied, like 
+  overloading.
+- But at the keysym-level, your OS is aware of your active layout. You 
+  can switch between them in the standard way, with some visual 
+  indication.
+- For layout-independent shortcut bindings, it is desirable that emitted 
+  keycodes stay the same even as the keysyms change.
+- I have run into some applications that listen to keycode 
+- The major drawback to remapping symbols at the keysym level is that 
+  you need to install a layout to the system that you're using.
+- On the other hand, the other approaches require that you have control 
+  over the keyboard firmware or run a virtual keyboard like `keyd`.
 
-<!-- - At the scan- and keycode-level, more tricks can be applied, like --> 
-<!--   overloading. -->
-<!-- - But at the keysym-level, your OS is aware of your active layout. You --> 
-<!--   can switch between them in the standard way, with some visual --> 
-<!--   indication. -->
-<!-- - It becomes easier to reason about key composition. We don't have to --> 
-<!--   explicitly write and remember rules for how layers and modifiers --> 
-<!--   combine. Suppose, for example, you want to type --> 
-<!--   <kbd>Meta</kbd><kbd>1</kbd>: the first key would be <kbd>&#9680;</kbd> --> 
-<!--   and the second would be <kbd>AltGr</kbd><kbd>n</kbd>. -->
-<!-- - For layout-independent keybindings in your window manager, it is --> 
-<!--   important that emitted keycodes stay the same even as symbols change. -->
-
-<!-- Holding <kbd>Shift</kbd> and <kbd>AltGr</kbd> together does not change --> 
-<!-- the keysyms, but it does change the keycode. This is helpful in --> 
-<!-- applications that read keycodes rather than keysyms, or when you use a --> 
-<!-- system in which the layout is not installed. -->
+For maximum compatibility, Handalf remaps at the scan- or keycode level. 
+Nevertheless, it also ships with an XKB layout that remaps 
+<kbd>AltGr</kbd> symbols at the keysym level. Both approaches can be 
+active simultaneously without issues.
 
 
 ## Compatibility mode
