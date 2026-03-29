@@ -228,8 +228,10 @@ g.kb > g > g > text.media {
   </g>
   <g class="r2">
     <g class="c0">
-      <text class="mod shift">Shftᴸ</text>
+      <text>Shftᴸ</text>
       <text class="doubletap">CapsLk</text>
+      <text style="translate: 2px 6px">_</text>
+      <text style="translate: -2px 6px">,</text>
     </g>
     <g class="c1">
       <g>

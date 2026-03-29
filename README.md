@@ -194,6 +194,16 @@ key in the **Fn** layer. This keeps the window list in view, just as it
 would be in the original situation holding <kbd>Alt</kbd>.
 
 
+## Decimal point and underscore
+
+You will often need a decimal point while typing numbers, but it is 
+cumbersome to disable **AltGr** just to grab one and return. The same 
+holds for the underscore when typing in all-caps. For this reason, 
+tapping left <kbd>Shift</kbd> while holding <kbd>AltGr</kbd> will emit a 
+decimal point (resulting in `.` or `,` depending on your locale), and 
+doing so while holding right <kbd>Shift</kbd> will emit an underscore 
+`_`.
+
 ## Modifiers and layers
 
 Modifiers are keys like <kbd>Shift</kbd>, <kbd>AltGr</kbd>, 
@@ -283,19 +293,12 @@ pause to think. This compromise is acceptable, because these are
 second-class variants anyway; their thumb counterparts should be used in 
 the general case.
 
-<!-- You will often need a decimal point while typing numbers, but it is --> 
-<!-- cumbersome to exit the symbol layer just to grab one and return. The --> 
-<!-- same holds for the underscore when typing in all-caps. For this reason, --> 
-<!-- double-tapping <kbd>Space</kbd> while holding <kbd>AltGr</kbd> will emit --> 
-<!-- a decimal point (resulting in `.` or `,` depending on your locale), and --> 
-<!-- doing so while holding <kbd>Shift</kbd> will emit an underscore `_`. --> 
-<!-- **(TODO)** -->
-
-<!-- You will usually use the arrows in the **Nav/Meta** layer while typing a --> 
-<!-- sentence, but if you continue typing quickly, the **Meta** portion may --> 
-<!-- still be active. For this reason, the right half will be disabled when --> 
-<!-- pressing something in the **Nav/Meta** layer some milliseconds after --> 
-<!-- using the arrow keys. **(TODO)** -->
+<!-- You will usually use the arrows in the **Nav/Meta** layer while 
+typing a --> <!-- sentence, but if you continue typing quickly, the 
+**Meta** portion may --> <!-- still be active. For this reason, the 
+right half will be disabled when --> <!-- pressing something in the 
+**Nav/Meta** layer some milliseconds after --> <!-- using the arrow 
+keys. **(TODO)** -->
 
 <!-- ## Keysyms -->
 
@@ -330,15 +333,15 @@ the general case.
 ## Compatibility mode
 
 Handalf uses some keys that are not present on standard contemporary 
-keyboards. As a result, they may not be recognized by all applications 
-and not even all operating systems.
+keyboards. As a result, they may not be recognized by all applications, 
+and not even all operating systems --- at least out of the box.
 
-That is why there are two compatibility modes. The first only replaces 
-<kbd>Cancel</kbd> with <kbd>Esc</kbd>. The second replaces other funky 
-keys with similar shortcuts from Android/Windows/iOS/MacOS, namely:
+That is why there is a compatibility mode that replaces funky keys with 
+similar shortcuts from Android/Windows/iOS/MacOS, namely:
 
 | Key               | Replacement                 |
 |-------------------|-----------------------------|
+| <kbd>Cancel</kbd> | <kbd>Esc</kbd>              |
 | <kbd>Cut</kbd>    | <kbd>Ctrl</kbd><kbd>X</kbd> |
 | <kbd>Copy</kbd>   | <kbd>Ctrl</kbd><kbd>C</kbd> |
 | <kbd>Paste</kbd>  | <kbd>Ctrl</kbd><kbd>V</kbd> |
