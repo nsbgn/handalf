@@ -181,8 +181,6 @@ of the layout of your alphanumerics, but more importantly: they can be
 used in some terminal emulators (without the need to distinguish the 
 `^C` signal from copying).
 
-<!-- Add a compatibility mode that just uses C-c etc, for Windows? -->
-
 
 ## Alt-Tab
 
@@ -319,15 +317,35 @@ Nevertheless, it also ships with an XKB layout that remaps
 <kbd>AltGr</kbd> symbols at the keysym level. Both approaches can be 
 active simultaneously without issues.
 
+## Keyboard controls
 
-## Compatibility mode
+The following section is only relevant for firmware implementations.
+
+Keystrokes for control of the keyboard *itself*, such as those handling 
+Bluetooth connectivity, should not obscure any keystroke that might be 
+used by an applications. For that reason, they are hidden away behind 
+*combinations of keys on the same column*. To avoid incurring any lag, 
+this is further limited to when all left thumb controls are 
+simultaneously pressed (that is, when the <kbd>Alt</kbd> and right 
+<kbd>Meta</kbd> modifiers as well as the **Fn** layer are simultaneously 
+activated).
+
+### Bluetooth
+
+For Bluetooth connectivity, the top two keys on columns 1 through 5 
+connect to the corresponding profile, the bottom two keys disconnect 
+that profile, and pressing all three clears the profile. Pressing all 3 
+buttons on column 0 clears all profiles.
+
+
+### Compatibility mode
 
 Handalf uses some keys that are not present on standard contemporary 
-keyboards. As a result, they may not be recognized by all applications, 
-and not even all operating systems --- at least out of the box.
+keyboards. As a result, they may not be recognized out of the box by all 
+applications, and not even all operating systems.
 
-That is why there is a compatibility mode that replaces funky keys with 
-similar shortcuts from Android/Windows/iOS/MacOS, namely:
+That is why a compatibility mode exists that replaces the funkier keys 
+as follows:
 
 | Key               | Replacement                 |
 |-------------------|-----------------------------|
@@ -338,6 +356,14 @@ similar shortcuts from Android/Windows/iOS/MacOS, namely:
 | <kbd>Lock</kbd>   | <kbd>Meta</kbd><kbd>L</kbd> |
 | <kbd>Close</kbd>  | <kbd>Alt</kbd><kbd>F4</kbd> |
 | <kbd>Search</kbd> | <kbd>Meta</kbd><kbd>S</kbd> |
+
+These keys are more widely recognized across all operating systems 
+without further configuration, but you do lose out on some of the subtle 
+benefits described in earlier sections.
+
+Pressing the top two keys in the rightmost column (11) turns 
+compatibility mode on, the bottom two keys turn it off, and pressing all 
+three keys simultaneously will toggle it.
 
 
 ## Usage and installation
@@ -364,17 +390,6 @@ level, you can have visual feedback, and your window manager's shortcuts
 can remain unaffected.
 -->
 
-
-## Keyboard controls
-
-Keystrokes for control of the keyboard *itself*, such as those handling 
-Bluetooth connectivity, should not obscure any keystroke that might be 
-used by an applications. For that reason, they are hidden away behind 
-combinations of keys *on the same column*. To avoid incurring any lag, 
-this is further limited to when all left thumb controls are 
-simultaneously pressed (that is, when the <kbd>Alt</kbd> and 
-<kbd>Meta</kbd> modifiers as well as the **Fn** layer are simultaneously 
-activated).
 
 <!--
 ## Other
