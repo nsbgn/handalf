@@ -46,14 +46,14 @@ within the constraints of a laptop keyboard.
     the key sent to your computer will depend *only* on the keys you are 
     currently pressing, or, at most, which keys you were pressing some 
     fraction of a second ago.
--   **No key combo is left behind.** When stuffing so much functionality 
-    into a cramped space, it is inevitable that some sequences of keys 
-    will become harder to type. However, care has been taken to avoid 
-    assumptions about the programs you will be running. That is: all 
-    modifier combinations are available, and they should still stack in 
-    an intuitive and consistent way.
--   **Complete.** A 42-key board should have access to all keys that you 
-    might find on a standard keyboard.
+-   **Complete.** When stuffing so much functionality into a cramped 
+    space, it is inevitable that some key sequences will become harder 
+    to type. However, our 42 keys should give access to *every* key that 
+    you might find on a tenkeyless keyboard. I have avoided assumptions 
+    about the software you will be running, and yet sought to find an 
+    arrangement of keys that fits within the established software 
+    ecosystems. All modifier combinations remain available, and they 
+    should still stack in an intuitive and consistent way.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
 consideration, like simplicity, rolling motions, muscle memory, semantic 
