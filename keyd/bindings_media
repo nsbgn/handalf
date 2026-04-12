@@ -40,5 +40,5 @@ n = f10
 m = f1
 , = f2
 . = f3
-/ = scrolllock
-rightshift = search
+/ = search
+rightshift = scrolllock

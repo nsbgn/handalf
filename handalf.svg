@@ -446,12 +446,12 @@ g.kb > g > g > text.media {
       <text>~</text>
       </g>
       <text class="fn">M-A-/</text>
-      <text class="media">ScrLk</text>
+      <text class="media">Search</text>
     </g>
     <g class="c5">
       <text class="big">\</text>
       <text class="fn">M-A-\</text>
-      <text class="media">Search</text>
+      <text class="media">ScrLk</text>
     </g>
   </g>
   <g class="r3">
