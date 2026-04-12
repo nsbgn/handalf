@@ -12,48 +12,48 @@ thumbs idle while your weakest finger contorts to reach keys like
 force your hands to abandon the home row entirely. Exotic keyboards can 
 remedy all this, but lack portability.
 
-Handalf is a 42-key layout scheme that works well for fancy 40% 
-keyboards with 3 thumb keys per hand, but it *also* fits comfortably 
+Handalf is a 42-key layout scheme that works well for Cornes and other 
+fancy keyboards with 3 thumb keys per hand, but it *also* fits perfectly 
 within the constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
 
 -   **Each finger travels one key at most.** Your thumbs pick up the 
     slack.
--   **Graceful degradation.** You can keep a consistent layout, even 
-    when you're stuck on a laptop keyboard.
--   **Easy to learn & remember.** You may be able to keep your letter 
-    keys unchanged, and all other symbols are accessible with just 
-    <kbd>AltGr</kbd> modifier. There is one additional layer beyond 
-    that, for navigation keys. Combined with <kbd>AltGr</kbd>, you get 
+-   **Graceful degradation.** You can keep a fully consistent layout, 
+    even when you're stuck on a laptop keyboard.
+-   **Easy to learn.** Your alpha keys could be the same as what you're 
+    using now, and every other symbol is accessible with *just* the 
+    <kbd>AltGr</kbd> modifier. There is one additional layer for 
+    navigation, which can be combined with <kbd>AltGr</kbd> to get 
     function and media keys. There's no need to learn it all at once: 
     I've found the symbols under <kbd>AltGr</kbd> to carry the most 
     ergonomic benefit.
--   **No homerow mods.** While typing at speed, keypresses will often 
-    overlap, which means that any attempt at assigning multiple 
-    functions to the spacebar or alpha keys must resort to timeouts. 
-    This introduces [visual delay][pftwp] and can cause misfires. You 
-    can train yourself and there are other [ways][urob] to mitigate it, 
-    but I have not made such sacrifices here.
--   **Overloading is used sparingly.** Even for non-alpha keys, 
-    overloading has the above downsides, albeit to a lesser degree. 
-    Therefore, only a *single* key is given double duty, and it is done 
-    judiciously.
--   **Stateless.** Modal editors are great, but only because they can 
-    provide continuous feedback about the current mode. Without glancing 
-    at the keyboard, the only association upon which your brain can 
-    build is tactile: the physical position of your hands. Therefore, 
-    the key sent to your computer will depend *only* on the keys you are 
-    currently pressing, or, at most, which keys you were pressing some 
-    fraction of a second ago.
+-   **Overloading is used sparingly.** While typing at speed, keypresses 
+    will often overlap, which means that any attempt at assigning 
+    multiple functions to the spacebar or home row must resort to 
+    timeouts. This introduces [visual delay][pftwp] and can cause 
+    misfires. You can train yourself and there are other [ways][urob] to 
+    mitigate it, but I have not made such sacrifices here. Only a 
+    *single* key is given double duty, and it is chosen with caution and 
+    care.
+-   **Low mental load.** Modal editors are great, but only because they 
+    can provide continuous feedback about the current state. We should 
+    strive to make the keyboard a perfect interface between the brain 
+    and the computer; it shouldn't ever expect you to glance down or to 
+    think: 'what was I doing again?' The information that remains 
+    available to your brain is tactile: the physical position of your 
+    hands. Therefore, the emitted keys will depend *only* on the keys 
+    you are currently pressing, and, at most, which key you were 
+    pressing some fraction of a second ago.
 -   **Complete.** When stuffing so much functionality into a cramped 
     space, it is inevitable that some key sequences will become harder 
     to type. However, our 42 keys should give access to *every* key that 
-    you might find on a tenkeyless keyboard. I have avoided assumptions 
-    about the software you will be running, and yet sought to find an 
-    arrangement of keys that fits within the established software 
-    ecosystems. All modifier combinations remain available, and they 
-    should still stack in an intuitive and consistent way.
+    you might find on a standard tenkeyless keyboard, and all modifiers 
+    should still stack in an intuitive and consistent way. I have 
+    avoided assumptions about the software you will be running, and yet 
+    tried to find an arrangement that makes sense within the established 
+    software ecosystems.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
 consideration, like simplicity, rolling motions, muscle memory, semantic 
