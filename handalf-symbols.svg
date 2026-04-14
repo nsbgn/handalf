@@ -60,7 +60,7 @@ text { font-size: 14px; text-anchor: middle; font-family: monospace; #004488; }
 <g class="kb" id="left-keyboard">
   <use href="#left"/>
   <g class="r0">
-    <text class="c0 tiny">Tab</text>
+    <text class="c0 tiny">S-Tab</text>
     <text class="c1">!</text>
     <text class="c2">[</text>
     <text class="c3">+</text>

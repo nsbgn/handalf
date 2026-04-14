@@ -2,6 +2,7 @@
 space = space
 [ = enter
 
+tab = S-tab
 q = !
 w = [
 e = +

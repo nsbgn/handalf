@@ -189,7 +189,13 @@ Many computer users will have muscle memory associated with
 layer will still emit exactly that. It will also keep the <kbd>Alt</kbd> 
 modifier active until you either exit the **Fn** layer, or press another 
 key in the **Fn** layer. This keeps the window list in view, just as it 
-would be in the original situation holding <kbd>Alt</kbd>.
+would if you pressed the real <kbd>Alt</kbd>.
+
+Furthermore, <kbd>Shift</kbd><kbd>Tab</kbd> is commonly used to invert 
+whatever <kbd>Tab</kbd> does --- be that indentation, input selection or 
+text completion. To make this easier, <kbd>AltGr</kbd><kbd>Tab</kbd> 
+(and thus <kbd>Alt</kbd><kbd>AltGr</kbd><kbd>Tab</kbd>) will do the 
+same.
 
 
 ## Decimal point and underscore
