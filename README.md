@@ -123,37 +123,44 @@ move your pinky would have had to make.
 right <kbd>Shift</kbd> (or double tapping <kbd>Shift</kbd>).
 
 
-## Overloading <kbd>Fn</kbd>/<kbd>Esc</kbd>
+## Overloading <kbd>Fn</kbd>
 
 The <kbd>Fn</kbd> key occupies a very accessible location. Since it does 
 not map to a conventional key anyway, you might be tempted, as I was, to 
 give it double duty: to make it do something else when it is tapped in 
 isolation.
 
-If you are a Vim user, one key in particular might come to mind. You 
-need it all the time and it tends to punctuate a sequence of keystrokes, 
-so it is relatively easy to disambiguate your intent.
+If you are a Vim user, one key in particular might come to mind. Indeed, 
+it is entirely reasonable to overload <kbd>Fn</kbd> with <kbd>Esc</kbd>. 
+It tends to punctuate your keystrokes, so you generally don't need to 
+muck about with timings to disambiguate your intent.
 
-Indeed, it is entirely reasonable to overload <kbd>Fn</kbd> with 
-<kbd>Esc</kbd>. However, when you accidentally trigger <kbd>Esc</kbd>, 
-it can be *really* annoying. Outside of Vim, it wreaks havoc by closing 
-windows, losing focus on input fields, and erasing the spreadsheet 
-formula you just typed.
+However, accidentally triggering <kbd>Esc</kbd> can be *really* 
+annoying. Outside of Vim, it wreaks havoc by closing windows, losing 
+focus on input fields, and erasing the spreadsheet formula you just 
+typed.
 
 That is why I have chosen to overload it with <kbd>Cancel</kbd> instead 
 --- a key that is barely used and not even present on contemporary 
 keyboards. Specific applications can then be explicitly configured to 
 interpret this key in a useful way, so that the effect is limited to 
-where it makes sense.[^1] In foot, you would put `\x1b = Cancel` in the 
-`[text-bindings]` section, and in Alacritty, you would put `bindings = 
-[{key = "Cancel", mods = "None", chars = "\u001b"}]` in the `[keyboard]` 
-section.
+where it makes sense.
 
-[^1]: You could even directly configure (Neo)Vim itself to interpret 
-    your special key (see 
-    [key-notation](https://neovim.io/doc/user/intro.html#_keycodes)), 
-    but since most terminal emulators do not support wacky keys (cf. 
-    `terminfo`), you would need to use another key.
+To interpret the key as <kdb>Esc</kbd> in your terminal emulator, confer 
+the relevant manual. For example, in foot, you would put `\x1b = Cancel` 
+in the `[text-bindings]` section, and in Alacritty, you would put 
+`bindings = [{key = "Cancel", mods = "None", chars = "\u001b"}]` in the 
+`[keyboard]` section.
+
+Of course, this approach also allows you to make it do something 
+entirely different, such as configuring XKB to use it as 
+<kbd>Compose</kbd>.
+
+<!-- [^1]: You could even directly configure (Neo)Vim itself to interpret --> 
+<!--     your special key (see --> 
+<!--     [key-notation](https://neovim.io/doc/user/intro.html#_keycodes)), --> 
+<!--     but since most terminal emulators do not support wacky keys (cf. --> 
+<!--     `terminfo`), you would need to use another key. -->
 
 
 ## The Compose key
