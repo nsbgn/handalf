@@ -1,0 +1,47 @@
+space = overload(meta, C-space)
+
+# Left
+
+tab = C-tab
+q = C-q
+w = C-w
+e = C-e
+r = C-r
+t = C-t
+
+a = C-a
+s = C-s
+d = C-d
+f = C-f
+g = C-g
+
+z = C-z
+x = C-x
+c = C-c
+v = C-v
+b = C-b
+
+# Right
+
+y = C-y
+u = C-u
+i = C-i
+o = C-o
+p = C-p
+[ = C-enter
+
+h = C-h
+j = C-j
+k = C-k
+l = C-l
+; = C-;
+' = C-'
+
+n = C-n
+m = C-m
+, = C-,
+. = C-.
+/ = C-/
+rightshift = C-backslash
+
+

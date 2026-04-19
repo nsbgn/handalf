@@ -1,0 +1,47 @@
+space = swapm(Fn, space)
+
+# Left
+
+# tab should fall through
+q = swapm(Fn, esc)
+w = swapm(Fn, home)
+e = swapm(Fn, up)
+r = swapm(Fn, end)
+t = swapm(Fn, pageup)
+
+a = swapm(Fn, leftcontrol)
+s = swapm(Fn, left)
+d = swapm(Fn, down)
+f = swapm(Fn, right)
+g = swapm(Fn, pagedown)
+
+z = swapm(Fn, leftmeta)
+x = swapm(Fn, cut)
+c = swapm(Fn, copy)
+v = swapm(Fn, paste)
+b = swapm(Fn, delete)
+
+# Right
+
+y = swapm(Fn, M-A-y)
+u = swapm(Fn, M-A-u)
+i = swapm(Fn, M-A-i)
+o = swapm(Fn, M-A-o)
+p = swapm(Fn, M-A-p)
+[ = swapm(Fn, M-A-enter)
+
+h = swapm(Fn, M-A-h)
+j = swapm(Fn, M-A-j)
+k = swapm(Fn, M-A-k)
+l = swapm(Fn, M-A-l)
+; = swapm(Fn, M-A-;)
+' = swapm(Fn, M-A-')
+
+n = swapm(Fn, M-A-n)
+m = swapm(Fn, M-A-m)
+, = swapm(Fn, M-A-,)
+. = swapm(Fn, M-A-.)
+/ = swapm(Fn, M-A-/)
+rightshift = swapm(Fn, M-A-backslash)
+
+

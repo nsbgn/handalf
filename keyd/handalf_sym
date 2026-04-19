@@ -1,6 +1,6 @@
-# Left
 space = space
-[ = enter
+
+# Left
 
 tab = S-tab
 q = !
@@ -28,6 +28,7 @@ u = 7
 i = 8
 o = 9
 p = %
+[ = enter
 
 h = @
 j = 4
@@ -41,3 +42,4 @@ m = 1
 , = 2
 . = 3
 / = ~
+rightshift = backslash

@@ -1,35 +1,34 @@
-# Left (Fn)
-space = space
+space = overload(MetaOverride, rightmeta)
 
-tab = A-tab
+# Left
+
+tab = swapm(AltTabFn, A-tab)
 q = esc
 w = home
 e = up
 r = end
 t = pageup
 
-backspace = backspace
-a = noop
+a = timeout(oneshot(ControlOverride), 150, layer(ControlOverride))
 s = left
 d = down
 f = right
 g = pagedown
 
-leftshift = timeout(overload(shift, rightshift), 140, layer(shift))
-z = layer(Meta)
+z = layer(MetaOverride)
 x = cut
 c = copy
 v = paste
 b = delete
 
-# Right (Fn)
+# Right
 
 y = M-A-y
 u = M-A-u
 i = M-A-i
 o = M-A-o
 p = M-A-p
-[ = M-A-[
+[ = M-A-enter
 
 h = M-A-h
 j = M-A-j

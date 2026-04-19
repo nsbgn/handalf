@@ -1,6 +1,6 @@
-[Meta:M]
-# Left (Meta)
 space = M-space
+
+# Left
 
 tab = M-tab
 q = M-q
@@ -21,13 +21,14 @@ c = M-c
 v = M-v
 b = M-b
 
-# Right (Meta)
+# Right
 
 y = M-y
 u = M-u
 i = M-i
 o = M-o
 p = M-p
+[ = M-enter
 
 h = M-h
 j = M-j
@@ -43,5 +44,4 @@ m = M-m
 / = M-/
 rightshift = M-backslash
 
-[Fn]
-space = overload(Meta, rightmeta)
+# Same rationale as for the Control layer.
