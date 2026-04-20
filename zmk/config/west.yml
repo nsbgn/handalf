@@ -1,0 +1,20 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos/zephyr
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: v0.3
+      import: app/west.yml
+    - name: zmk-smart-toggle
+      remote: caksoylar
+      revision: main
+      # Also consider <https://github.com/dhruvinsh/zmk-tri-state>;
+      # see <https://github.com/zmkfirmware/zmk/issues/1806#issuecomment-1555059522>
+  self:
+    path: config
