@@ -1,29 +1,34 @@
 default partial alphanumeric_keys xkb_symbols "basic" {
     include "us(basic)"
+    include "handalf(level3)"
+    include "handalf(shift_level3_multi)"
     name[Group1]= "Handalf";
-    include "handalf(handalf)"
 };
 
 partial alphanumeric_keys xkb_symbols "colemak_dh" {
     include "us(colemak_dh_ortho)"
+    include "handalf(shift_level3_multi)"
+    include "handalf(level3)"
     name[Group1]= "Handalf (Colemak)";
-    include "handalf(handalf)"
 };
 
+partial modifier_keys xkb_symbols "caps_backspace" {
+    key <CAPS> { [ BackSpace, BackSpace, BackSpace ] };
+};
+
+partial modifier_keys xkb_symbols "shift_level3_multi" {
+    key <LFSH> { type[Group1]="THREE_LEVEL", [ Shift_L,  Multi_key,  Multi_key ] };
+    key <RTSH> { type[Group1]="THREE_LEVEL", [ Shift_R,  Multi_key,  Multi_key ] };
+    key <RALT> { type[Group1]="THREE_LEVEL", [ ISO_Level3_Shift, Multi_key,  Multi_key ] };
+};
 
 partial modifier_keys xkb_symbols "cancel" {
     key <STOP> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
     key <I231> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
 };
 
-
-partial alphanumeric_keys xkb_symbols "handalf" {
-    include "level3(ralt_switch)"
-    include "handalf(cancel)"
-
+partial alphanumeric_keys xkb_symbols "level3" {
     key.type = "THREE_LEVEL";
-    key <CAPS> { [ BackSpace, BackSpace, BackSpace ] };
-
     key <TAB> { [ NoSymbol, NoSymbol, Tab ] };
     key <AD01> { [ NoSymbol, NoSymbol, exclam ] }; // q
     key <AD02> { [ NoSymbol, NoSymbol, bracketleft ] }; // w
