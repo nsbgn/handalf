@@ -230,8 +230,7 @@ g.kb > g > g > text.media {
     <g class="c0">
       <text>Shftᴸ</text>
       <text class="doubletap">CapsLk</text>
-      <text style="translate: 2px 6px">_</text>
-      <text style="translate: -2px 6px">,</text>
+      <text style="translate: 0px 7px">Multi</text>
     </g>
     <g class="c1">
       <g>

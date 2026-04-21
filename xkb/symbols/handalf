@@ -1,14 +1,16 @@
 default partial alphanumeric_keys xkb_symbols "basic" {
     include "us(basic)"
     include "handalf(level3)"
+    include "handalf(cancel)"
     include "handalf(shift_level3_multi)"
     name[Group1]= "Handalf";
 };
 
 partial alphanumeric_keys xkb_symbols "colemak_dh" {
     include "us(colemak_dh_ortho)"
-    include "handalf(shift_level3_multi)"
     include "handalf(level3)"
+    include "handalf(cancel)"
+    include "handalf(shift_level3_multi)"
     name[Group1]= "Handalf (Colemak)";
 };
 
@@ -23,8 +25,8 @@ partial modifier_keys xkb_symbols "shift_level3_multi" {
 };
 
 partial modifier_keys xkb_symbols "cancel" {
-    key <STOP> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
-    key <I231> { type[Group1]="THREE_LEVEL", [ Cancel, Multi_key, Multi_key ] };
+    key <STOP> { type[Group1]="ONE_LEVEL", [ Cancel ] };
+    key <I231> { type[Group1]="ONE_LEVEL", [ Cancel ] };
 };
 
 partial alphanumeric_keys xkb_symbols "level3" {

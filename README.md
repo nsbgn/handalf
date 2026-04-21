@@ -1,8 +1,8 @@
 # 🧙 Handalf
 
-*I only uploaded this so that it may serve as inspiration. It is still 
-being tweaked. The README may not completely match the implementation. 
-It currently only supports Linux.*
+*I am mostly happy with the layout. There may still be some minor 
+changes in the implementations as edge cases are being ironed out. The 
+README may not yet completely match the implementations.*
 
 ## Philosophy
 
@@ -12,9 +12,10 @@ thumbs idle while your weakest finger contorts to reach keys like
 force your hands to abandon the home row entirely. Exotic keyboards can 
 remedy all this, but lack portability.
 
-Handalf is a 42-key layout scheme that works well for Cornes and other 
-fancy keyboards with 3 thumb keys per hand, but it *also* fits perfectly 
-within the constraints of a laptop keyboard.
+Handalf is a 42-key layout scheme that works well for a 
+[Corne](https://github.com/foostan/crkbd) or any other fancy keyboard 
+with 3 thumb keys per hand, but it *also* fits perfectly within the 
+constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
 
@@ -31,34 +32,36 @@ within the constraints of a laptop keyboard.
     ergonomic benefit.
 -   **Overloading is used sparingly.** While typing at speed, keypresses 
     will often overlap, which means that any attempt at assigning 
-    multiple functions to the spacebar or home row must resort to 
+    multiple functions to the spacebar or home row must resort to fiddly 
     timeouts. This introduces [visual delay][pftwp] and can cause 
     misfires. You can train yourself and there are other [ways][urob] to 
     mitigate it, but I have not made such sacrifices here. Only a 
     *single* key is given double duty, and it is chosen with caution and 
     care.
--   **Low mental load.** Modal editors are great, but only because they 
-    can provide continuous feedback about the current state. We should 
-    strive to make the keyboard a perfect interface between the brain 
-    and the computer; it shouldn't ever expect you to glance down or to 
-    think: 'what was I doing again?' The information that remains 
-    available to your brain is tactile: the physical position of your 
-    hands. Therefore, the emitted keys will depend *only* on the keys 
-    you are currently pressing, and, at most, which key you were 
-    pressing some fraction of a second ago.
+-   **Stateless.** Modal editors are great, but only because they can 
+    provide continuous feedback about the current mode. We should strive 
+    to make the keyboard a perfect interface between the brain and the 
+    computer; you should never be expected to glance down or to think: 
+    'what was I doing again?' The feedback available to your brain is 
+    strictly tactile, in the physical position of your hands. Therefore, 
+    emitted keys will depend *only* on the keys you are currently 
+    pressing, and, at most, which key you were pressing some fraction of 
+    a second ago.
+-   **Low mental load.** Modifiers and layers should behave identically 
+    from the user's perspective. They should stack in an intuitive and 
+    consistent way. Sticky keys may last for one keypress at most.
 -   **Complete.** When stuffing so much functionality into a cramped 
     space, it is inevitable that some key sequences will become harder 
     to type. However, our 42 keys should give access to *every* key that 
-    you might find on a standard tenkeyless keyboard, and all modifiers 
-    should still stack in an intuitive and consistent way. I have 
-    avoided assumptions about the software you will be running, and yet 
-    tried to find an arrangement that makes sense within the established 
-    software ecosystems.
+    you might find on a standard tenkeyless keyboard. I have avoided 
+    assumptions about the software you will be running, and yet tried to 
+    find an arrangement that makes sense within the established software 
+    ecosystems.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
-consideration, like simplicity, rolling motions, muscle memory, semantic 
-clustering, symmetry, separating actions from symbols, etcetera --- but 
-the final decision is based on vibes. A good mapping will almost 
+consideration, like rolling motions, muscle memory, semantic clustering, 
+symmetry, separating actions from symbols, etcetera --- but the final 
+decision is based on vibes. If it's a good mapping, it will almost 
 immediately render its absence on other keyboards painful.
 
 Unfortunately, Handalf is biased toward right-handed people. Let me know 
@@ -172,12 +175,12 @@ example, <kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
 It is *virtual*, in the sense that there is no physical key that has 
 this property by default. You need to assign it on the software level.
 
-In the Handalf XKB layout, Compose is accessible by tapping the 
-<kbd>Fn</kbd> key while holding <kbd>Shift</kbd> or <kbd>AltGr</kbd> (or 
-vice versa). This is convenient, firstly because it does not obscure any 
-keys you might want to use for something else, and secondly because many 
-subsequent symbols already require you to hold one of these modifiers 
-anyway.
+In the Handalf XKB layout, Compose is accessible by tapping the the left 
+<kbd>Shift</kbd> key while holding the right <kbd>Shift</kbd> or 
+<kbd>AltGr</kbd> (or vice versa). This is convenient, firstly because it 
+does not obscure any keys you might want to use for something else, and 
+secondly because many subsequent symbols already require you to hold one 
+of these modifiers anyway.
 
 
 ## Copy/paste/cut
@@ -204,7 +207,7 @@ text completion. To make this easier, <kbd>AltGr</kbd><kbd>Tab</kbd>
 (and thus <kbd>Alt</kbd><kbd>AltGr</kbd><kbd>Tab</kbd>) will do the 
 same.
 
-
+<!--
 ## Decimal point and underscore
 
 You will often need a decimal point while typing numbers, but it is 
@@ -214,6 +217,7 @@ tapping left <kbd>Shift</kbd> while holding <kbd>AltGr</kbd> will emit a
 decimal point (resulting in `.` or `,` depending on your locale), and 
 doing so while holding right <kbd>Shift</kbd> will emit an underscore 
 `_`.
+-->
 
 ## Modifiers and layers
 
@@ -228,8 +232,9 @@ they change everything your other fingers can do. Therefore, I
 considered many different permutations, eventually landing on the 
 following insights:
 
-- Ideally, these keys should be your thumbs' responsibility, because 
-  that makes it easy to combine them with other keys.
+- Ideally, these keys should be your thumbs' responsibility, because you 
+  have full range of motion with the rest of your fingers while holding 
+  them.
 - The symbol modifiers, <kbd>Shift</kbd> and <kbd>AltGr</kbd>, should be 
   on the hand opposite from <kbd>Space</kbd>. They don't need to be 
   combined, so they can be on the same hand.
@@ -347,8 +352,8 @@ activated).
 
 For Bluetooth connectivity, the top two keys on columns 1 through 5 
 connect to the corresponding profile, the bottom two keys disconnect 
-that profile, and pressing all three clears the profile. Pressing all 3 
-buttons on column 0 clears all profiles.
+that profile, and pressing all three clears the profile. Keys on column 
+0 switch between USB and Bluetooth output.
 
 
 ### Compatibility mode
@@ -381,8 +386,19 @@ three keys simultaneously will toggle it.
 
 ## Usage and installation
 
-Install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) and run 
-`sudo make install`. Activate the `handalf` layout in your environment.
+For the Linux software implementation for a laptop or non-programmable 
+keyboard, install [keyd](https://github.com/rvaiya/keyd) (version >=2.3) 
+and run `sudo make install-keyd`. 
+
+A firmware implementation for ZMK-based keyboards can be found in the 
+[zmk](/zmk) directory.
+
+In either case, optionally do `sudo make install-xkb` and activate the 
+`handalf` XKB layout in your environment. This sets up the 
+<kbd>Compose</kbd> key and assigns the Level3 symbols to 
+<kbd>AltGr</kbd>.
+
+More detailed installation instructions to come later.
 
 <!--
 ## Notes on switching between alphanumeric layouts
@@ -391,35 +407,12 @@ I reckon it's a good idea to use Colemak-DH on ortholinear boards, while
 using Qwerty on anything else. This allows your brain to lock into the 
 right layout based on what your fingers are feeling.
 
-Perhaps encouraging the use of different layouts for different keyboards 
-feels somewhat contradictory to Handalf's stated goal of universality, 
-so here I will introduce some nuance: Handalf is a universal *base* that 
-makes it easy to mentally compartmentalize the atomic changes that you 
-*do* make.
-
-When you switch between Qwerty and Colemak, everything except the alpha 
-keys will stay the same. And because the remapping happens on the XKB 
-level, you can have visual feedback, and your window manager's shortcuts 
-can remain unaffected.
 -->
-
-
 <!--
 ## Other
 
 [Seniply] and [Callum] have similar goals: limited keys and no home-row 
 mods.
-
-# Consideration for the thumb keys
-
--   All thumb keys except space are modifiers or layer keys, because you 
-    have full range of motion with the rest of your fingers while 
-    holding them.
--   Since we avoid crazy modifier combinations, `sym` and `shift` never 
-    make sense to press together. Therefore, they should be on the same 
-    finger.
--   `space` should be opposite from  `shift` and `sym`, so that you can 
-    still use it while in their respective modes.
 
 -->
 
