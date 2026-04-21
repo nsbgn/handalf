@@ -51,14 +51,6 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        media_compat_layer {
-            if-layers = <FN SYM COMPAT>;
-            then-layer = <MEDIA_COMPAT>;
-        };
-        fn_compat_layer {
-            if-layers = <FN COMPAT>;
-            then-layer = <FN_COMPAT>;
-        };
         media_layer {
             if-layers = <FN SYM>;
             then-layer = <MEDIA>;
@@ -66,6 +58,14 @@
         sym_compat_layer {
             if-layers = <SYM COMPAT>;
             then-layer = <SYM_COMPAT>;
+        };
+        fn_compat_layer {
+            if-layers = <FN COMPAT>;
+            then-layer = <FN_COMPAT>;
+        };
+        media_compat_layer {
+            if-layers = <FN SYM COMPAT>;
+            then-layer = <MEDIA_COMPAT>;
         };
     };
 
@@ -116,16 +116,40 @@
 
     behaviors {
 
-    // For various reasons, having a left shift in the usual spot is useful,
-    // but to make it a bit more so, it will yield CapsLock on double tap.
-        lsft: lsft {
+    // For predictability, our symbol modifiers and layers will only be sticky
+    // if they aren't combined with any other modifier
+        lsft_mod: lsft_mod {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&sk LSFT>, <&mt LSHFT CAPS>;
-            mods = <(MOD_LSFT)>;
+            bindings = <&sk LSFT>, <&kp LSFT>;
+            mods = <0x8f>;
+            keep-mods = <0x8f>;
+        };
+        sym_mod: sym_mod {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sl SYM>, <&mo SYM>;
+            mods = <0x8f>;
+            keep-mods = <0x8f>;
+        };
+        rsft_mod: rsft_mod {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk RSFT>, <&kp RSFT>;
+            mods = <0x8f>;
+            keep-mods = <0x8f>;
         };
 
-    // The SYM layer is a compromise: ideally, you would its keys on the
+    // For various reasons, having a left shift in the usual spot is useful,
+    // but to make it a bit more so, it will yield CapsLock on double tap.
+        lsft_tapdance: lsft_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lsft_mod>, <&mt LSHFT CAPS>;
+        };
+
+    // The SYM layer is a compromise: ideally, you would map its keys on the
     // software level (ie associate AltGr with the appropriate Level-3 symbols
     // in XKB), but this requires configuration on the device you're using. So,
     // for compatibility, we do it on the firmware level. However, then you
@@ -133,44 +157,46 @@
     // Therefore, the first tap on SYM gets you the SYM layer; the second tap
     // gives you the 'real' AltGr; and the third tap gets you the two of them
     // combined (so that you can still get AltGr+5, for example). In the
-    // situation where the XKB layout is installed, you shouldn't need to think
+    // case that the XKB layout is installed, you shouldn't need to think
     // about this --- the resulting symbols should be indistinguishable.
         sym_tapdance: sym_tapdance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sl SYM>, <&sk RALT>, <&kp_mo RALT SYM>;
+            bindings = <&sym_mod_aux>, <&kp RALT>, <&kp_mo RALT SYM>;
         };
 
-    // When holding left Shift while tapping the SYM layer, we get LShift+AltGr
-    // immediately. This allows you to use this key combination for something
-    // (like Compose), *as if* it were a real AltGr.
-        sym: sym {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sym_tapdance>, <&mo_tap SYM RALT>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
-        };
-
-    // Symmetrically, pressing left Shift while in the SYM layer, we want to
-    // 'swap' the SYM layer with the AltGr modifier (as if the Sym key had been
-    // the AltGr modifier all along) so that we may potentially bind something
-    // to AltGr+LShift.
+    // Tapping left Shift while in the SYM layer, we want to 'swap' the SYM
+    // layer with the AltGr modifier (as if the Sym key had been the AltGr
+    // modifier all along) so that we may potentially bind something like
+    // Compose to AltGr+LShift (just as we might bind it to the 'real'
+    // modifier combination of the neighbouring RShift+LShift).
         lsft_in_sym: lsft_in_sym {
             compatible = "zmk,behavior-smart-toggle";
             #binding-cells = <0>;
-            bindings = <&kp RALT>, <&lsft>;
+            bindings = <&kp RALT>, <&kp LSFT>;
             ignored-key-positions = <36 37 39 40 41>;
         };
 
-    // Following similar logic as above, I might consider emitting AltGr+Cancel
-    // (or AltGr+Esc for compatibility) upon tapping Fn and Sym together and
-    // RShift+Cancel (or RShift+Esc) upon tapping Fn and RShift together; this
-    // happens for free for the real RShift modifier, but is surprisingly
-    // sublte for the Sym layer; might need more thought.
+    // To get Compose, you tap left Shift while holding one of the symbol
+    // modifiers on the thumbs (that is, right Shift or Sym/AltGr). The idea is
+    // that you often need to hold those thumb modifiers anyway (for the key
+    // following Compose), so it works out. However, in the situation that you
+    // *don't* want to modify the next character, it's useful to just be able
+    // to mash left Shift and a thumb key together without caring for which
+    // comes first. For the real modifiers, this comes naturally, and tapping
+    // left Shift after Sym has been handled above. The remaining case is
+    // tapping Sym after left Shift, which should do the same as Sym but emit a
+    // quick leftShift+AltGr first.
+        sym_mod_aux: sym_mod_aux {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sym_mod>, <&mo_tap SYM LS(RALT)>;
+            mods = <(MOD_LSFT)>;
+            /* keep-mods = <(MOD_LSFT)>; */
+        };
 
-    // I additionally considered the following: tapping left Shift while
+    // I alternatively considered the following: tapping left Shift while
     // holding AltGr (or SYM) yields a decimal point and tapping it
     // while holding right shift yields an underscore. This is useful
     // because you often need these keys while already holding another
@@ -213,14 +239,15 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
         };
 
-    // This is just the RGUI key, but if you press it while holding LALT, it
-    // will *also* activate a transparent layer that is strictly used for
-    // determining whether combos may activate.
+    // This is just the RGUI key, but if you hold it while holding Alt, it will
+    // activate a transparent layer that is strictly used for determining
+    // whether combos may activate.
         rgui: rgui {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RGUI>, <&kp_mo RGUI SYS>;
             mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
         };
 
     // Pressing Tab in the FN layer will press Alt+Tab (or Shift+Alt+Tab if
@@ -418,13 +445,13 @@
     &kp A &kp S &kp D &kp F &kp G
     &kp H &kp J &kp K &kp L &kp SEMI
 &kp SQT
-&lsft
+&lsft_tapdance
     &kp Z &kp X &kp C     &kp V   &kp B
     &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 &backslash
 
 &kp LALT  &lt FN K_STOP &kp SPACE
-&sk RSHFT &sym          &kp RCTL
+&rsft_mod &sym_tapdance &kp RCTL
             >;
         };
 
@@ -524,6 +551,12 @@
 &trans &trans &rgui
 &trans &trans &trans
 
+// I might consider emitting AltGr+Cancel (or AltGr+Esc for compatibility) upon
+// tapping Fn and Sym together and RShift+Cancel (or RShift+Esc) upon tapping
+// Fn and RShift together; this happens for free for the real RShift modifier,
+// but is surprisingly subtle for the Sym layer; might need more thought.
+// &trans              &trans             &rgui
+// &mt RSFT RS(K_STOP) &lt SYM RA(K_STOP) &trans
             >;
         };
         fn_compat_layer {
@@ -540,6 +573,11 @@
 
 &trans &trans &trans
 &trans &trans &trans
+
+// See comment in the Sym layer. Here it might be undesirable anyway because
+// S-Esc might means something.
+// &trans           &trans          &trans
+// &mt RSFT RS(ESC) &lt SYM RA(ESC) &trans
             >;
         };
         media_layer {
