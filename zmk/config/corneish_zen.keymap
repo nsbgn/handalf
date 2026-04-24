@@ -509,8 +509,8 @@
     &kp AMPS &kp N1   &kp N2   &kp N3    &kp TILDE
 &backslash
 
-&trans &lt FN RA(K_STOP) &trans
-&trans &trans            &trans
+&trans   &lt FN RA(K_STOP) &trans
+&kp RSFT &trans            &trans
             >;
         };
 
