@@ -89,6 +89,9 @@
                 , <&macro_press &kp MACRO_PLACEHOLDER>
                 , <&macro_param_2to1>
                 , <&macro_press &mo MACRO_PLACEHOLDER>
+             // we add this one to cancel potential responses when the
+             // key from the first param is pressed on its own
+                , <&macro_tap &kp LCTRL>
                 , <&macro_pause_for_release>
                 , <&macro_param_1to1>
                 , <&macro_release &kp MACRO_PLACEHOLDER>
@@ -240,8 +243,8 @@
         };
 
     // This is just the RGUI key, but if you hold it while holding Alt, it will
-    // activate a transparent layer that is strictly used for determining
-    // whether combos may activate.
+    // *also* activate a transparent layer that is strictly used for
+    // determining whether combos may activate.
         rgui: rgui {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
