@@ -168,19 +168,22 @@ entirely different, such as configuring XKB to use it as
 
 ## The Compose key
 
-The <kbd>Multi</kbd> key (also called the Compose key) allows you to 
+The <kbd>Multi</kbd> key (also called <kbd>Compose</kbd>) allows you to 
 type special characters by typing intuitive keys in succession. For 
 example, <kbd>Multi</kbd><kbd>=</kbd><kbd>c</kbd> becomes `€`.
 
 It is *virtual*, in the sense that there is no physical key that has 
 this property by default. You need to assign it on the software level.
 
-In the Handalf XKB layout, Compose is accessible by tapping the the left 
-<kbd>Shift</kbd> key while holding the right <kbd>Shift</kbd> or 
-<kbd>AltGr</kbd> (or vice versa). This is convenient, firstly because it 
-does not obscure any keys you might want to use for something else, and 
-secondly because many subsequent symbols already require you to hold one 
-of these modifiers anyway.
+In the Handalf XKB layout, <kbd>Multi</kbd> is assigned to the second 
+backslash, a neighbour to left shift on ISO keyboards. This is a good 
+choice because is not used for anything else in our layout, its 
+canonical position is already more or less where we want it to be, and 
+there exists a standard XKB option for it (namely `compose:102`).
+
+It is put on the same position as left <kbd>Shift</kbd>, with the 
+understanding that we prefer to use right <kbd>Shift</kbd> on the thumb 
+in most cases.
 
 
 ## Copy/paste/cut

@@ -143,15 +143,6 @@
             keep-mods = <0x8f>;
         };
 
-    // For various reasons, having a left shift in the usual spot is useful,
-    // but to make it a bit more so, it will yield CapsLock on double tap.
-        lsft_tapdance: lsft_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lsft_mod>, <&mt LSHFT CAPS>;
-        };
-
     // The SYM layer is a compromise: ideally, you would map its keys on the
     // software level (ie associate AltGr with the appropriate Level-3 symbols
     // in XKB), but this requires configuration on the device you're using. So,
@@ -166,37 +157,56 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sym_mod_aux>, <&kp RALT>, <&kp_mo RALT SYM>;
+            bindings = <&sym_mod>, <&kp RALT>, <&kp_mo RALT SYM>;
         };
 
-    // Tapping left Shift while in the SYM layer, we want to 'swap' the SYM
-    // layer with the AltGr modifier (as if the Sym key had been the AltGr
-    // modifier all along) so that we may potentially bind something like
-    // Compose to AltGr+LShift (just as we might bind it to the 'real'
-    // modifier combination of the neighbouring RShift+LShift).
-        lsft_in_sym: lsft_in_sym {
-            compatible = "zmk,behavior-smart-toggle";
+    // For various reasons, having a left Shift in the usual spot is useful,
+    // as it allows you to eg hold Shift while clicking the mouse with the right hand.
+    // So as not let a good spot go to waste, it will also yield CapsLock on
+    // double tap.
+        lsft_tapdance: lsft_tapdance {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp RALT>, <&kp LSFT>;
-            ignored-key-positions = <36 37 39 40 41>;
+            tapping-term-ms = <200>;
+            bindings = <&lsft_nubs>, <&mt LSHFT CAPS>;
         };
 
-    // To get Compose, you tap left Shift while holding one of the symbol
-    // modifiers on the thumbs (that is, right Shift or Sym/AltGr). The idea is
-    // that you often need to hold those thumb modifiers anyway (for the key
-    // following Compose), so it works out. However, in the situation that you
-    // *don't* want to modify the next character, it's useful to just be able
-    // to mash left Shift and a thumb key together without caring for which
-    // comes first. For the real modifiers, this comes naturally, and tapping
-    // left Shift after Sym has been handled above. The remaining case is
-    // tapping Sym after left Shift, which should do the same as Sym but emit a
-    // quick leftShift+AltGr first.
-        sym_mod_aux: sym_mod_aux {
+    // The backslash key that is next to left shift on ISO keyboards, keycode
+    // `NUBS`, is a good candidate for the Compose key because it is not used
+    // for anything else in our layout, its canonical position is already more
+    // or less where we want it to be, and there exists a standard XKB option
+    // for it (namely `compose:102`).
+    // We would like to overload it onto the left Shift to make that key as
+    // useful as possible without losing left Shift completely.
+    //
+    // When combined with one of the thumb letter modifiers (right Shift or
+    // Sym/AltGr), it should immediately resolve to NUBS, because there is no
+    // reason to combine shift with those, and it is common to need these
+    // modifiers for the key following Compose. Conversely, there is no reason
+    // to press the Compose key with any other modifier, so in those cases, it
+    // should resolve to LSHFT.
+        bmt: bmt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 41>;
+        };
+        nubs: nubs {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&sym_mod>, <&mo_tap SYM LS(RALT)>;
-            mods = <(MOD_LSFT)>;
-            /* keep-mods = <(MOD_LSFT)>; */
+            bindings = <&bmt LSHFT NUBS>, <&kp NUBS>;
+            mods = <(MOD_RSFT|MOD_RALT)>;
+            keep-mods = <(MOD_RSFT|MOD_RALT)>;
+        };
+        lsft_nubs: lsft_nubs {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&nubs>, <&kp LSHFT>;
+            mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
         };
 
     // I alternatively considered the following: tapping left Shift while
@@ -507,7 +517,7 @@
     &kp STAR &kp LPAR &kp MINUS &kp EQUAL &kp RPAR
     &kp AT   &kp N4   &kp N5    &kp N6    &kp N0
 &kp GRAVE
-&lsft_in_sym
+&kp RA(NUBS)
     &kp PIPE &kp LBRC &kp DLLR &kp UNDER &kp RBRC
     &kp AMPS &kp N1   &kp N2   &kp N3    &kp TILDE
 &backslash
@@ -546,7 +556,7 @@
     &fn13 &fn14 &fn15 &fn16 &fn17
     &fn18 &fn19 &fn20 &fn21 &fn22
 &fn23
-&trans
+&kp LSHFT
     &fn25 &fn26 &fn27 &fn28 &fn29
     &fn30 &fn31 &fn32 &fn33 &fn34
 &fn35

@@ -2,7 +2,7 @@ default partial alphanumeric_keys xkb_symbols "basic" {
     include "us(basic)"
     include "handalf(level3)"
     include "handalf(cancel)"
-    include "handalf(shift_level3_multi)"
+    include "compose(102)"
     name[Group1]= "Handalf";
 };
 
@@ -10,7 +10,7 @@ partial alphanumeric_keys xkb_symbols "colemak_dh" {
     include "us(colemak_dh_ortho)"
     include "handalf(level3)"
     include "handalf(cancel)"
-    include "handalf(shift_level3_multi)"
+    include "compose(102)"
     name[Group1]= "Handalf (Colemak)";
 };
 
