@@ -185,10 +185,14 @@
     // modifiers for the key following Compose. Conversely, there is no reason
     // to press the Compose key with any other modifier, so in those cases, it
     // should resolve to LSHFT.
+    //
+    // Note: I alternatively considered that this key could yield a decimal
+    // point in the Sym layer and an underscore in the Shift modifier. This is
+    // useful because these keys are often needed while in a different layer.
         bmt: bmt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
@@ -208,37 +212,6 @@
             mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
             keep-mods = <(MOD_LALT|MOD_LCTL|MOD_RCTL|MOD_LGUI|MOD_RGUI)>;
         };
-
-    // I alternatively considered the following: tapping left Shift while
-    // holding AltGr (or SYM) yields a decimal point and tapping it
-    // while holding right shift yields an underscore. This is useful
-    // because you often need these keys while already holding another
-    // modifier. However, I think optimisations like this may be better
-    // left to XKB. We are duplicating keys, and there may be better
-    // uses for this position (like Compose!)
-
-/*         lsft_underscore: lsft_underscore { */
-/*             compatible = "zmk,behavior-mod-morph"; */
-/*             #binding-cells = <0>; */
-/*             bindings = <&lsft_caps>, <&kp UNDER>; */
-/*             mods = <(MOD_RSFT)>; */
-/*         }; */
-/*         lsft: lsft { */
-/*             compatible = "zmk,behavior-mod-morph"; */
-/*             #binding-cells = <0>; */
-/*             // KP_DOT might make more sense, so as to have a locale-independent */
-/*             // decimal point, but it depends on the state of NumLock, so I */
-/*             // decided against it */
-/*             bindings = <&lsft_underscore>, <&kp DOT>; */
-/*             mods = <(MOD_RALT)>; */
-/*         }; */
-/*         dot: dot { */
-/*             // For the benefit of the SYM layer */
-/*             compatible = "zmk,behavior-mod-morph"; */
-/*             #binding-cells = <0>; */
-/*             bindings = <&kp DOT>, <&kp DOT>; */
-/*             mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>; */
-/*         }; */
 
     // Backslash: the backslash should be produced even while pressing the
     // Shift or AltGr modifiers. It would be sensible to do this on the
@@ -440,6 +413,9 @@
         SYSCOMBO(colemakon,  7 19, &togon COLEMAK )
         SYSCOMBO(colemakoff, 19 31, &togoff COLEMAK )
         SYSCOMBO(colemaktog, 7 19 31, &tog COLEMAK )
+
+        // Column R0
+        SYSCOMBO(softpoweroff, 11 23 35, &soft_off )
 
     };
 
