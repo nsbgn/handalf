@@ -53,10 +53,10 @@ constraints of a laptop keyboard.
 -   **Complete.** When stuffing so much functionality into a cramped 
     space, it is inevitable that some key sequences will become harder 
     to type. However, our 42 keys should give access to *every* key that 
-    you might find on a standard tenkeyless keyboard. I have avoided 
-    assumptions about the software you will be running, and yet tried to 
-    find an arrangement that makes sense within the established software 
-    ecosystems.
+    you might find on a standard tenkeyless keyboard (numpad keys have 
+    been left out for now). I have avoided assumptions about the 
+    software you will be running, and yet tried to find an arrangement 
+    that makes sense within the established software ecosystems.
 
 Above all, the layout should *feel* good. Many ideals are taken into 
 consideration, like rolling motions, muscle memory, semantic clustering, 
@@ -115,7 +115,21 @@ to be used for custom window manager shortcuts.
 F-keys and media control keys are obtained by combining the **Fn** layer 
 with the <kbd>AltGr</kbd> modifier.
 
-Numpad keys have been left out of the layout for now.
+This layer will likely not see as much traffic as its constituent **Fn** 
+and **Sym** layers, and contains some keys that you'd really rather not 
+activate by accident. For example: you type a number and immediately 
+want to go <kbd>Home</kbd>, but as you are inadvertantly still holding 
+<kbd>AltGr</kbd> for the number, pressing <kbd>Fn</kbd> activates 
+**Media**, and now what you thought was <kbd>Home</kbd> actually rewinds 
+your media player to the previous track.
+
+(TODO) To avoid accidental activations of this sort, there is a 200ms 
+delay before **Media** can activate *if* you have used one of the keys 
+in **Fn** or **Sym** first; otherwise, **Media** will enable 
+immediately. This shouldn't be disruptive, because keys in **Media** 
+usually won't be struck as part of a fast flow of keys.
+
+(TODO) LCtl and LMeta should disable the Media layer too.
 
 ## Backspace
 
