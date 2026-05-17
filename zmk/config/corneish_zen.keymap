@@ -160,24 +160,18 @@
             bindings = <&sym_mod>, <&kp RALT>, <&kp_mo RALT SYM>;
         };
 
-    // For various reasons, having a left Shift in the usual spot is useful,
-    // as it allows you to eg hold Shift while clicking the mouse with the right hand.
-    // So as not let a good spot go to waste, it will also yield CapsLock on
-    // double tap.
-        lsft_tapdance: lsft_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&lsft_nubs>, <&mt LSHFT CAPS>;
-        };
-
+    // For various reasons, having a left Shift in the usual spot is useful, as
+    // it allows you to eg hold Shift while clicking the mouse with the right
+    // hand. But we also don't want to let a good spot go to waste for a
+    // duplicate.
+    //
     // The backslash key that is next to left shift on ISO keyboards, keycode
     // `NUBS`, is a good candidate for the Compose key because it is not used
     // for anything else in our layout, its canonical position is already more
     // or less where we want it to be, and there exists a standard XKB option
-    // for it (namely `compose:102`).
-    // We would like to overload it onto the left Shift to make that key as
-    // useful as possible without losing left Shift completely.
+    // for it (namely `compose:102`). We would like to overload it onto the
+    // left Shift to make that key as useful as possible without losing left
+    // Shift completely.
     //
     // When combined with one of the thumb letter modifiers (right Shift or
     // Sym/AltGr), it should immediately resolve to NUBS, because there is no
@@ -434,7 +428,7 @@
     &kp A &kp S &kp D &kp F &kp G
     &kp H &kp J &kp K &kp L &kp SEMI
 &kp SQT
-&lsft_tapdance
+&lsft_nubs
     &kp Z &kp X &kp C     &kp V   &kp B
     &kp N &kp M &kp COMMA &kp DOT &kp FSLH
 &backslash
@@ -532,7 +526,7 @@
     &fn13 &fn14 &fn15 &fn16 &fn17
     &fn18 &fn19 &fn20 &fn21 &fn22
 &fn23
-&kp LSHFT
+&mt LSHFT CAPS
     &fn25 &fn26 &fn27 &fn28 &fn29
     &fn30 &fn31 &fn32 &fn33 &fn34
 &fn35
