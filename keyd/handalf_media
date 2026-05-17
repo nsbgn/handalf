@@ -3,7 +3,7 @@ space = space
 # Left
 
 tab = S-A-tab
-q = coffee
+q = A-f4
 w = previoussong
 e = volumeup
 r = nextsong
@@ -19,7 +19,7 @@ g = brightnessdown
 x = pause
 c = mute
 v = play
-b = close
+b = coffee
 
 # Right
 
@@ -41,5 +41,5 @@ n = f10
 m = f1
 , = f2
 . = f3
-/ = search
-rightshift = scrolllock
+/ = scrolllock
+rightshift = search

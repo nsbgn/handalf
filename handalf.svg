@@ -137,7 +137,7 @@ g.kb > g > g > text.media {
         <text>!</text>
       </g>
       <text class="fn">Esc</text>
-      <text class="media">Lock</text>
+      <text class="media">A-F4</text>
     </g>
     <g class="c2">
       <g>
@@ -275,7 +275,7 @@ g.kb > g > g > text.media {
       <text>}</text>
       </g>
       <text class="fn">Del</text>
-      <text class="media">Close</text>
+      <text class="media">Lock</text>
     </g>
   </g>
   <g class="r3">
@@ -445,12 +445,12 @@ g.kb > g > g > text.media {
       <text>~</text>
       </g>
       <text class="fn">M-A-/</text>
-      <text class="media">Search</text>
+      <text class="media">ScrLk</text>
     </g>
     <g class="c5">
       <text class="big">\</text>
       <text class="fn">M-A-\</text>
-      <text class="media">ScrLk</text>
+      <text class="media">Search</text>
     </g>
   </g>
   <g class="r3">

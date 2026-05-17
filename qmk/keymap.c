@@ -182,12 +182,12 @@ _______, _______, _______
 [L_MEDIA] = LAYOUT_split_3x6_3(
 
 _______,
-    _______,   KC_MPRV,   KC_VOLU,    KC_MNXT,   KC_BRIU,
+    LA(KC_F4), KC_MPRV,   KC_VOLU,    KC_MNXT,   KC_BRIU,
     KC_F12,    KC_F7,     KC_F8,      KC_F9,     KC_PAUS,
 KC_INS,
 _______,
     _______,   KC_MRWD,   KC_VOLD,    KC_MFFD,   KC_BRID,
-    KC_F11,    KC_F6,     KC_F7,      KC_F8,     KC_PSCR,
+    KC_F11,    KC_F4,     KC_F5,      KC_F6,     KC_PSCR,
 KC_APP,
 _______,
     _______,   KC_MSTP,   KC_KB_MUTE, KC_MPLY,   _______,
@@ -196,7 +196,7 @@ KC_SCRL,
 
 // Note:
 // - uses stop/playpause instead of pause/play
-// - No search key, no lock key, no close key
+// - No search key, no lock key
 
 _______, _______, _______,
 _______, _______, _______

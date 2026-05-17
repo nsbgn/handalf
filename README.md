@@ -14,8 +14,8 @@ remedy all this, but lack portability.
 
 Handalf is a 42-key layout scheme that works well for a 
 [Corne](https://github.com/foostan/crkbd) or any other fancy keyboard 
-with 3 thumb keys per hand, but it *also* fits perfectly within the 
-constraints of a laptop keyboard.
+with at least 3 thumb keys per hand, but it *also* fits perfectly within 
+the constraints of a laptop keyboard.
 
 ![The Handalf keyboard layout on top of a Qwerty layout.](handalf.svg)
 
@@ -389,7 +389,6 @@ as follows:
 | <kbd>Copy</kbd>   | <kbd>Ctrl</kbd><kbd>C</kbd> |
 | <kbd>Paste</kbd>  | <kbd>Ctrl</kbd><kbd>V</kbd> |
 | <kbd>Lock</kbd>   | <kbd>Meta</kbd><kbd>L</kbd> |
-| <kbd>Close</kbd>  | <kbd>Alt</kbd><kbd>F4</kbd> |
 | <kbd>Search</kbd> | <kbd>Meta</kbd><kbd>S</kbd> |
 
 These keys are more widely recognized across all operating systems 
