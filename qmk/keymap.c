@@ -21,7 +21,6 @@ enum custom_keycodes {
   CKC_ALTTAB = SAFE_RANGE,
   CKC_LCTL,
   CKC_LGUI,
-  CKC_OSL_SYM,
   CKC_OSM_RSFT,
   CKC_LT_FN_STOP,
   CKC_MT_LSFT_NUBS,
@@ -73,7 +72,7 @@ CKC_MT_LSFT_NUBS,
 KC_BSLS,
 
 KC_LALT,      CKC_LT_FN_STOP, KC_SPC,
-CKC_OSM_RSFT, CKC_OSL_SYM,    KC_RCTL
+CKC_OSM_RSFT, OSL(L_SYM),     KC_RCTL
     ),
 
 [L_SYM] = LAYOUT_split_3x6_3(
@@ -219,19 +218,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-        case CKC_OSL_SYM:
+        case OSL(L_SYM):
             is_sym_pressed = (record->event.pressed);
             if (is_sym_pressed) {
-                set_oneshot_layer(L_SYM, ONESHOT_START);
                 if (is_fn_pressed) {
                     layer_on(L_MEDIA);
                 }
             } else {
-                // TODO
-                clear_oneshot_layer_state(ONESHOT_PRESSED);
                 layer_off(L_MEDIA);
             }
-            return false;
+            return true;
 
         // On keyup of the FN key, want to exit the AltTab mode
         case CKC_LT_FN_STOP:
