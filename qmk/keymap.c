@@ -17,11 +17,6 @@ enum {
     L_COMPAT,
 };
 
-enum {
-    TD_LSFT,
-    // TD_SYM,
-};
-
 enum custom_keycodes {
   CKC_ALTTAB = SAFE_RANGE,
   CKC_LCTL,
@@ -29,79 +24,19 @@ enum custom_keycodes {
   CKC_OSL_SYM,
   CKC_OSM_RSFT,
   CKC_LT_FN_STOP,
+  CKC_MT_LSFT_NUBS,
 };
 
 bool is_fn_pressed = false;
 bool is_fn_used = false;
 uint16_t fn_timer = 0;
 
+bool is_lsft_used = false;
+uint16_t lsft_timer = 0;
+
 bool is_sym_pressed = false;
 bool is_lalt_pressed = false;
 bool is_alttab_active = false;
-
-// Tap dance //////////////////////////////////////////////////////////
-
-// For information on how oneshot layers are processed, see:
-// <https://github.com/qmk/qmk_firmware/blob/504533b3b49d0c7643c7ec5881348e400a86782f/quantum/action_util.c#L184>
-// For the structure of tap_dance_state_t, see:
-// <https://github.com/qmk/qmk_firmware/blob/master/quantum/process_keycode/process_tap_dance.h>
-
-// void td_sym_finish(tap_dance_state_t *state, void *user_data) {
-//     if(state->count != 2){
-//         set_oneshot_layer(L_SYM, ONESHOT_START);
-//     }
-//     if(state->count >= 2){
-//         register_mods(MOD_BIT(KC_RALT));
-//
-// }
-
-// void td_sym_reset(tap_dance_state_t *state, void *user_data){
-//     if (state->count != 2){
-//         clear_oneshot_layer_state(ONESHOT_PRESSED);
-//     }
-//     if (get_mods() & MOD_BIT(MOD_LSFT)) {
-//         unregister_mods(MOD_LSFT);
-//     }
-// }
-
-void td_lsft_tap(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-        register_code(KC_LSFT);
-    }
-}
-
-void td_lsft_finish(tap_dance_state_t *state, void *user_data) {
-    if (state->interrupting_keycode == CKC_OSM_RSFT
-            || state->interrupting_keycode == CKC_OSL_SYM) {
-        uint8_t tap = KC_NUBS;
-        if (state->count >= 2) {
-            tap = KC_CAPS;
-        }
-        unregister_code(KC_LSFT);
-        tap_code(tap);
-    }
-}
-
-void td_lsft_reset(tap_dance_state_t *state, void *user_data) {
-    if (get_mods() & MOD_BIT(MOD_LSFT)) {
-        unregister_mods(MOD_LSFT);
-    }
-    if(!state->interrupted) {
-        uint8_t tap = KC_NUBS;
-        if (state->count >= 2) {
-            tap = KC_CAPS;
-        }
-        tap_code(tap);
-    }
-}
-
-tap_dance_action_t tap_dance_actions[] = {
-    [TD_LSFT] = ACTION_TAP_DANCE_FN_ADVANCED(
-            td_lsft_tap, td_lsft_finish, td_lsft_reset),
-    // [TD_SYM]  = ACTION_TAP_DANCE_FN_ADVANCED(
-    //         NULL,        td_sym_finish,  td_sym_reset),
-};
-
 
 // Overrides //////////////////////////////////////////////////////////
 
@@ -111,7 +46,7 @@ const key_override_t backslash_override = ko_make_basic(
     MOD_MASK_SHIFT, KC_BSLS, KC_BSLS);
 
 const key_override_t lsft_override = ko_make_basic(
-    MOD_BIT(KC_RSFT), TD(TD_LSFT), KC_NUBS);
+    MOD_MASK_SHIFT, CKC_MT_LSFT_NUBS, KC_NUBS);
 
 const key_override_t *key_overrides[] = {
     &backslash_override,
@@ -132,7 +67,7 @@ KC_BSPC,
     KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
     KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
 KC_QUOT,
-TD(TD_LSFT),
+CKC_MT_LSFT_NUBS,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
     KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
 KC_BSLS,
@@ -170,7 +105,7 @@ _______,
     CKC_LCTL,  KC_LEFT,   KC_DOWN,      KC_RGHT,     KC_PGDN,
     LAG(KC_H), LAG(KC_J), LAG(KC_K),    LAG(KC_L),   LAG(KC_SCLN),
 LAG(KC_QUOT),
-_______,
+MT(MOD_LSFT, KC_CAPS),
     CKC_LGUI,  KC_CUT,    KC_COPY,      KC_PSTE,     KC_DEL,
     LAG(KC_N), LAG(KC_M), LAG(KC_COMM), LAG(KC_DOT), LAG(KC_SLSH),
 LAG(KC_BSLS),
@@ -182,7 +117,7 @@ _______, _______, _______
 [L_MEDIA] = LAYOUT_split_3x6_3(
 
 _______,
-    LA(KC_F4), KC_MPRV,   KC_VOLU,    KC_MNXT,   KC_BRIU,
+    A(KC_F4),  KC_MPRV,   KC_VOLU,    KC_MNXT,   KC_BRIU,
     KC_F12,    KC_F7,     KC_F8,      KC_F9,     KC_PAUS,
 KC_INS,
 _______,
@@ -243,6 +178,10 @@ void oneshot_mods_changed_user(uint8_t mods) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    if (get_mods() & MOD_BIT(KC_LSFT) && record->event.pressed) {
+        is_lsft_used = true;
+    }
 
     if (layer_state_is(L_FN) && record->event.pressed) {
         is_fn_used = true;
@@ -344,11 +283,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
+        case CKC_MT_LSFT_NUBS:
+            if (record->event.pressed) {
+                is_lsft_used = false;
+                lsft_timer = timer_read();
+                register_mods(MOD_BIT(KC_LSFT));
+            } else {
+                unregister_mods(MOD_BIT(KC_LSFT));
+                if (timer_elapsed(lsft_timer) < TAPPING_TERM && !is_lsft_used) {
+                    tap_code(KC_NUBS);
+                }
+            }
+            return false;
+
         // Other thumb keys should not have any influence...
         case OSM(KC_RSFT):
         case KC_RSFT:
         case KC_RALT:
-        // case TD(TD_SYM):
         case KC_RCTL:
             return true;
 
