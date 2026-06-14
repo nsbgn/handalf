@@ -44,6 +44,17 @@
     hold-while-undecided;
 };
 
+// The default tap-preferred flavor for &lt gets you into situations where you
+// tap shorter than the tapping-term-ms (resulting in esc/cancel), followed by
+// an immediate press of the next key. This gets interpreted in the terminal
+// and messes things up in vim. It would be safe to introduce a delay between
+// them, to accommodate fast continuation after esc, but I haven't found a
+// clean way to implement that and it seems the intention is usually to go into
+// the Fn layer, anyway.
+&lt {
+    flavor = "hold-preferred";
+};
+
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_6col_layout;
@@ -75,7 +86,8 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
-                = <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
+                = <&macro_param_1to1>
+                , <&macro_tap &bt BT_SEL MACRO_PLACEHOLDER>
                 , <&macro_tap &bt BT_CLR>
                 ;
         };
@@ -312,8 +324,7 @@
         UNMOD(fn34,  &kp LG(LA(FSLH)) )
         UNMOD(fn35,  &kp LG(LA(BSLH)) )
 
-        UNMOD(md01,  &kp K_LOCK )
-        UNMOD(md01c, &kp LG(L) )
+        UNMOD(md01,  &kp LA(F4) )
         UNMOD(md02,  &kp C_PREV )
         UNMOD(md03,  &kp C_VOL_UP )
         UNMOD(md04,  &kp C_NEXT )
@@ -343,15 +354,15 @@
         UNMOD(md26,  &kp C_PAUSE )
         UNMOD(md27,  &kp C_MUTE )
         UNMOD(md28,  &kp C_PLAY )
-        UNMOD(md29,  &kp C_AC_CLOSE )
-        UNMOD(md29c, &kp LA(F4) )
+        UNMOD(md29,  &kp K_LOCK )
+        UNMOD(md29c, &kp LG(L) )
         UNMOD(md30,  &kp F10 )
         UNMOD(md31,  &kp F1 )
         UNMOD(md32,  &kp F2 )
         UNMOD(md33,  &kp F3 )
-        UNMOD(md34,  &kp C_AC_SEARCH )
-        UNMOD(md34c, &kp LG(S) )
-        UNMOD(md35,  &kp SLCK )
+        UNMOD(md34,  &kp SLCK )
+        UNMOD(md35,  &kp C_AC_SEARCH )
+        UNMOD(md35c, &kp LG(S) )
 
     };
 
@@ -588,14 +599,14 @@
         media_compat_layer {
             display-name = "Media (Compatibility)";
             bindings = <
-&trans &md01c &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
 
 &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
 
 &trans &trans &trans &trans &trans &md29c
-&trans &trans &trans &trans &md34c &trans
+&trans &trans &trans &trans &trans &md35c
 
 &trans &trans &trans
 &trans &trans &trans
