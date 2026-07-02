@@ -237,7 +237,7 @@
         rgui: rgui {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RGUI>, <&kp_mo RGUI SYS>;
+            bindings = <&kp RGUI>, <&lt SYS RGUI>;
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LALT)>;
         };
@@ -609,14 +609,19 @@
         system_layer {
             display-name = "System";
             bindings = <
-&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans
 
-&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans
-
-&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans
+&kp RG(TAB)
+    &kp RG(Q) &kp RG(W) &kp RG(E) &kp RG(R) &kp RG(T)
+    &kp RG(Y) &kp RG(U) &kp RG(I) &kp RG(O) &kp RG(P)
+&kp RG(RET)
+&kp RG(BSPC)
+    &kp RG(A) &kp RG(S) &kp RG(D) &kp RG(F) &kp RG(G)
+    &kp RG(H) &kp RG(J) &kp RG(K) &kp RG(L) &kp RG(SEMI)
+&kp RG(SQT)
+&trans
+    &kp RG(Z) &kp RG(X) &kp RG(C)     &kp RG(V)   &kp RG(B)
+    &kp RG(N) &kp RG(M) &kp RG(COMMA) &kp RG(DOT) &kp RG(FSLH)
+&trans
 
 &trans &trans &trans
 &trans &trans &trans
