@@ -231,17 +231,6 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT)>;
         };
 
-    // This is just the RGUI key, but if you hold it while holding Alt, it will
-    // *also* activate a transparent layer that is strictly used for
-    // determining whether combos may activate.
-        rgui: rgui {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RGUI>, <&lt SYS RGUI>;
-            mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LALT)>;
-        };
-
     // Pressing Tab in the FN layer will press Alt+Tab (or Shift+Alt+Tab if
     // Shift or SYM were pressed) and keep Alt active as long as FN is active
     // or until you press some other non-modifier key. This keeps the window
@@ -536,14 +525,14 @@
     &fn30 &fn31 &fn32 &fn33 &fn34
 &fn35
 
-&trans &trans &rgui
+&trans &trans &lt SYS RGUI
 &trans &trans &trans
 
 // I might consider emitting AltGr+Cancel (or AltGr+Esc for compatibility) upon
 // tapping Fn and Sym together and RShift+Cancel (or RShift+Esc) upon tapping
 // Fn and RShift together; this happens for free for the real RShift modifier,
 // but is surprisingly subtle for the Sym layer; might need more thought.
-// &trans              &trans             &rgui
+// &trans              &trans             &lt SYS RGUI
 // &mt RSFT RS(K_STOP) &lt SYM RA(K_STOP) &trans
             >;
         };
@@ -606,6 +595,10 @@
 &trans &trans &trans
             >;
         };
+
+    // This layer is almost just the RGUI key, but it will *also* activate a
+    // transparent layer that is used for determining whether combos may
+    // activate.
         system_layer {
             display-name = "System";
             bindings = <
