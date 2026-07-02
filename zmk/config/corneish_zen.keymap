@@ -379,49 +379,43 @@
     // all three thumb keys on the left side are active (activating the SYS
     // layer).
 
-        // Column L0
-        SYSCOMBO(outputble, 0 12, &out OUT_BLE )
-        SYSCOMBO(outputusb, 12 24, &out OUT_USB )
-        SYSCOMBO(outputtog, 0 12 24, &out OUT_TOG )
-
-        // Column L1
-        SYSCOMBO(btsel1, 1 13, &bt BT_SEL 0 )
-        SYSCOMBO(btdsc1, 13 25, &bt BT_DISC 0 )
-        SYSCOMBO(btclr1, 1 13 25, &btclr 1 )
-
-        // Column L2
-        SYSCOMBO(btsel2, 2 14, &bt BT_SEL 1 )
-        SYSCOMBO(btdsc2, 14 26, &bt BT_DISC 1 )
-        SYSCOMBO(btclr2, 2 14 26, &btclr 2 )
-
-        // Column L3
-        SYSCOMBO(btsel3, 3 15, &bt BT_SEL 2 )
-        SYSCOMBO(btdsc3, 15 27, &bt BT_DISC 2 )
-        SYSCOMBO(btclr3, 3 15 27, &btclr 3 )
-
-        // Column L4
-        SYSCOMBO(btsel4, 4 16, &bt BT_SEL 3 )
-        SYSCOMBO(btdsc4, 16 28, &bt BT_DISC 3 )
-        SYSCOMBO(btclr4, 4 16 28, &btclr 4 )
-
-        // Column L5
-        SYSCOMBO(btsel5, 5 17, &bt BT_SEL 4 )
-        SYSCOMBO(btdsc5, 17 29, &bt BT_DISC 4 )
-        SYSCOMBO(btclr5, 5 17 29, &btclr 5 )
-
-        // Column R5
-        SYSCOMBO(compaton,  6 18, &togon COMPAT )
-        SYSCOMBO(compatoff, 18 30, &togoff COMPAT )
-        SYSCOMBO(compattog, 6 18 30, &tog COMPAT )
-
-        // Column R4
-        SYSCOMBO(colemakon,  7 19, &togon COLEMAK )
-        SYSCOMBO(colemakoff, 19 31, &togoff COLEMAK )
-        SYSCOMBO(colemaktog, 7 19 31, &tog COLEMAK )
-
-        // Column R0
-        SYSCOMBO(softpoweroff, 11 23 35, &soft_off )
-
+        // Column L0: 0 12 24
+        SYSCOMBO(softpoweroff, 0 12 24, &soft_off )
+        // Column L1: 1 13 25
+        // Column L2: 2 14 26
+        // Column L3: 3 15 27
+        // Column L4: 4 16 28
+        SYSCOMBO(colemakon,  4 16, &togon COLEMAK )
+        SYSCOMBO(colemakoff, 16 28, &togoff COLEMAK )
+        SYSCOMBO(colemaktog, 4 16 28, &tog COLEMAK )
+        // Column L5: 5 17 29
+        SYSCOMBO(compaton,  5 17 29, &togon COMPAT )
+        SYSCOMBO(compatoff, 17 29, &togoff COMPAT )
+        SYSCOMBO(compattog, 5 17 29, &tog COMPAT )
+        // Column R5: 6 18 30
+        SYSCOMBO(btsel1, 6 18, &bt BT_SEL 0 )
+        SYSCOMBO(btdsc1, 18 30, &bt BT_DISC 0 )
+        SYSCOMBO(btclr1, 6 18 30, &btclr 1 )
+        // Column R4: 7 19 31
+        SYSCOMBO(btsel2, 7 19, &bt BT_SEL 1 )
+        SYSCOMBO(btdsc2, 19 31, &bt BT_DISC 1 )
+        SYSCOMBO(btclr2, 7 19 31, &btclr 2 )
+        // Column R3: 8 20 32
+        SYSCOMBO(btsel3, 8 20, &bt BT_SEL 2 )
+        SYSCOMBO(btdsc3, 20 32, &bt BT_DISC 2 )
+        SYSCOMBO(btclr3, 8 20 32, &btclr 3 )
+        // Column R2: 9 21 33
+        SYSCOMBO(btsel4, 9 21, &bt BT_SEL 3 )
+        SYSCOMBO(btdsc4, 21 33, &bt BT_DISC 3 )
+        SYSCOMBO(btclr4, 9 21 33, &btclr 4 )
+        // Column R1: 10 22 34
+        SYSCOMBO(btsel5, 10 22, &bt BT_SEL 4 )
+        SYSCOMBO(btdsc5, 22 34, &bt BT_DISC 4 )
+        SYSCOMBO(btclr5, 10 22 34, &btclr 5 )
+        // Column R0: 11 23 35
+        SYSCOMBO(outputble, 11 23, &out OUT_BLE )
+        SYSCOMBO(outputusb, 23 35, &out OUT_USB )
+        SYSCOMBO(outputtog, 11 23 35, &out OUT_TOG )
     };
 
     keymap {
